@@ -4,4 +4,3 @@ web/uploads/		# Ne pas ajouter les fichiers uploads
 cache/			# Contenu du cache
 log/			# Contenu de log
 web/sf/			# lien symbolique vers sf
-
