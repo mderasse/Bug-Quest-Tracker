@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/25546/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine
+END
+PluginsfGuardPermissionForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/24629/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine/PluginsfGuardPermissionForm.class.php
+END
+sfGuardChangeUserPasswordForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/25546/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine/sfGuardChangeUserPasswordForm.class.php
+END
+sfGuardFormSignin.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/23536/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine/sfGuardFormSignin.class.php
+END
+sfGuardUserAdminForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/23536/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine/sfGuardUserAdminForm.class.php
+END
+PluginsfGuardGroupForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/24629/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine/PluginsfGuardGroupForm.class.php
+END
+PluginsfGuardUserForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/23536/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine/PluginsfGuardUserForm.class.php
+END
+sfGuardRegisterForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/25546/plugins/sfDoctrineGuardPlugin/trunk/lib/form/doctrine/sfGuardRegisterForm.class.php
+END

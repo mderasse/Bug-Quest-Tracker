@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/28922/plugins/sfDoctrineGuardPlugin/trunk
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/10781/plugins/sfDoctrineGuardPlugin/trunk/LICENSE
+END
+VERSION
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/10781/plugins/sfDoctrineGuardPlugin/trunk/VERSION
+END
+package.xml.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/24700/plugins/sfDoctrineGuardPlugin/trunk/package.xml.tmpl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/23170/plugins/sfDoctrineGuardPlugin/trunk/README
+END

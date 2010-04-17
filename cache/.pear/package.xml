@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.0" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfFormExtraPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Validators, Widgets, and Forms.</summary>
+ <description>Validators, Widgets, and Forms.</description>
+ <lead>
+  <name>Fabien Potencier</name>
+  <user>fabpot</user>
+  <email>fabien.potencier@symfony-project.com</email>
+  <active>yes</active>
+ </lead>
+ <developer>
+  <name>Nicolas Perriault</name>
+  <user>nicolas</user>
+  <email>nicolas.perriault@symfony-project.com</email>
+  <active>yes</active>
+ </developer>
+ <developer>
+  <name>Kris Wallsmith</name>
+  <user>Kris.Wallsmith</user>
+  <email>kris.wallsmith@symfony-project.com</email>
+  <active>yes</active>
+ </developer>
+ <developer>
+  <name>Hugo Hamon</name>
+  <user>hugo.hamon</user>
+  <email>hugo.hamon@sensio.com</email>
+  <active>yes</active>
+ </developer>
+ <date>2009-11-30</date>
+ <time>11:08:39</time>
+ <version>
+  <release>1.1.1</release>
+  <api>1.0.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.symfony-project.com/license">MIT license</license>
+ <notes>
+-
+ </notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="dd477c00b9182a8fce0a2931b2afe14f" name="bin/prove.php" role="data"/>
+   <file md5sum="21c54a09b385c894509ada602944db0f" name="lib/form/sfFormLanguage.class.php" role="data"/>
+   <file md5sum="1374000a0198f4a174f80795e60e7c71" name="lib/validator/doctrine/sfValidatorDoctrineNestedSetLevel.class.php" role="data"/>
+   <file md5sum="47573deff2c7264ae1a31ead15940eed" name="lib/validator/sfValidatorBlacklist.class.php" role="data"/>
+   <file md5sum="71d741ed1a332e2c3c5e5eba43061123" name="lib/validator/sfValidatorReCaptcha.class.php" role="data"/>
+   <file md5sum="bbf8ac8ced4dfb08d56c2de659f4932a" name="lib/validator/sfValidatorSchemaTimeInterval.class.php" role="data"/>
+   <file md5sum="b0a625150802410c9a39dee434746908" name="lib/widget/sfWidgetFormDoctrineChoiceGrouped.class.php" role="data"/>
+   <file md5sum="8d3f91f1b54429c94b71517bd3840e20" name="lib/widget/sfWidgetFormDoctrineJQueryAutocompleter.class.php" role="data"/>
+   <file md5sum="8ca49e7b709485623ebd124950a0a41f" name="lib/widget/sfWidgetFormJQueryAutocompleter.class.php" role="data"/>
+   <file md5sum="a24e12d8e02190118f355a568cbbb98f" name="lib/widget/sfWidgetFormJQueryDate.class.php" role="data"/>
+   <file md5sum="8c909201670d42f4d4ddfe46eab45adb" name="lib/widget/sfWidgetFormPropelChoiceGrouped.class.php" role="data"/>
+   <file md5sum="45adc6b7bfb2296d7bc77a83a441ac88" name="lib/widget/sfWidgetFormPropelJQueryAutocompleter.class.php" role="data"/>
+   <file md5sum="f3efc316ce56dd0f4e80a3c87f704e0f" name="lib/widget/sfWidgetFormReCaptcha.class.php" role="data"/>
+   <file md5sum="92a8141fbceb2e3eff66a52fa5ed5184" name="lib/widget/sfWidgetFormSelectDoubleList.class.php" role="data"/>
+   <file md5sum="4b4bedb41a4adb487ecc39cc47be4eab" name="lib/widget/sfWidgetFormSelectUSState.class.php" role="data"/>
+   <file md5sum="b4e4b61fba61b26db3ac30bb5933771b" name="lib/widget/sfWidgetFormTextareaTinyMCE.class.php" role="data"/>
+   <file md5sum="eaf9956fa7c043b664b1548d2c9ad222" name="test/form/sfFormLanguageTest.php" role="data"/>
+   <file md5sum="6ea19158046962f6ad76776ed3ad8673" name="test/validator/sfValidatorReCaptchaTest.php" role="data"/>
+   <file md5sum="84fedbad753d517ed3c535de7fbab39e" name="test/validator/sfValidatorBlacklistTest.php" role="data"/>
+   <file md5sum="1f6fd7556f6f3a68b7a31ba859c4175b" name="test/validator/sfValidatorSchemaTimeIntervalTest.php" role="data"/>
+   <file md5sum="993dc134aefab7538455472af3a3c5a4" name="test/widget/sfWidgetFormReCaptchaTest.php" role="data"/>
+   <file md5sum="e04220de43865dc7cf4cc7fe5965873b" name="test/bootstrap.php" role="data"/>
+   <file md5sum="4748c74f91b197224c87425e240576fb" name="web/css/jquery.autocompleter.css" role="data"/>
+   <file md5sum="460d935f81fd9de0c01656fd4f294757" name="web/js/double_list.js" role="data"/>
+   <file md5sum="13aa9e3abc71aac8eb1345e0f7b2a275" name="web/js/jquery.autocompleter.js" role="data"/>
+   <file md5sum="03ce3dcc84af110e9da8699a841e5200" name="web/images/indicator.gif" role="data"/>
+   <file md5sum="64113e3f418860c6c27caa83d8494c73" name="web/images/next.png" role="data"/>
+   <file md5sum="4485131fafbc7b6bd6018a67671e9040" name="web/images/previous.png" role="data"/>
+   <file md5sum="cab24c0c85c5558f77b2ea3cfe34006a" name="README" role="data"/>
+   <file md5sum="4db2c5c669396b6c794f2fe214cb33e8" name="LICENSE" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.4</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+  <release>
+   <version>
+    <release>1.1.1</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT license</license>
+   <license>MIT</license>
+   <date>2009-11-30</date>
+   <notes>
+* fabien: added a date_widget option to sfWidgetFormJQueryDate (#5382)
+* fabien: changed the sfFormLanguage to take the current user culture into account (#6752)
+* fabien: added sfWidgetFormDoctrineJQueryAutocompleter (#5118, #4943)
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.1.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT license</license>
+   <license>MIT</license>
+   <date>2009-11-30</date>
+   <notes>
+* fabien: made the plugin work for symfony 1.3/1.4
+   </notes>
+  </release>
+ </changelog>
+</package>

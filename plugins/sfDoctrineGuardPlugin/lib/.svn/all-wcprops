@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/28922/plugins/sfDoctrineGuardPlugin/trunk/lib
+END
+sfGuardBasicSecurityFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/27166/plugins/sfDoctrineGuardPlugin/trunk/lib/sfGuardBasicSecurityFilter.class.php
+END
+sfGuardRememberMeFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/27166/plugins/sfDoctrineGuardPlugin/trunk/lib/sfGuardRememberMeFilter.class.php
+END
