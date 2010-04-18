@@ -1,6 +1,8 @@
 config/databases.yml	# Fichier d'acces a la base de donnee
 config/properties.ini	# Pour la synchro project:deploy
-web/uploads/		# Ne pas ajouter les fichiers uploads
-cache/			# Contenu du cache
-log/			# Contenu de log
+web/uploads/*		# Ne pas ajouter les fichiers uploads
+cache/*		# Contenu du cache
+log/*			# Contenu de log
 web/sf/			# lien symbolique vers sf
+
+!.gitkeep
