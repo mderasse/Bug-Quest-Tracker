@@ -9683,3 +9683,278 @@ Apr 19 23:52:30 symfony [info] {sfWebDebugLogger} Factories 20.91 ms (1)
 Apr 19 23:52:30 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 2.24 ms (1)
 Apr 19 23:52:30 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 26.19 ms (1)
 Apr 19 23:52:30 symfony [info] {sfWebResponse} Send content (48487 o)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 19 23:54:22 symfony [info] {sfPatternRouting} Match route "sf_guard_register" (/guard/register) for /guard/register with parameters array (  'module' => 'sfGuardRegister',  'action' => 'index',)
+Apr 19 23:54:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:54:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 19 23:54:22 symfony [info] {sfBasicSecurityFilter} Action "sfGuardRegister/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Apr 19 23:54:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:54:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 19 23:54:22 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 19 23:54:22 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 19 23:54:22 symfony [info] {sfPHPView} Decorate content with "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:54:22 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:54:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Apr 19 23:54:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 19 23:54:22 symfony [info] {sfWebDebugLogger} Configuration 1.71 ms (12)
+Apr 19 23:54:22 symfony [info] {sfWebDebugLogger} Factories 28.50 ms (1)
+Apr 19 23:54:22 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 3.16 ms (1)
+Apr 19 23:54:22 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 6.75 ms (1)
+Apr 19 23:54:22 symfony [info] {sfWebResponse} Send content (48484 o)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 19 23:57:48 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 19 23:57:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:57:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 19 23:57:48 symfony [info] {sfBasicSecurityFilter} Action "default/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Apr 19 23:57:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:57:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 19 23:57:48 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 19 23:57:48 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 19 23:57:48 symfony [info] {sfPHPView} Decorate content with "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:57:48 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:57:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Apr 19 23:57:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 19 23:57:48 symfony [info] {sfWebDebugLogger} Configuration 6.51 ms (13)
+Apr 19 23:57:48 symfony [info] {sfWebDebugLogger} Factories 66.63 ms (1)
+Apr 19 23:57:48 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 2.70 ms (1)
+Apr 19 23:57:48 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.51 ms (1)
+Apr 19 23:57:48 symfony [info] {sfWebResponse} Send content (47871 o)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 19 23:57:51 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 19 23:57:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:57:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 19 23:57:51 symfony [info] {sfBasicSecurityFilter} Action "default/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Apr 19 23:57:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:57:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 19 23:57:51 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 19 23:57:51 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 19 23:57:51 symfony [info] {sfPHPView} Decorate content with "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:57:51 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:57:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Apr 19 23:57:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 19 23:57:51 symfony [info] {sfWebDebugLogger} Configuration 1.99 ms (12)
+Apr 19 23:57:51 symfony [info] {sfWebDebugLogger} Factories 25.08 ms (1)
+Apr 19 23:57:51 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 2.08 ms (1)
+Apr 19 23:57:51 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 5.80 ms (1)
+Apr 19 23:57:51 symfony [info] {sfWebResponse} Send content (48253 o)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 19 23:58:17 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 19 23:58:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:58:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 19 23:58:17 symfony [info] {sfBasicSecurityFilter} Action "default/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Apr 19 23:58:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:58:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 19 23:58:17 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 19 23:58:17 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 19 23:58:17 symfony [info] {sfPHPView} Decorate content with "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:58:17 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:58:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Apr 19 23:58:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 19 23:58:17 symfony [info] {sfWebDebugLogger} Configuration 6.64 ms (13)
+Apr 19 23:58:17 symfony [info] {sfWebDebugLogger} Factories 23.85 ms (1)
+Apr 19 23:58:17 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 3.31 ms (1)
+Apr 19 23:58:17 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 10.97 ms (1)
+Apr 19 23:58:17 symfony [info] {sfWebResponse} Send content (48470 o)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 19 23:58:28 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 19 23:58:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:58:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 19 23:58:28 symfony [info] {sfBasicSecurityFilter} Action "default/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Apr 19 23:58:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 19 23:58:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 19 23:58:28 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 19 23:58:28 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 19 23:58:28 symfony [info] {sfPHPView} Decorate content with "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:58:28 symfony [info] {sfPHPView} Render "/Users/Alexandre/Sites/_git/peanut/apps/backend/templates/layout.php"
+Apr 19 23:58:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Apr 19 23:58:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 19 23:58:28 symfony [info] {sfWebDebugLogger} Configuration 6.42 ms (13)
+Apr 19 23:58:28 symfony [info] {sfWebDebugLogger} Factories 23.63 ms (1)
+Apr 19 23:58:28 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 3.28 ms (1)
+Apr 19 23:58:28 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 10.49 ms (1)
+Apr 19 23:58:28 symfony [info] {sfWebResponse} Send content (48415 o)
