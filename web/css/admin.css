@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------------
+
+[Master Stylesheet]
+
+Framework : BIC
+Version : 2.7.2
+Last Change : 17/02/2010
+Author : Alexandre "pocky" BALMES - http://www.pockyworld.com
+Please use for beautiful design only
+
+[Credits]
+clean.css is inspired from Meyer : http://meyerweb.com
+
+--------------------------------------------------------------------*/
+
+
+@import "bic/clean.css";
+@import "bic/typography.css";
+@import "bic/color.css";
+@import "bic/layout.css";
+@import "bic/myclass.css";
+
+
+/*--------------------------------------------------------------------
+  1. General
+--------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------
+   2. Login
+--------------------------------------------------------------------*/
+
+body#login {
+  background: url('/images/login/bg.jpg') #000;
+  color: #ebebeb;
+}
+
+body#login a {
+  color: #ebebeb;
+}
+
+#containerIn {
+
+  padding-top: 200px;
+
+}
+
+#login h1 {
+  margin-top: 70px;
+}
+
+#login #form {
+  border-left: 1px solid #fbfbfb;
+  padding-left: 20px;
+}
+
+#login #form .text-input {
+  width: 255px;
+  background: url('/images/login/button-overlay.png') #fbfbfb repeat-x;
+  display: inline-block;
+  padding: 7px 10px;
+  color: #434242;
+  font-style: italic;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#login #form .formSubmit {
+  margin-right: 25px;
+}
+
+#login #form .formSubmit .button {
+  background: url('/images/login/button-overlay.png') #000 repeat-x;
+  display: inline-block;
+  padding: 5px 20px;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #000;
+  border-bottom: 1px solid rgba(0,0,0,0.25);  
+  font-weight: bolder;
+  font-size: 16px;
+}

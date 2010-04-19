@@ -8,7 +8,26 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
   </head>
-  <body>
+  <body <?php echo !$sf_user->isAuthenticated() ? 'id="login"' : null ?> class="arial">
+	
+	<?php if(!$sf_user->isAuthenticated()): ?>
+	
+	  <div class="container_12 alignCenter center">
+		
+		  <div id="containerIn" class="prefix_2 alignLeft clearfix">
+  		  <h1 class="grid_4 padding alignCenter"><img src="/images/login/logo.png" alt="Peanut, un CMS à base de symfony" /></h1>
+  		  
+  		  <div id="form" class="padding grid_4">
+  				<?php echo $sf_content ?>
+  			</div>
+			</div>
+			
+		</div>
+		
+	<?php else: ?>
+	
     <?php echo $sf_content ?>
+    
+  <?php endif; ?>
   </body>
 </html>
