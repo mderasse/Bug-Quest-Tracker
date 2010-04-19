@@ -1,0 +1,80 @@
+/*	--------------------------------------------------------------------
+	[typography.css]
+
+	Table of Contents
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	1. Default Style
+	2. Titles
+	3. Safe font family
+	4. Text decoration
+	5. Text align
+	6. Typographic style
+
+--------------------------------------------------------------------	*/
+
+
+/*	--------------------------------------------------------------------	
+	1. Default Style : because we need one :)
+--------------------------------------------------------------------	*/
+
+body { font-size: 1.4em; line-height: 1.6em; }
+
+/*	--------------------------------------------------------------------	
+	2. Heading
+--------------------------------------------------------------------	*/
+
+h1 { font: 3em/1.6em serif; }
+h2 { font: 2.5em/1.6em serif; }
+h3 { font: 2em/1.6em serif; }
+h4 { font: 1.8em/1.6em serif; }
+h5 { font: 1.6em/1.6em serif; }
+h6 { font: 1.4em/1.6em serif; }
+
+/*	--------------------------------------------------------------------	
+	3. Safe font family
+--------------------------------------------------------------------	*/
+
+.arial { font-family: Arial, Helvetica, sans-serif; }
+.courierNew { font-family: 'Courier New', Courier, monospace; }
+.georgia { font-family: Georgia, 'Times New Roman', Times, serif; }
+.lucidaConsole { font-family: 'Lucida Console', Monaco, monospace; }
+.lucidaSansUnicode { font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
+.tahoma { font-family: Tahoma, Geneva, sans-serif; }
+.times { font-family: 'Times New Roman', Times, serif; }
+.trebuchet { font-family: 'Trebuchet MS', Helvetica, sans-serif; }
+.verdana { font-family: Verdana, Geneva, sans-serif; }
+.msSans { font-family: 'MS Sans Serif', Geneva, sans-serif; }
+.msSerif { font-family: 'MS Serif', 'New York', serif; }
+.helvetica { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.impact { font-family: Impact, Charcoal, sans-serif; }
+.century { font-family: 'Century Gothic', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif; }
+
+/*	--------------------------------------------------------------------	
+	4. Text decoration
+--------------------------------------------------------------------	*/
+
+.underline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+
+/*	--------------------------------------------------------------------	
+	5. Text align
+--------------------------------------------------------------------	*/
+
+.alignLeft { text-align: left; }
+.alignRight { text-align: right; }
+.alignCenter { text-align: center; }
+.alignJustify { text-align: justify; }
+
+/*	--------------------------------------------------------------------	
+	6. Typographic style
+--------------------------------------------------------------------	*/
+
+.bold { font-weight: 900; }
+.light { font-weight: 100; }
+.italic { font-style: italic; }
+.smallcaps { font-variant: small-caps; }
+.expanded { letter-spacing: .5em; }
+.condensed { letter-spacing: -.1em; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }

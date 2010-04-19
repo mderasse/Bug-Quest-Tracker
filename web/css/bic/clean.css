@@ -1,0 +1,97 @@
+/*	--------------------------------------------------------------------
+	[clean.css]
+
+	Table of Contents
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	1. Meyer modified reset
+	2. Body
+	3. Tables
+	4. Quotes
+	5. List
+	6. Links
+	7. Anything else
+--------------------------------------------------------------------	*/
+
+
+/*	--------------------------------------------------------------------	
+	1. Meyer modified reset
+--------------------------------------------------------------------	*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, address, big, cite, code,
+del, dfn, font, img, ins, kbd, q, s, samp,
+small, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+em, strong, strike, acronym {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+* { font-size: 100.01%; }
+html { font-size: 62.5%; }
+
+/*	--------------------------------------------------------------------
+	2. Body
+--------------------------------------------------------------------	*/
+
+body { min-height: 100%; }
+
+/*	--------------------------------------------------------------------
+	3. Tables
+--------------------------------------------------------------------	*/
+ 
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+
+/*	--------------------------------------------------------------------
+	4. Quotes
+--------------------------------------------------------------------	*/
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; }
+
+/*	--------------------------------------------------------------------
+	5. List
+--------------------------------------------------------------------	*/
+
+
+ol, ul { list-style-type: none; margin: 1em 0; }
+
+/*	--------------------------------------------------------------------
+	6. Links
+--------------------------------------------------------------------	*/
+
+a, a img { text-decoration : none; }
+
+/*	--------------------------------------------------------------------
+	7. Anything else
+--------------------------------------------------------------------	*/
+
+abbr { border-bottom: 1px dotted; }
+p { margin: 1em 0 1em 0; }
+hr { border: 0; height: 1px; margin-top: -1px; }

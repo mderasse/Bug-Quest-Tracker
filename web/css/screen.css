@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------------
+
+[Master Stylesheet]
+
+Framework : BIC
+Version : 2.7.2
+Last Change : 17/02/2010
+Author : Alexandre "pocky" BALMES - http://www.pockyworld.com
+Please use for beautiful design only
+
+[Credits]
+clean.css is inspired from Meyer : http://meyerweb.com
+
+--------------------------------------------------------------------*/
+
+
+@import "bic/clean.css";
+@import "bic/typography.css";
+@import "bic/color.css";
+@import "bic/layout.css";
+@import "bic/myclass.css";
+
+
+/*--------------------------------------------------------------------
+                          Start here
+--------------------------------------------------------------------*/
