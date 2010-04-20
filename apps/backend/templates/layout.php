@@ -26,8 +26,43 @@
 		
 	<?php else: ?>
 	
-    <?php echo $sf_content ?>
-    
+	<div id="container" class="clearfix">
+  	<div id="sidebar" class="floatLeft">
+  	  <h1><a href="<?php echo url_for('@homepage', true); ?>" title="<?php echo __('Homepage'); ?>" /><img src="/images/backend/logo.png" alt="Peanut, un CMS à base de symfony" /></a></h1>
+  	  
+  	  <ul class="alignRight">   
+  	    <li><a href="#" title="#"><?php echo __('Gestion des utilisateurs'); ?></a>
+  	      <ul>
+  	        <li><a href="#" title="#"><?php echo __('Voir les utilisateurs'); ?></li></a>
+  	        <li><a href="#" title="#"><?php echo __('Ajouter un utilisateur'); ?></li></a>
+  	      </ul>
+  	    </li>
+  	      
+  	    <li><a href="#" title="#"><?php echo __('Gestion des groupes'); ?></a>
+  	      <ul>
+  	        <li><a href="#" title="#"><?php echo __('Voir les groupes'); ?></li></a>
+  	        <li><a href="#" title="#"><?php echo __('Ajouter un groupe'); ?></li></a>
+  	      </ul>
+  	    </li>
+  	    
+  	    <li><a href="#" title="#"><?php echo __('Gestion des permissions'); ?></a>
+  	      <ul>
+  	        <li><a href="#" title="#"><?php echo __('Voir les permissions'); ?></li></a>
+  	        <li><a href="#" title="#"><?php echo __('Ajouter une permission'); ?></li></a>
+  	      </ul>
+  	    </li>
+  	  </ul>
+  	</div>
+  	
+  	<div id="content">
+  	  
+  	  <div id="header">
+  	  </div>
+  	  
+      <?php echo $sf_content ?>
+    </div>
+  </div>
+  
   <?php endif; ?>
   </body>
 </html>

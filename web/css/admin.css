@@ -104,3 +104,63 @@ body#login h2 {
 /*--------------------------------------------------------------------
    3. Content
 --------------------------------------------------------------------*/
+
+#sidebar {
+  width: 260px;
+}
+
+#sidebar h1 {
+  height: 100px;
+  background-color: #1d1d1d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#sidebar h1 img {
+  margin-top: 30px;
+}
+
+#sidebar a {
+  border-bottom: 0;
+  color: #959494;
+}
+
+#sidebar a:hover, #sidebar a.current {
+  color: #1d1d1d;
+}
+
+#sidebar ul {
+  margin: 10px 10px 10px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#sidebar ul li {
+  list-style-type: none;
+  border-bottom: 1px solid #959494;
+  margin-top: 10px;
+  font-weight: bolder;
+  padding-right: 10px;
+}
+
+#sidebar ul li ul {
+  font-size: 14px;
+  text-transform: none;
+}
+
+#sidebar ul li ul li {
+  border-bottom: 0;
+  margin-top: 0;
+  font-weight: normal;
+  padding-right: 0;
+}
+
+#sidebar ul li ul li a {
+  width: auto;
+  display: inline;
+}
+
+#content {
+  min-width: 700px;
+  margin-left: 260px;
+}
