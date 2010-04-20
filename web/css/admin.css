@@ -25,7 +25,9 @@ clean.css is inspired from Meyer : http://meyerweb.com
   1. General
 --------------------------------------------------------------------*/
 
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 /*--------------------------------------------------------------------
    2. Login
@@ -38,6 +40,18 @@ body#login {
 
 body#login a {
   color: #ebebeb;
+}
+
+body#login h1 a:hover {
+  border-bottom: 0;
+}
+
+body#login h2 {
+  font-weight: bolder;
+  text-indent: 0px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
 #containerIn {
@@ -67,10 +81,10 @@ body#login a {
 }
 
 #login #form .formSubmit {
-  margin-right: 25px;
+  margin: 30px 25px 30px 0;
 }
 
-#login #form .formSubmit .button {
+#login #form .button {
   background: url('/images/login/button-overlay.png') #000 repeat-x;
   display: inline-block;
   padding: 5px 20px;

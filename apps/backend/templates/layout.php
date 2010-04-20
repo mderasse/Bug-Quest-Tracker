@@ -15,7 +15,7 @@
 	  <div class="container_12 alignCenter center">
 		
 		  <div id="containerIn" class="prefix_2 alignLeft clearfix">
-  		  <h1 class="grid_4 padding alignCenter"><img src="/images/login/logo.png" alt="Peanut, un CMS à base de symfony" /></h1>
+  		  <h1 class="grid_4 padding alignCenter"><a href="<?php echo url_for('@homepage', true); ?>" title="<?php echo __('Homepage'); ?>" /><img src="/images/login/logo.png" alt="Peanut, un CMS à base de symfony" /></a></h1>
   		  
   		  <div id="form" class="padding grid_4">
   				<?php echo $sf_content ?>
