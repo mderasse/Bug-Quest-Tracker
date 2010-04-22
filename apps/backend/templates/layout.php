@@ -57,9 +57,18 @@
   	<div id="content">
   	  
   	  <div id="header">
+  	    <p class="floatLeft"><?php echo __('Bonjour').' '.$sf_user->getGuardUser(). __('!') ?></p>
+  	    
+  	    <ul class="listInline floatRight">
+  	      <li><a href="<?php echo url_for('@homepage').'guard/users/'.$sf_user->getGuardUser()->getId().'/edit'; ?>" title="<?php echo __('Edit your profile') ?>" class="picto user"><?php echo __('Edit your profile') ?></a></li>
+  	      <li><a href="<?php echo url_for('@sf_guard_signout') ?>" title="<?php echo __('Signout') ?>" class="picto exit"><?php echo __('Signout') ?></a></li>
+  	    </ul>
+  	    
   	  </div>
   	  
-      <?php echo $sf_content ?>
+  	  <div id="sfContent">
+        <?php echo $sf_content ?>
+      </div>
     </div>
   </div>
   

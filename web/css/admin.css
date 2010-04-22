@@ -164,3 +164,96 @@ body#login h2 {
   min-width: 700px;
   margin-left: 260px;
 }
+
+#header {
+  height: 50px;
+  background-color: #1d1d1d;
+  color: #e1e1e1;
+}
+
+#header a {
+  color: #e1e1e1;
+}
+
+#header p {
+  margin: 0;
+  padding: 10px;
+}
+
+#header ul {
+  margin: 0;
+  margin-top: 5px;
+}
+
+#header ul a {
+  display: block;
+  height: 41px;
+  width: 47px;
+  float: left;
+  border-bottom: 0;
+}
+
+#header ul a.user {
+  background: url('/images/backend/a-profil.jpg') no-repeat;
+  text-indent: -1984px;
+}
+
+#header ul a.user:hover {
+  background: url('/images/backend/a-profil.jpg') no-repeat 0 -41px;
+}
+
+#header ul a.exit {
+  background: url('/images/backend/a-exit.jpg') no-repeat;
+  text-indent: -1984px;
+}
+
+#header ul a.exit:hover {
+  background: url('/images/backend/a-exit.jpg') no-repeat 0 -41px;
+}
+
+#sfContent {
+  padding: 10px;
+}
+
+#sfContent #sf_admin_container a {
+  border-bottom: 0;
+}
+
+#sfContent #sf_admin_container input[type=text] {
+width: 400px;
+}
+
+#sfContent #sf_admin_container .sf_admin_filter input[type=text] {
+  width: 100px;
+}
+
+#sfContent #sf_admin_container input[type=submit] {
+  background: url('/images/login/button-overlay.png') #fbfbfb repeat-x;
+  display: inline-block;
+  padding: 5px;
+  color: #434242;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#sfContent #sf_admin_container tr {
+  width: 100%;
+}
+
+#sfContent #sf_admin_container table {
+  border-collapse: collapse;
+}
+
+#sfContent input.sf_admin_batch_checkbox, #sfContent input#sf_admin_list_batch_checkbox {
+  padding: 10px; margin-top: 6px;
+}
+
+#sfContent #sf_admin_container h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
