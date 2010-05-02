@@ -1,5 +1,16 @@
 $(document).ready(function(){
     
+  //Form login/request/register
+    $("#login input#signin_username").example("Username or E-Mail");
+    $("#login input#signin_password").example("Password");
+  
+    $("#login input#sf_guard_user_first_name").example("Firstname");
+    $("#login input#sf_guard_user_last_name").example("Lastname");
+    $("#login input#sf_guard_user_email_address").example("Email address");
+    $("#login input#sf_guard_user_username").example("Username");
+    $("#login input#sf_guard_user_password").example("Password");
+    $("#login input#sf_guard_user_password_again").example("Password again");
+  
 	//Sidebar Accordion Menu:
 		
 		$("#sidebar li ul").hide(); //Hide all sub menus

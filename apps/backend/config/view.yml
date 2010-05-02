@@ -14,7 +14,7 @@ default:
 
   stylesheets:    [admin.css]
 
-  javascripts:    [jquery.js, peanut.configuration.js]
+  javascripts:    [jquery.js, jquery.example.min.js, peanut.configuration.js]
 
   has_layout:     true
   layout:         layout

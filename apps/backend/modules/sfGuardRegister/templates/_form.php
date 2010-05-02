@@ -5,42 +5,36 @@
   <p>
   	<?php echo $form['first_name']->render(array(
   	  'class'  => 'text-input',
-  	  'value'  => __('First Name'),
   	)); ?>
   </p>
   
   <p>
   	<?php echo $form['last_name']->render(array(
   	  'class'  => 'text-input',
-  	  'value'  => __('Last name'),
   	)); ?>
   </p>
   
   <p>
   	<?php echo $form['email_address']->render(array(
   	  'class'  => 'text-input',
-  	  'value'  => __('Email address'),
   	)); ?>
   </p>
   
   <p>
   	<?php echo $form['username']->render(array(
   	  'class'  => 'text-input',
-  	  'value'  => __('Username'),
   	)); ?>
   </p>
   
   <p>
   	<?php echo $form['password']->render(array(
   	  'class'  => 'text-input',
-  	  'value'  => __('Password'),
   	)); ?>
   </p>
   
   <p>
   	<?php echo $form['password_again']->render(array(
   	  'class'  => 'text-input',
-  	  'value'  => __('Password again'),
   	)); ?>
   </p>
   

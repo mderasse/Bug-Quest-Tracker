@@ -13,14 +13,12 @@
 	<p>
 		<?php echo $form['username']->render(array(
 		  'class'  => 'text-input',
-		  'value'  => __('Username or E-Mail'),
 		)); ?>
 	</p>
 	
 	<p>
 		<?php echo $form['password']->render(array(
 		  'class'  => 'text-input',
-		  'value'  => __('Password'),
 		)); ?>
 	</p>
 	
