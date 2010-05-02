@@ -26,12 +26,14 @@
   	)); ?>
   </p>
   
+  <input id="password-clear" class="text-input" type="text" value="Password" autocomplete="off" />
   <p>
   	<?php echo $form['password']->render(array(
   	  'class'  => 'text-input',
   	)); ?>
   </p>
   
+  <input id="password-again-clear" class="text-input" type="text" value="Password-again" autocomplete="off" />
   <p>
   	<?php echo $form['password_again']->render(array(
   	  'class'  => 'text-input',

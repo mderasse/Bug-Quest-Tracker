@@ -16,6 +16,7 @@
 		)); ?>
 	</p>
 	
+	<input id="password-clear" class="text-input" type="text" value="Password" autocomplete="off" />
 	<p>
 		<?php echo $form['password']->render(array(
 		  'class'  => 'text-input',

@@ -8,8 +8,51 @@ $(document).ready(function(){
     $("#login input#sf_guard_user_last_name").example("Lastname");
     $("#login input#sf_guard_user_email_address").example("Email address");
     $("#login input#sf_guard_user_username").example("Username");
-    $("#login input#sf_guard_user_password").example("Password");
-    $("#login input#sf_guard_user_password_again").example("Password again");
+    
+    $('#login input#password-clear').show();
+    $('#login input#sf_guard_user_password').hide();
+    
+    $('#login input#password-clear').focus(function() {
+        $('#login input#password-clear').hide();
+        $('#login input#sf_guard_user_password').show();
+        $('#login input#sf_guard_user_password').focus();
+    });
+    $('#login input#sf_guard_user_password').blur(function() {
+        if($('#login input#sf_guard_user_password').val() == '') {
+            $('#login input#password-clear').show();
+            $('#login input#sf_guard_user_password').hide();
+        }
+    });
+    
+    $('#login input#password-again-clear').show();
+    $('#login input#sf_guard_user_password_again').hide();
+    
+    $('#login input#password-again-clear').focus(function() {
+        $('#login input#password-again-clear').hide();
+        $('#login input#sf_guard_user_password_again').show();
+        $('#login input#sf_guard_user_password_again').focus();
+    });
+    $('#login input#sf_guard_user_password_again').blur(function() {
+        if($('#login input#sf_guard_user_password_again').val() == '') {
+            $('#login input#password-again-clear').show();
+            $('#login input#sf_guard_user_password_again').hide();
+        }
+    });
+    
+    $('#login input#password-clear').show();
+    $('#login input#signin_password').hide();
+    
+    $('#login input#password-clear').focus(function() {
+        $('#login input#password-clear').hide();
+        $('#login input#signin_password').show();
+        $('#login input#signin_password').focus();
+    });
+    $('#login input#signin_password').blur(function() {
+        if($('#login input#signin_password').val() == '') {
+            $('#login input#password-clear').show();
+            $('#login input#signin_password').hide();
+        }
+    });
   
 	//Sidebar Accordion Menu:
 		
