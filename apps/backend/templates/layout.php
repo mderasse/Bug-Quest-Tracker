@@ -31,21 +31,21 @@
   	  <h1><a href="<?php echo url_for('@homepage', true); ?>" title="<?php echo __('Homepage'); ?>" /><img src="/images/backend/logo.png" alt="Peanut, un CMS à base de symfony" /></a></h1>
   	  
   	  <ul class="alignRight">   
-  	    <li><a href="#" class="nav-top-item" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Gestion des utilisateurs'); ?></a>
+  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardUser'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Gestion des utilisateurs'); ?></a>
   	      <ul>
   	        <li><a href="<?php echo url_for('@sf_guard_user'); ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Voir les utilisateurs'); ?></li></a>
   	        <li><a href="<?php echo url_for('@sf_guard_user_new') ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Ajouter un utilisateur'); ?></li></a>
   	      </ul>
   	    </li>
   	      
-  	    <li><a href="#" class="nav-top-item" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Gestion des groupes'); ?></a>
+  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardGroup'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Gestion des groupes'); ?></a>
   	      <ul>
   	        <li><a href="<?php echo url_for('@sf_guard_group'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Voir les groupes'); ?></li></a>
   	        <li><a href="<?php echo url_for('@sf_guard_group_new'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Ajouter un groupe'); ?></li></a>
   	      </ul>
   	    </li>
   	    
-  	    <li><a href="#" class="nav-top-item" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Gestion des permissions'); ?></a>
+  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardPermission'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Gestion des permissions'); ?></a>
   	      <ul>
   	        <li><a href="<?php echo url_for('@sf_guard_permission'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Voir les permissions'); ?></li></a>
   	        <li><a href="<?php echo url_for('@sf_guard_permission_new'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Ajouter une permission'); ?></li></a>
