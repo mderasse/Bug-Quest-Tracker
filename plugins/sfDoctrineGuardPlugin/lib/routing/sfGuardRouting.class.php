@@ -113,6 +113,16 @@ class sfGuardRouting
    */
   static public function addRouteForRegister(sfEvent $event)
   {
-    $event->getSubject()->prependRoute('sf_guard_register', new sfRoute('/guard/register', array('module' => 'sfGuardRegister', 'action' => 'index'))); 
+    $r = $event->getSubject();
+    $r->prependRoute('sf_guard_register', new sfRoute('/guard/register', array('module' => 'sfGuardRegister', 'action' => 'index')));
+    $r->prependRoute('sf_guard_register_confirmation', new sfDoctrineRoute('/guard/register/:mail/:unique_key', array(
+      'module' => 'sfGuardRegister',
+      'action' => 'confirmation'
+    ), array(
+      'sf_method' => array('get', 'post')
+    ), array(
+      'model' => 'sfGuardForgotRegister',
+      'type' => 'object'
+    )));
   }
 }
