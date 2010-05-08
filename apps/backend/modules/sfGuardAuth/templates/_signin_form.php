@@ -5,7 +5,9 @@
 	<?php if($form['username']->renderError()) { ?>
 	<div class="notification information png_bg">
 		<div>
-			<?php echo $form['username']->renderError(); ?>
+			<?php echo $form['username']->renderError(); ?>			
+			<?php echo $sf_user->getFlash('error') ?>
+			<?php echo $sf_user->getFlash('notice') ?>
 		</div>
 	</div>
 	<?php } ?>

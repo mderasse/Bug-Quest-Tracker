@@ -1,84 +1,32 @@
 sfGuardGroup:
   sfGuardGroup_1:
-    name: Webmaster
-    description: 'Le groupe des webmasters'
-    created_at: '2010-02-16 00:40:30'
-    updated_at: '2010-02-16 00:40:30'
-  sfGuardGroup_2:
-    name: Editeur
-    description: 'Le groupe des ?diteurs'
-    created_at: '2010-02-16 00:40:30'
-    updated_at: '2010-02-16 00:40:30'
+    name: admin
+    description: 'Le groupe des administrateurs'
+    created_at: '2010-05-03 00:07:39'
+    updated_at: '2010-05-03 00:07:39'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_1
+    created_at: '2010-05-03 00:07:39'
+    updated_at: '2010-05-03 00:07:39'
 sfGuardPermission:
   sfGuardPermission_1:
-    name: webmaster
-    description: ''
-    created_at: '2010-02-16 00:40:31'
-    updated_at: '2010-02-16 00:40:31'
-  sfGuardPermission_2:
-    name: editeur
-    description: ''
-    created_at: '2010-02-16 00:40:31'
-    updated_at: '2010-02-16 00:40:31'
+    name: backend
+    description: 'Peut accéder au backoffice'
+    created_at: '2010-05-03 00:07:01'
+    updated_at: '2010-05-03 00:07:01'
 sfGuardUser:
   sfGuardUser_1:
     first_name: admin
     last_name: admin
-    email_address: admin@symfony.local
+    email_address: admin@peanut.local
     username: admin
     algorithm: sha1
     salt: b92588255a85294b21b641a5b83cdce4
     password: admin
     is_active: true
     is_super_admin: true
-    last_login: '2010-04-07 20:52:48'
+    last_login: '2010-05-08 01:08:59'
     created_at: '2010-02-16 00:40:30'
-    updated_at: '2010-04-07 20:52:48'
-  sfGuardUser_2:
-    first_name: editeur
-    last_name: editeur
-    email_address: editeur@symfony.local
-    username: editeur
-    algorithm: sha1
-    salt: 90340f555c55e3742ab98f358ee58020
-    password: editeur
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2010-02-16 00:40:30'
-    updated_at: '2010-02-16 00:40:30'
-  sfGuardUser_3:
-    first_name: webmaster
-    last_name: webmaster
-    email_address: webmaster@symfony.local
-    username: webmaster
-    algorithm: sha1
-    salt: 137dca0e5ece495b8fdc99ae75b6a821
-    password: webmaster
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2010-02-16 00:40:30'
-    updated_at: '2010-02-16 00:40:30'
-sfGuardUserGroup:
-  sfGuardUserGroup_2_2:
-    User: sfGuardUser_2
-    Group: sfGuardGroup_2
-    created_at: '2010-02-16 00:40:30'
-    updated_at: '2010-02-16 00:40:30'
-  sfGuardUserGroup_3_1:
-    User: sfGuardUser_3
-    Group: sfGuardGroup_1
-    created_at: '2010-02-16 00:40:30'
-    updated_at: '2010-02-16 00:40:30'
-sfGuardUserPermission:
-  sfGuardUserPermission_2_2:
-    User: sfGuardUser_2
-    Permission: sfGuardPermission_2
-    created_at: '2010-02-16 00:40:31'
-    updated_at: '2010-02-16 00:40:31'
-  sfGuardUserPermission_3_1:
-    User: sfGuardUser_3
-    Permission: sfGuardPermission_1
-    created_at: '2010-02-16 00:40:31'
-    updated_at: '2010-02-16 00:40:31'
+    updated_at: '2010-05-08 01:08:59'
