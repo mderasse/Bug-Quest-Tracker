@@ -2,15 +2,29 @@
 
 <form action="<?php echo url_for('@sf_guard_signin') ?>" method="post">
 	
-	<?php if($form['username']->renderError()) { ?>
-	<div class="notification information png_bg">
+	<?php if($form['username']->renderError()): ?>
+	<div class="notification error">
 		<div>
 			<?php echo $form['username']->renderError(); ?>			
-			<?php echo $sf_user->getFlash('error') ?>
-			<?php echo $sf_user->getFlash('notice') ?>
 		</div>
 	</div>
-	<?php } ?>
+	<?php endif; ?>
+	
+	<?php if ($sf_user->hasFlash('notice')): ?>
+	  <div class="notification notice">
+	  	<div>
+	  	  <?php echo $sf_user->getFlash('notice') ?>
+	  	</div>
+	  </div>
+	<?php endif ?>
+	
+	<?php if ($sf_user->hasFlash('error')): ?>
+	  <div class="notification error">
+	  	<div>
+	  	  <?php echo $sf_user->getFlash('error') ?>
+	  	</div>
+	  </div>
+	<?php endif ?>
 	
 	<p>
 		<?php echo $form['username']->render(array(
