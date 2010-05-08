@@ -1,4 +1,4 @@
-<?php use_helper('I18N') ?>
+<?php use_helper('I18n') ?>
 
 <form action="<?php echo url_for('@sf_guard_signin') ?>" method="post">
 	

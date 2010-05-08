@@ -28,6 +28,22 @@
         <source>You don't have the required permission to access this page.</source>
         <target>Vous n'avez pas les permissions nécessaires pour accéder à cette page.</target>
       </trans-unit>
+      <trans-unit>
+        <source>Want to register?</source>
+        <target>Vous inscrire ?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Request</source>
+        <target>Demander</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Do not worry, we can help you get back in to your account safely!</source>
+        <target>Ne vous inquétez pas, nous pouvons vous aider !</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Fill out the form below to request an e-mail with information on how to reset your password.</source>
+        <target>Compléter le formulaire ci-dessous pour recevoir un email contenant les informations pour réinitiliser votre mot de passe.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

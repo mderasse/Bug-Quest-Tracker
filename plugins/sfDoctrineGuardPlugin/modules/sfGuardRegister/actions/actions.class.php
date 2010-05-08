@@ -75,27 +75,27 @@ class sfGuardRegisterActions extends BasesfGuardRegisterActions
         {
           $user->setIsActive(true);
     			$this->getUser()->signIn($user);
-    			$this->getUser()->setFlash('notice', 'Votre compte a bien été activé');
+    			$this->getUser()->setFlash('notice', 'Your account is now validated!');
           $this->redirect('@homepage');        
         }
         else
         {
           $user = Doctrine::getTable('sfGuardUser')->deleteUser($user->getId());
-          $this->getUser()->setFlash('error', 'Le délai d\'expiration de votre compte à été dépassé');
+          $this->getUser()->setFlash('error', 'Sorry but the time of activation was exceeded, you must recreate your account');
           $this->redirect('sf_guard_register');   
         }
         
       }   
       else      
       {
-        $this->getUser()->setFlash('error', 'Votre lien de confirmation n\'est pas valide');
+        $this->getUser()->setFlash('error', 'Your activation code is not valid');
         $this->redirect('@homepage');  
       }
     
     }
     else
     {
-     $this->getUser()->setFlash('error', 'Votre compte est déjà activé');
+     $this->getUser()->setFlash('error', 'Your account is already activated');
      $this->redirect('@homepage');  
     }
   }
