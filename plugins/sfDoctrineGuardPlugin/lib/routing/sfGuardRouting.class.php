@@ -119,9 +119,9 @@ class sfGuardRouting
       'module' => 'sfGuardRegister',
       'action' => 'confirmation'
     ), array(
-      'sf_method' => array('get', 'post')
+      'sf_method' => 'get'
     ), array(
-      'model' => 'sfGuardRegister',
+      'model' => 'sfGuardUser',
       'type' => 'object'
     )));
   }
