@@ -6,11 +6,11 @@
     <body>
       <trans-unit>
         <source>Username</source>
-        <target>Nom d'utilisateur</target>
+        <target>Nom d'utilisateur </target>
       </trans-unit>
       <trans-unit>
         <source>Password</source>
-        <target>Mot de passe</target>
+        <target>Mot de passe </target>
       </trans-unit>
       <trans-unit>
         <source>Remember me</source>
@@ -116,7 +116,14 @@
         <source>Check your e-mail! You should receive something shortly!</source>
         <target>Un email vient de vous être envoyé !</target>
       </trans-unit>
+      <trans-unit>
+        <source>Password updated successfully!</source>
+        <target>Votre mot de passe a été mis à jour !</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Below you will your username and new password:</source>
+        <target>Voici votre nom d'utilisateur et votre nouveau mot de passe :</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
-

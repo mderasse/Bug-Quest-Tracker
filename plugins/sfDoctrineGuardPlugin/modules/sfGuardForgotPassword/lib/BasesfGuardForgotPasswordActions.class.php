@@ -29,11 +29,12 @@ abstract class BasesfGuardForgotPasswordActions extends sfActions
       {
         $this->user = $this->form->user;
         $this->_deleteOldUserForgotPasswordRecords();
-
+        
+        $time = strtotime('+1 day');
         $forgotPassword = new sfGuardForgotPassword();
         $forgotPassword->user_id = $this->form->user->id;
         $forgotPassword->unique_key = md5(rand() + time());
-        $forgotPassword->expires_at = new Doctrine_Expression('NOW()');
+        $forgotPassword->expires_at = date('Y-m-d H:i:s', $time);
         $forgotPassword->save();
 
         $message = Swift_Message::newInstance()
