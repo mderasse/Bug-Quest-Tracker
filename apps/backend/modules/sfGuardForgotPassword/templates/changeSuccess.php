@@ -1,5 +1,5 @@
 <?php use_helper('I18N') ?>
-<h2><?php echo __('Change your password') ?></h2>
+<h2><?php echo __('Forgot your password?', null, 'sf_guard') ?></h2>
 
 <p style="margin-top: 20px;">
   <?php echo __('Hello %name%', array('%name%' => $user->getName()), 'sf_guard') ?><br />

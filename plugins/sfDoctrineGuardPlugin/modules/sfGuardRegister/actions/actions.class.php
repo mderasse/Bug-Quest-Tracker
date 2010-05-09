@@ -75,7 +75,7 @@ class sfGuardRegisterActions extends BasesfGuardRegisterActions
         {
           $user->setIsActive(true);
     			$this->getUser()->signIn($user);
-    			$this->getUser()->setFlash('notice', 'Your account is now validated!');
+    			$this->getUser()->setFlash('notice', 'Your account is now confirmed!');
           $this->redirect('@homepage');        
         }
         else
@@ -95,8 +95,8 @@ class sfGuardRegisterActions extends BasesfGuardRegisterActions
     }
     else
     {
-     $this->getUser()->setFlash('error', 'Your account is already activated');
-     $this->redirect('@homepage');  
+      $this->getUser()->setFlash('error', 'Your account is already activated');
+      $this->redirect('@homepage');  
     }
   }
   

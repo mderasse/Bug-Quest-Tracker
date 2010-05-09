@@ -25,6 +25,18 @@
         <target>Mot de passe oublié ?</target>
       </trans-unit>
       <trans-unit>
+        <source>Hello %name%</source>
+        <target>Bonjour %name%</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Enter your new password in the form below.</source>
+        <target>Changer votre mot de passe ci-dessous</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Change</source>
+        <target>Changer</target>
+      </trans-unit>
+      <trans-unit>
         <source>You don't have the required permission to access this page.</source>
         <target>Vous n'avez pas les permissions nécessaires pour accéder à cette page.</target>
       </trans-unit>
@@ -38,7 +50,7 @@
       </trans-unit>
       <trans-unit>
         <source>Do not worry, we can help you get back in to your account safely!</source>
-        <target>Ne vous inquétez pas, nous pouvons vous aider !</target>
+        <target>Ne vous inquiétez pas, nous pouvons vous aider !</target>
       </trans-unit>
       <trans-unit>
         <source>Fill out the form below to request an e-mail with information on how to reset your password.</source>
@@ -47,6 +59,30 @@
       <trans-unit>
         <source>Register</source>
         <target>S'inscrire</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Your account is already activated</source>
+        <target>Votre compte est déjà activé</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You are already registered and signed in!</source>
+        <target>Vous êtes déjà enregistré et connecté</target>
+      </trans-unit>
+      <trans-unit>
+        <source>A confirmation of creation has just been sent on your mailbox</source>
+        <target>Une confirmation de création vient d'être envoyé sur votre boite mail</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Your account is now confirmed!</source>
+        <target>Votre compte est confirmé !</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Sorry but the time of activation was exceeded, you must recreate your account</source>
+        <target>Désolé mais le délai d'activation de votre compte à été dépassé, vous devez recréer votre compte</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Your activation code is not valid</source>
+        <target>Votre code d'activation n'est pas valide</target>
       </trans-unit>
     </body>
   </file>
