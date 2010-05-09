@@ -120,10 +120,6 @@
         <source>Password updated successfully!</source>
         <target>Votre mot de passe a été mis à jour !</target>
       </trans-unit>
-      <trans-unit>
-        <source>Below you will your username and new password:</source>
-        <target>Voici votre nom d'utilisateur et votre nouveau mot de passe :</target>
-      </trans-unit>
     </body>
   </file>
 </xliff>

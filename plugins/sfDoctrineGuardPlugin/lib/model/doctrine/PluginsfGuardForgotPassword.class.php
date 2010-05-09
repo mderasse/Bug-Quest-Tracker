@@ -12,5 +12,4 @@
  */
 abstract class PluginsfGuardForgotPassword extends BasesfGuardForgotPassword
 {
-
 }
