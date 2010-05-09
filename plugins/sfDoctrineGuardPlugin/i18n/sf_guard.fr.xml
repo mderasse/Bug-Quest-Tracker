@@ -84,6 +84,39 @@
         <source>Your activation code is not valid</source>
         <target>Votre code d'activation n'est pas valide</target>
       </trans-unit>
+      <trans-unit>
+        <source>Hi %first_name%</source>
+        <target>Bonjour %first_name%</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Below you will your username and new password:</source>
+        <target>Voici votre identifiant et votre mot nouveau mot de passe :</target>
+      </trans-unit>
+      <trans-unit>
+        <source>This e-mail is being sent because you requested information on how to reset your password.</source>
+        <target>Cet email vous est envoyé car vous avez effectué une demande de modification de votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You can change your password by clicking the below link which is only valid for 24 hours:</source>
+        <target>Vous pouvez changer votre mot de passe en cliquant sur le lien ci-dessous d'une validité de 24 heures :</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Click to change password</source>
+        <target>Changer votre mot de passe</target>
+      </trans-unit>
+      <trans-unit>
+        <source>This e-mail is being sent because you just registered on our site.</source>
+        <target>Cet email vous est envoyé car vous venez de vous enregistrer sur notre site.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Click to confirm your account</source>
+        <target>Confirmer votre compte</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Check your e-mail! You should receive something shortly!</source>
+        <target>Un email vient de vous être envoyé !</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
+
