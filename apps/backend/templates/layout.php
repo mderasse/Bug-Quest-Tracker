@@ -31,24 +31,24 @@
   	  <h1><a href="<?php echo url_for('@homepage', true); ?>" title="<?php echo __('Homepage'); ?>" /><img src="/images/backend/logo.png" alt="Peanut, un CMS à base de symfony" /></a></h1>
   	  
   	  <ul class="alignRight">   
-  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardUser'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Gestion des utilisateurs'); ?></a>
+  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardUser'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Manage users'); ?></a>
   	      <ul>
-  	        <li><a href="<?php echo url_for('@sf_guard_user'); ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Voir les utilisateurs'); ?></li></a>
-  	        <li><a href="<?php echo url_for('@sf_guard_user_new') ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Ajouter un utilisateur'); ?></li></a>
+  	        <li><a href="<?php echo url_for('@sf_guard_user'); ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Show users'); ?></li></a>
+  	        <li><a href="<?php echo url_for('@sf_guard_user_new') ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Add user'); ?></li></a>
   	      </ul>
   	    </li>
   	      
-  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardGroup'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Gestion des groupes'); ?></a>
+  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardGroup'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Manage groups'); ?></a>
   	      <ul>
-  	        <li><a href="<?php echo url_for('@sf_guard_group'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Voir les groupes'); ?></li></a>
-  	        <li><a href="<?php echo url_for('@sf_guard_group_new'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Ajouter un groupe'); ?></li></a>
+  	        <li><a href="<?php echo url_for('@sf_guard_group'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Show groups'); ?></li></a>
+  	        <li><a href="<?php echo url_for('@sf_guard_group_new'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Add group'); ?></li></a>
   	      </ul>
   	    </li>
   	    
-  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardPermission'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Gestion des permissions'); ?></a>
+  	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardPermission'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Manage permissions'); ?></a>
   	      <ul>
-  	        <li><a href="<?php echo url_for('@sf_guard_permission'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Voir les permissions'); ?></li></a>
-  	        <li><a href="<?php echo url_for('@sf_guard_permission_new'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Ajouter une permission'); ?></li></a>
+  	        <li><a href="<?php echo url_for('@sf_guard_permission'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Show permissions'); ?></li></a>
+  	        <li><a href="<?php echo url_for('@sf_guard_permission_new'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Add permission'); ?></li></a>
   	      </ul>
   	    </li>
   	  </ul>
@@ -57,7 +57,7 @@
   	<div id="content">
   	  
   	  <div id="header">
-  	    <p class="floatLeft"><?php echo __('Bonjour').' '.$sf_user->getGuardUser(). __('!') ?></p>
+  	    <p class="floatLeft"><?php echo __('Hi').' '.$sf_user->getGuardUser(). __('!') ?></p>
   	    
   	    <ul class="listInline floatRight">
   	      <li><a href="<?php echo url_for('@homepage').'guard/users/'.$sf_user->getGuardUser()->getId().'/edit'; ?>" title="<?php echo __('Edit your profile') ?>" class="picto user"><?php echo __('Edit your profile') ?></a></li>

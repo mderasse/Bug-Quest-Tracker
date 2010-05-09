@@ -40,7 +40,7 @@
 	</p>
 	
 	<p class="formSubmit alignRight">
-	  <?php echo $form['remember']; ?><?php echo __('Remember me'); ?><br />
+	  <?php echo $form['remember']; ?><?php echo __('Remember me', null, 'sf_guard'); ?><br />
 		<input type="submit" class="button" value="<?php echo __('Signin', null, 'sf_guard') ?>" />
 	</p>
 

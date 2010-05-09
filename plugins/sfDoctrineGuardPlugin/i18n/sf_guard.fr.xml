@@ -13,8 +13,8 @@
         <target>Mot de passe</target>
       </trans-unit>
       <trans-unit>
-        <source>Remember</source>
-        <target>Se rappeler</target>
+        <source>Remember me</source>
+        <target>Rester actif</target>
       </trans-unit>
       <trans-unit>
         <source>Signin</source>
@@ -43,6 +43,10 @@
       <trans-unit>
         <source>Fill out the form below to request an e-mail with information on how to reset your password.</source>
         <target>Compléter le formulaire ci-dessous pour recevoir un email contenant les informations pour réinitiliser votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Register</source>
+        <target>S'inscrire</target>
       </trans-unit>
     </body>
   </file>
