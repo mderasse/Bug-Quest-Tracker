@@ -58,7 +58,7 @@ class sfGuardRegisterActions extends BasesfGuardRegisterActions
     
     $user = Doctrine::getTable('sfGuardUser')->retrieveByUsername($user->getUsername(), $isActive = false);
     
-    if($user)
+    if($user && $request->isMethod('get'))
     {
     
       $check = sha1($user->getUsername().$csrf.$user->getEmailAddress());
