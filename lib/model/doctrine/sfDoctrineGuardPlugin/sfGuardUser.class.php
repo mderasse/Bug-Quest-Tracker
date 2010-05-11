@@ -12,4 +12,20 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
+  
+  public function __toString()
+  {
+  	return self::getGiven() . ' ' . self::getFamily();
+  }
+  
+  public function getGiven()
+  {
+  	return ucfirst(strtolower($this->_get('first_name')));
+  }
+  
+  public function getFamily()
+  {
+  	return strtoupper($this->_get('last_name'));
+  }
+
 }
