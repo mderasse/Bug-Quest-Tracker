@@ -1,0 +1,17 @@
+PeanutPage:
+ actAs:
+     Sluggable:
+      fields:            [title]
+     Timestampable:      ~
+ columns:
+     title:              { type: string(255), notnull: true }
+     content:            { type: clob, notnull: true }
+     excerpt:            { type: clob }
+     author:             { type: integer, notnull: true }
+     status:             { type: string, notnull: true, values: [draft, publish], default: draft }
+     type:               { type: string(255), notnull: true, values: [homepage, singlepage], default: singlepage }
+ relations:
+     sfGuardUser:
+      local:             author
+      foreign:           id
+      foreignAlias:      PageAuthor
