@@ -223,8 +223,8 @@ body#login h2 {
   border-bottom: 0;
 }
 
-#sfContent #sf_admin_container input[type=text] {
-width: 400px;
+#sfContent #sf_admin_container input[type=text], #sfContent #sf_admin_container textarea {
+  width: 100%;
 }
 
 #sfContent #sf_admin_container .sf_admin_filter input[type=text] {
@@ -240,6 +240,7 @@ width: 400px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 #sfContent #sf_admin_container tr {
@@ -260,4 +261,8 @@ width: 400px;
   font-size: 16px;
   letter-spacing: -1px;
   text-transform: uppercase;
+}
+
+#sfContent input[type="text"] {
+  width: 600px;
 }

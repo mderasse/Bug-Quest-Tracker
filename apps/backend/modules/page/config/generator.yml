@@ -12,9 +12,16 @@ generator:
     actions_base_class:    sfActions
 
     config:
-      actions: ~
+      actions:
       fields:  ~
-      list:    ~
+      list:
+       object_actions:
+         promote:
+           action: promote
+         demote:
+           action: demote
+         _edit:    ~
+         _delete:  ~
       filter:  ~
       form:    ~
       edit:    ~

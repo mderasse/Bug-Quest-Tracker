@@ -13,6 +13,7 @@ class ProjectConfiguration extends sfProjectConfiguration
       'sfDoctrineGuardPlugin',
       'sfTaskExtraPlugin',
       'csDoctrineActAsSortablePlugin',
+      'sfCKEditorPlugin',
     ));
   }
 }

@@ -13,4 +13,20 @@ require_once dirname(__FILE__).'/../lib/pageGeneratorHelper.class.php';
  */
 class pageActions extends autoPageActions
 {
+  public function executePromote()
+  {
+    $object=Doctrine::getTable('peanutPage')->findOneById($this->getRequestParameter('id'));
+   
+   
+    $object->promote();
+    $this->redirect("@peanut_page");
+  }
+   
+  public function executeDemote()
+  {
+    $object=Doctrine::getTable('peanutPage')->findOneById($this->getRequestParameter('id'));
+   
+    $object->demote();
+    $this->redirect("@peanut_page");
+  }
 }

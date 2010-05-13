@@ -12,5 +12,10 @@ class peanutPageForm extends BasepeanutPageForm
 {
   public function configure()
   {
+    $this->widgetSchema['content'] = new sfWidgetFormCKEditor(array('jsoptions'=>array(
+    	'customConfig'				=> '/js/ckeditor/config.js',
+    	'filebrowserBrowseUrl'		=> '/js/filemanager/index.html',
+    	'filebrowserImageBrowseUrl'	=> '/js/filemanager/index.html?type=Images',
+    )));
   }
 }
