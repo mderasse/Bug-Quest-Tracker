@@ -1,14 +1,14 @@
 <?php
 
 /**
- * PeanutPage filter form base class.
+ * peanutPage filter form base class.
  *
  * @package    peanut
  * @subpackage filter
  * @author     Alexandre pocky BALMES
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
  */
-abstract class BasePeanutPageFormFilter extends BaseFormFilterDoctrine
+abstract class BasepeanutPageFormFilter extends BaseFormFilterDoctrine
 {
   public function setup()
   {
@@ -47,7 +47,7 @@ abstract class BasePeanutPageFormFilter extends BaseFormFilterDoctrine
 
   public function getModelName()
   {
-    return 'PeanutPage';
+    return 'peanutPage';
   }
 
   public function getFields()

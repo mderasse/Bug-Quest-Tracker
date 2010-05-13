@@ -1,16 +1,16 @@
 <?php
 
 /**
- * PeanutPage form base class.
+ * peanutPage form base class.
  *
- * @method PeanutPage getObject() Returns the current form's model object
+ * @method peanutPage getObject() Returns the current form's model object
  *
  * @package    peanut
  * @subpackage form
  * @author     Alexandre pocky BALMES
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
  */
-abstract class BasePeanutPageForm extends BaseFormDoctrine
+abstract class BasepeanutPageForm extends BaseFormDoctrine
 {
   public function setup()
   {
@@ -41,7 +41,7 @@ abstract class BasePeanutPageForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'PeanutPage', 'column' => array('slug')))
+      new sfValidatorDoctrineUnique(array('model' => 'peanutPage', 'column' => array('slug')))
     );
 
     $this->widgetSchema->setNameFormat('peanut_page[%s]');
@@ -55,7 +55,7 @@ abstract class BasePeanutPageForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'PeanutPage';
+    return 'peanutPage';
   }
 
 }

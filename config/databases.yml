@@ -8,3 +8,11 @@ all:
       dsn:      mysql:host=localhost;dbname=peanut
       username: root
       password: t2t2d83w
+
+test:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=peanut
+      username: root
+      password: t2t2d83w

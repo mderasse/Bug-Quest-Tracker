@@ -12,27 +12,27 @@ class pageActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->peanut_pages = Doctrine::getTable('PeanutPage')
+    $this->peanut_pages = Doctrine::getTable('peanutPage')
       ->createQuery('a')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->peanut_page = Doctrine::getTable('PeanutPage')->find(array($request->getParameter('id')));
+    $this->peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->peanut_page);
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new PeanutPageForm();
+    $this->form = new peanutPageForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new PeanutPageForm();
+    $this->form = new peanutPageForm();
 
     $this->processForm($request, $this->form);
 
@@ -41,15 +41,15 @@ class pageActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($peanut_page = Doctrine::getTable('PeanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
-    $this->form = new PeanutPageForm($peanut_page);
+    $this->forward404Unless($peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
+    $this->form = new peanutPageForm($peanut_page);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($peanut_page = Doctrine::getTable('PeanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
-    $this->form = new PeanutPageForm($peanut_page);
+    $this->forward404Unless($peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
+    $this->form = new peanutPageForm($peanut_page);
 
     $this->processForm($request, $this->form);
 
@@ -60,7 +60,7 @@ class pageActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($peanut_page = Doctrine::getTable('PeanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
+    $this->forward404Unless($peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
     $peanut_page->delete();
 
     $this->redirect('page/index');

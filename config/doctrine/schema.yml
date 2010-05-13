@@ -1,4 +1,4 @@
-PeanutPage:
+peanutPage:
  actAs:
      Sluggable:
       fields:            [title]
@@ -14,4 +14,4 @@ PeanutPage:
      sfGuardUser:
       local:             author
       foreign:           id
-      foreignAlias:      PageAuthor
+      foreignAlias:      pageAuthor

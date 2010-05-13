@@ -1,0 +1,21 @@
+peanutPage:
+  peanutPage_1:
+    title: Titre
+    content: 'Contenu'
+    excerpt: 'Excerpt'
+    sfGuardUser: sfGuardUser_1
+    status: publish
+    type: singlepage
+    slug: titre
+    created_at: '2010-03-10 00:00:00'
+    updated_at: '2010-03-17 20:29:03'
+  peanutPage_2:
+    title: Titre2
+    content: 'Contenu'
+    excerpt: 'Excerpt'
+    sfGuardUser: sfGuardUser_1
+    status: draft
+    type: homepage
+    slug: titre2
+    created_at: '2010-03-10 00:00:00'
+    updated_at: '2010-03-17 20:29:03'
