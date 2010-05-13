@@ -25,12 +25,11 @@
      * @return peanutPage
      */
      
-    public function getWhereId($id, $status = 'publish')
+    public function getWhereId($id)
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
-        ->where('p.id = ?', $id)
-        ->andWhere('p.status = ?', $status);
+        ->where('p.id = ?', $id);
         
       return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
     }
@@ -45,12 +44,11 @@
      * @return peanutPage
      */
      
-    public function getWhereSlug($slug, $status = 'publish')
+    public function getWhereSlug($slug)
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
-        ->where('p.slug = ?', $slug)
-        ->andWhere('p.status = ?', $status);
+        ->where('p.slug = ?', $slug);
         
       return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
     }
@@ -65,14 +63,13 @@
      * @return peanutPage
      */
      
-    public function getWhereAuthor($author, $status = 'publish')
+    public function getAllWhereAuthor($author)
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
         ->where('p.author = ?', $author)
         ->orWhere('s.username = ?', $author)
-        ->andWhere('p.status = ?', $status)
-        ->orderBy('p.created_at DESC');
+        ->orderBy('p.position DESC');
         
       return $p->execute(array(), Doctrine_Core::HYDRATE_RECORD);
     }
@@ -86,33 +83,12 @@
      * @return peanutPage
      */
      
-    public function getHomepage($status = 'publish')
+    public function getAll($status = 'publish')
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
-        ->where('p.type = ?', 'homepage')
         ->andWhere('p.status = ?', $status)
-        ->orderBy('p.created_at DESC');
-        
-      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
-    }
-    
-    /**
-     * Retrieves a page object by author and status.
-     *
-     * @param  int $slug The slug of the page
-     * @param  string $status The page's status
-     *
-     * @return peanutPage
-     */
-     
-    public function getAllByType($type, $status = 'publish')
-    {
-      $p = $this->createQuery('p')
-        ->leftJoin('p.sfGuardUser s')
-        ->where('p.type = ?', $type)
-        ->andWhere('p.status = ?', $status)
-        ->orderBy('p.created_at DESC');
+        ->orderBy('p.position ASC');
         
       return $p->execute(array(), Doctrine_Core::HYDRATE_RECORD);
     }

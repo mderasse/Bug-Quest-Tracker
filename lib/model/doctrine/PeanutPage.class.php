@@ -12,4 +12,8 @@
  */
 class peanutPage extends BasepeanutPage
 {
+  public function __toString()
+  {
+  	return $this->getTitle(ESC_RAW);
+  }
 }

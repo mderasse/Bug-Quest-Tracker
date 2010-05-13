@@ -10,7 +10,6 @@
  * @property clob $excerpt
  * @property integer $author
  * @property string $status
- * @property string $type
  * @property sfGuardUser $sfGuardUser
  * 
  * @method string      getTitle()       Returns the current record's "title" value
@@ -18,14 +17,12 @@
  * @method clob        getExcerpt()     Returns the current record's "excerpt" value
  * @method integer     getAuthor()      Returns the current record's "author" value
  * @method string      getStatus()      Returns the current record's "status" value
- * @method string      getType()        Returns the current record's "type" value
  * @method sfGuardUser getSfGuardUser() Returns the current record's "sfGuardUser" value
  * @method peanutPage  setTitle()       Sets the current record's "title" value
  * @method peanutPage  setContent()     Sets the current record's "content" value
  * @method peanutPage  setExcerpt()     Sets the current record's "excerpt" value
  * @method peanutPage  setAuthor()      Sets the current record's "author" value
  * @method peanutPage  setStatus()      Sets the current record's "status" value
- * @method peanutPage  setType()        Sets the current record's "type" value
  * @method peanutPage  setSfGuardUser() Sets the current record's "sfGuardUser" value
  * 
  * @package    peanut
@@ -64,17 +61,6 @@ abstract class BasepeanutPage extends sfDoctrineRecord
              ),
              'default' => 'draft',
              ));
-        $this->hasColumn('type', 'string', 255, array(
-             'type' => 'string',
-             'notnull' => true,
-             'values' => 
-             array(
-              0 => 'homepage',
-              1 => 'singlepage',
-             ),
-             'default' => 'singlepage',
-             'length' => 255,
-             ));
     }
 
     public function setUp()
@@ -91,7 +77,9 @@ abstract class BasepeanutPage extends sfDoctrineRecord
              ),
              ));
         $timestampable0 = new Doctrine_Template_Timestampable();
+        $sortable0 = new Doctrine_Template_Sortable();
         $this->actAs($sluggable0);
         $this->actAs($timestampable0);
+        $this->actAs($sortable0);
     }
 }

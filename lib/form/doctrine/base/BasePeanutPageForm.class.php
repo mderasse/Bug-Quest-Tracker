@@ -21,10 +21,10 @@ abstract class BasepeanutPageForm extends BaseFormDoctrine
       'excerpt'    => new sfWidgetFormTextarea(),
       'author'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
       'status'     => new sfWidgetFormTextarea(),
-      'type'       => new sfWidgetFormInputText(),
       'slug'       => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
+      'position'   => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -34,14 +34,17 @@ abstract class BasepeanutPageForm extends BaseFormDoctrine
       'excerpt'    => new sfValidatorString(array('required' => false)),
       'author'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
       'status'     => new sfValidatorString(array('required' => false)),
-      'type'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
+      'position'   => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'peanutPage', 'column' => array('slug')))
+      new sfValidatorAnd(array(
+        new sfValidatorDoctrineUnique(array('model' => 'peanutPage', 'column' => array('slug'))),
+        new sfValidatorDoctrineUnique(array('model' => 'peanutPage', 'column' => array('position'))),
+      ))
     );
 
     $this->widgetSchema->setNameFormat('peanut_page[%s]');
