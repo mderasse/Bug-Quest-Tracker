@@ -16,4 +16,5 @@ class peanutPage extends BasepeanutPage
   {
   	return $this->getTitle(ESC_RAW);
   }
+  
 }

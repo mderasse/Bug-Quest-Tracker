@@ -224,11 +224,20 @@ body#login h2 {
 }
 
 #sfContent #sf_admin_container input[type=text], #sfContent #sf_admin_container textarea {
-  width: 100%;
+  width: 900px;
+  background: url('/images/login/button-overlay.png') #fbfbfb repeat-x;
+  display: inline-block;
+  padding: 5px;
+  color: #434242;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 #sfContent #sf_admin_container .sf_admin_filter input[type=text] {
-  width: 100px;
+  width: 300px;
 }
 
 #sfContent #sf_admin_container input[type=submit] {

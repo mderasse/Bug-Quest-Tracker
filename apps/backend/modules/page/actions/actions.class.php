@@ -29,4 +29,6 @@ class pageActions extends autoPageActions
     $object->demote();
     $this->redirect("@peanut_page");
   }
+  
+  
 }
