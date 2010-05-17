@@ -15,5 +15,13 @@ class ProjectConfiguration extends sfProjectConfiguration
       'csDoctrineActAsSortablePlugin',
       'sfCKEditorPlugin',
     ));
+    
+    $this->dispatcher->connect('context.load_factories', array($this, 'listenToLoadFactoriesEvent'));
   }
+  
+  public function listenToLoadFactoriesEvent(sfEvent $event)
+  {
+    BaseForm::setUser($event->getSubject()->getUser());
+  }
+  
 }

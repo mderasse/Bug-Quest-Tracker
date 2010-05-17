@@ -12,6 +12,8 @@ class peanutPageForm extends BasepeanutPageForm
 {
   public function configure()
   {
+    $user = self::getValidUser();
+    
     unset($this['position']);
     
     $this->widgetSchema->setHelps(array(
@@ -34,11 +36,11 @@ class peanutPageForm extends BasepeanutPageForm
     
     if(!$this->isNew()) {
       $this->widgetSchema['created_at'] = new sfWidgetFormI18nDate(array(
-        'culture' => sfContext::getInstance()->getUser()->getCulture(),
+        'culture' => $user->getCulture(),
       ));
 
       $this->widgetSchema['updated_at'] = new sfWidgetFormI18nDate(array(
-        'culture' => sfContext::getInstance()->getUser()->getCulture(),
+        'culture' => $user->getCulture(),
       ));
     }
     else
