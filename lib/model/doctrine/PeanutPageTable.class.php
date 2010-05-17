@@ -16,12 +16,14 @@
       return Doctrine_Core::getTable('PeanutPage');
     }
     
-    static public $status = array(
+    static public $status = array
+    (
     	'draft'		=> 'Draft',
     	'publish'	=> 'Publish',
     );
     
-    public function getStatus() {
+    public function getStatus()
+    {
     	return self::$status;
     }
     
@@ -73,19 +75,20 @@
      * @return peanutPage
      */
      
-    public function getAllWhereAuthor($author)
+    public function getAllWhereAuthor($author, $status = 'publish')
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
         ->where('p.author = ?', $author)
         ->orWhere('s.username = ?', $author)
+        ->andWhere('p.status = ?', $status)
         ->orderBy('p.position DESC');
         
       return $p->execute(array(), Doctrine_Core::HYDRATE_RECORD);
     }
     
     /**
-     * Retrieves a page object by author and status.
+     * Retrieves a page object by status.
      *
      * @param  int $slug The slug of the page
      * @param  string $status The page's status

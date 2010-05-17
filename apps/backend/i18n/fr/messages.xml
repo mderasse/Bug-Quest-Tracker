@@ -56,6 +56,18 @@
         <source>Signout</source>
         <target>Se déconnecter</target>
       </trans-unit>
+      <trans-unit>
+        <source>pages</source>
+        <target>Pages</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Show pages</source>
+        <target>Voir les pages</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Add new page</source>
+        <target>Ajouter une page</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

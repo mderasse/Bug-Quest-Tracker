@@ -31,7 +31,7 @@
   $t->is($page->getStatus(), 'publish', '->getStatus() return Status');
   $t->is($page->getSlug(), 'titre', '->getSlug() return titre');
   $t->is($page->getCreatedAt(), '2010-03-10 00:00:00', '->getId() return created_at');
-  $t->is($page->getUpdatedAt(), '2010-03-17 20:29:03', '->getId() return updated_at');
+  $t->is($page->getUpdatedAt(), '2010-05-14 00:28:55', '->getId() return updated_at');
   
   $t->isnt($page->getStatus(), 'draft', '->getStatus() draft isnt the good value');
   $t->isnt($page->getCreatedAt(), '2010-03-10', '->getCreatedAt() isnt a timestamp');
@@ -94,11 +94,11 @@
    */
    
   $t = new lime_test(3);
-  $t->comment('->getByAuthor()');
+  $t->comment('->getAllWhereAuthor()');
   $page = Doctrine_Core::getTable('peanutPage')->getAllWhereAuthor('1');
   
   $t->is($page->getFirst()->getAuthor(), '1', '->getAuthor() return 1');
-  $t->is($page->getFirst()->getId(), '2', '->getId() return 2 (orderBy created_at DESC)');
+  $t->is($page->getFirst()->getId(), '2', '->getId() return 2 (orderBy position ASC)');
   
   
   $page = Doctrine_Core::getTable('peanutPage')->getAllWhereAuthor('2');

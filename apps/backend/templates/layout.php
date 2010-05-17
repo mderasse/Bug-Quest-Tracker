@@ -31,6 +31,9 @@
   	  <h1><a href="<?php echo url_for('@homepage', true); ?>" title="<?php echo __('Homepage'); ?>" /><img src="/images/backend/logo.png" alt="Peanut, un CMS à base de symfony" /></a></h1>
   	  
   	  <ul class="alignRight">   
+  	    
+  	    <?php include_component('page', 'menu') ?>
+  	    
   	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardUser'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Manage users'); ?></a>
   	      <ul>
   	        <li><a href="<?php echo url_for('@sf_guard_user'); ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Show users'); ?></li></a>
