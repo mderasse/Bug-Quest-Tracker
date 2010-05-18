@@ -15,7 +15,7 @@ class sfGuardUser extends PluginsfGuardUser
   
   public function __toString()
   {
-  	return self::getGiven() . ' ' . self::getFamily();
+  	return $this->getGiven() . ' ' . $this->getFamily();
   }
   
   public function getGiven()
