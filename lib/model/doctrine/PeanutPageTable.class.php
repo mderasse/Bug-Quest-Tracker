@@ -50,7 +50,7 @@
     /**
      * Retrieves a page object by slug and status.
      *
-     * @param  int $slug The slug of the page
+     * @param  string $slug The slug of the page
      * @param  string $status The page's status
      *
      * @return peanutPage
@@ -69,7 +69,7 @@
     /**
      * Retrieves a page object by author and status.
      *
-     * @param  int $slug The slug of the page
+     * @param  int $author The author of the page
      * @param  string $status The page's status
      *
      * @return peanutPage
@@ -90,7 +90,6 @@
     /**
      * Retrieves a page object by status.
      *
-     * @param  int $slug The slug of the page
      * @param  string $status The page's status
      *
      * @return peanutPage
@@ -100,10 +99,28 @@
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
-        ->andWhere('p.status = ?', $status)
+        ->where('p.status = ?', $status)
         ->orderBy('p.position ASC');
         
       return $p->execute(array(), Doctrine_Core::HYDRATE_RECORD);
+    }
+    
+    /**
+     * Retrieve first page.
+     *
+     * @param  string $status The page's status
+     *
+     * @return peanutPage
+     */
+     
+    public function getFirstPage($status = 'publish')
+    {
+      $p = $this->createQuery('p')
+        ->leftJoin('p.sfGuardUser s')
+        ->where('p.status = ?', $status)
+        ->orderBy('p.position ASC');
+        
+      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
     }
       
   }

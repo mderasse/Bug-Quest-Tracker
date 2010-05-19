@@ -66,7 +66,7 @@
   /**
    * Test a page object by slug and status.
    *
-   * @param  int $slug The slug of the page
+   * @param  string $slug The slug of the page
    * @param  string $status The page's status
    *
    * @return peanutPage
@@ -87,7 +87,7 @@
   /**
    * Test a page object by atuhor and status.
    *
-   * @param  int $slug The slug of the page
+   * @param  int $author The author of the page
    * @param  string $status The page's status
    *
    * @return peanutPage
@@ -105,3 +105,22 @@
   
   $t->isnt($page, false, '->getAuthor(\'2\') doesnt exist');
   
+  
+  /**
+   * Test a page object by position.
+   *
+   * @param  int $slug The slug of the page
+   * @param  string $status The page's status
+   *
+   * @return peanutPage
+   */
+   
+   $t = new lime_test(2);
+   $t->comment('->getFirstPage');
+   $page = Doctrine_Core::getTable('PeanutPage')->getFirstPage();
+   
+   $t->is($page->getId(), '1', '->getId() return 1');
+   
+   $page = Doctrine_Core::getTable('PeanutPage')->getFirstPage('draft');
+   
+   $t->is($page->getId(), '2', '->getId() return 2');

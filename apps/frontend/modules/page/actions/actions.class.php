@@ -12,68 +12,14 @@ class pageActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->peanut_pages = Doctrine::getTable('peanutPage')
-      ->createQuery('a')
-      ->execute();
+    $this->peanut_page = Doctrine::getTable('peanutPage')->getFirstPage();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id')));
+    $this->peanut_page = $this->getRoute()->getObject();
     $this->forward404Unless($this->peanut_page);
   }
 
-  public function executeNew(sfWebRequest $request)
-  {
-    $this->form = new peanutPageForm();
-  }
-
-  public function executeCreate(sfWebRequest $request)
-  {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
-
-    $this->form = new peanutPageForm();
-
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('new');
-  }
-
-  public function executeEdit(sfWebRequest $request)
-  {
-    $this->forward404Unless($peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
-    $this->form = new peanutPageForm($peanut_page);
-  }
-
-  public function executeUpdate(sfWebRequest $request)
-  {
-    $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
-    $this->form = new peanutPageForm($peanut_page);
-
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('edit');
-  }
-
-  public function executeDelete(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($peanut_page = Doctrine::getTable('peanutPage')->find(array($request->getParameter('id'))), sprintf('Object peanut_page does not exist (%s).', $request->getParameter('id')));
-    $peanut_page->delete();
-
-    $this->redirect('page/index');
-  }
-
-  protected function processForm(sfWebRequest $request, sfForm $form)
-  {
-    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
-    {
-      $peanut_page = $form->save();
-
-      $this->redirect('page/edit?id='.$peanut_page->getId());
-    }
-  }
+  
 }

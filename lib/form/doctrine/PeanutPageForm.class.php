@@ -45,7 +45,7 @@ class peanutPageForm extends BasepeanutPageForm
     }
     else
     {
-      unset($this['created_at'], $this['updated_at']);
+      unset($this['created_at']);
     }
     
     
