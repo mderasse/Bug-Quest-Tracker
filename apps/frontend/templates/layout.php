@@ -12,8 +12,8 @@
     <div class="container_12 alignCenter center">
       
       <div id="header" class="alignLeft clearfix">
-        <h1 class="helvetica bold condensed grid_4 margin"><a href="<?php echo url_for('@homepage') ?>" title="Retour à l'accueil">peanut</a></h1>
-        <ul class="menu grid_8 margin">
+        <h1 class="helvetica bold condensed grid_4 padding"><a href="<?php echo url_for('@homepage') ?>" title="Retour à l'accueil">peanut</a></h1>
+        <ul class="menu grid_8">
           <?php include_component('page', 'menu') ?>
       </div>
       

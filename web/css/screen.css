@@ -45,10 +45,13 @@ clean.css is inspired from Meyer : http://meyerweb.com
 
 }
 
-#header a:hover {
-  border-bottom: 0;
+#header h1:hover, #header h1:hover a, #header ul li:hover, #header ul li:hover a {
   color: #fefefe;
   background-color: #1b1b1b;
+}
+
+#header a:hover {
+  border-bottom: 0;
 }
 
 #content ul {
