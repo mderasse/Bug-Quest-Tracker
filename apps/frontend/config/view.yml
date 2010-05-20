@@ -6,7 +6,7 @@ default:
     content-type: text/html
 
   metas:
-    title:        Peanut :: One more symfony project
+    title:        peanut :: One more symfony project
     description:  peanut, CMS basé sur le framework symfony
     keywords:     symfony, project, peanut
     language:     fr

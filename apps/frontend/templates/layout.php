@@ -3,7 +3,14 @@
   <head>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
-    <?php include_title() ?>
+    
+    
+    <title>
+      <?php if (!include_slot('title')): ?>
+        peanut :: another CMS on symfony
+      <?php endif; ?>
+    </title>
+    
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
@@ -22,7 +29,7 @@
       </div>
       
       <div id="footer">
-        <p class="light">Ce site utilise le CMS <a href="http://dev.pockyworld.com/?s=peanut" title"Voir le site">peanut</a> basé sur <a href="http://www.symfony-projects.com" title="Voir le site">symfony</a> !</p>
+        <p class="light">Ce site utilise le CMS <a href="http://dev.pockyworld.com/?s=peanut" title"Voir le site">peanut</a> basé sur <a href="http://www.symfony-project.com" title="Voir le site">symfony</a> !</p>
       </div>
       
     </div>

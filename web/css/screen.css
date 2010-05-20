@@ -59,6 +59,14 @@ clean.css is inspired from Meyer : http://meyerweb.com
   margin-left: 20px;
 }
 
+#content a, #footer a {
+  border-bottom: 1px solid;
+}
+
+#content a:hover, #footer a:hover {
+  border-bottom: 0;
+}
+
 #footer {
   margin-top: 40px;
   font-size: 12px;
