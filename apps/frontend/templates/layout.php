@@ -22,6 +22,7 @@
         <h1 class="helvetica bold condensed grid_4 padding"><a href="<?php echo url_for('@homepage') ?>" title="Retour à l'accueil">peanut</a></h1>
         <ul class="menu grid_8">
           <?php include_component('page', 'menu') ?>
+          <?php include_component('contact', 'menu') ?>
       </div>
       
       <div id="content" class="alignLeft">

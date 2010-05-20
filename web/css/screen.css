@@ -72,3 +72,54 @@ clean.css is inspired from Meyer : http://meyerweb.com
   font-size: 12px;
   color: #474747;
 }
+
+
+
+form .text-input {
+  width: 255px;
+  background: url('/images/login/button-overlay.png') #fbfbfb repeat-x;
+  display: inline-block;
+  padding: 7px 10px;
+  color: #434242;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+form .textarea {
+  width: 500px;
+}
+
+form .formSubmit {
+  margin: 30px 25px 30px 0;
+}
+
+form .button {
+  background: url('/images/login/button-overlay.png') #000 repeat-x;
+  display: inline-block;
+  padding: 5px 20px;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #000;
+  border-bottom: 1px solid rgba(0,0,0,0.25);  
+  font-weight: bolder;
+}
+
+
+.notification {
+  border: 1px solid;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.error {
+  border-color: red;
+  background-color: #fb7675;
+}
