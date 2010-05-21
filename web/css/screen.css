@@ -73,7 +73,9 @@ clean.css is inspired from Meyer : http://meyerweb.com
   color: #474747;
 }
 
-
+#footer p:hover {
+  font-weight: normal;
+}
 
 form .text-input {
   width: 255px;

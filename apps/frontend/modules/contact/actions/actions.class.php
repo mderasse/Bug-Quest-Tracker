@@ -25,43 +25,40 @@ class contactActions extends sfActions
     	
     	if ($this->form->isValid())
     	{
-        if($this->form->getValue('captcha') == 7)
-        {
-      		try
-      		{
-      			$body = $this->getPartial('contact/mailTextBody',  array(
-      				'name' => $this->form->getValue('lastname'),
-      				'email' => $this->form->getValue('email'),
-      				'message' => $this->form->getValue('message'),
-      			 ));
-      			 
-      			 
-      			 $altbody = $this->getPartial('contact/mailTextAltBody',  array(
-      				'name' => $this->form->getValue('lastname'),
-      				'email' => $this->form->getValue('email'),
-      				'message' => $this->form->getValue('message'),
-      			 ));
-      			 
-      			$message = $this->getMailer();
-      			
-      			$message = Swift_Message::newInstance()
-      				->setSubject('Nouveau message depuis le formulaire de contact')
-      				->setFrom(array(sfConfig::get('app_mail_site') => 'Formulaire de contact peanut'))
-      				->setTo(array(sfConfig::get('app_mail_contact') => 'Webmaster peanut'))
-      				->setBody($body, 'text/html')
-      				->addPart($altBody, 'text/plain');
-    	  				
-    	  		$this->getMailer()->send($message);
-      		
-      		}
-      		
-      		catch (Exception $e)
-      		{
-      		  $this->getUser()->setFlash('error', 'An error has occured while send your message!');
-      		}
-      		
-      		$this->redirect('contact/thankyou.html?'.http_build_query($this->form->getValues()));
-        }
+    		try
+    		{
+    			$body = $this->getPartial('contact/mailTextBody',  array(
+    				'name' => $this->form->getValue('lastname'),
+    				'email' => $this->form->getValue('email'),
+    				'message' => $this->form->getValue('message'),
+    			 ));
+    			 
+    			 
+    			 $altbody = $this->getPartial('contact/mailTextAltBody',  array(
+    				'name' => $this->form->getValue('lastname'),
+    				'email' => $this->form->getValue('email'),
+    				'message' => $this->form->getValue('message'),
+    			 ));
+    			 
+    			$message = $this->getMailer();
+    			
+    			$message = Swift_Message::newInstance()
+    				->setSubject('Nouveau message depuis le formulaire de contact')
+    				->setFrom(array(sfConfig::get('app_mail_site') => 'Formulaire de contact peanut'))
+    				->setTo(array(sfConfig::get('app_mail_contact') => 'Webmaster peanut'))
+    				->setBody($body, 'text/html')
+    				->addPart($altBody, 'text/plain');
+  	  				
+  	  		$this->getMailer()->send($message);
+    		
+    		}
+    		
+    		catch (Exception $e)
+    		{
+    		  $this->getUser()->setFlash('error', 'An error has occured while send your message!');
+    		}
+    		
+    		$this->redirect('contact/thankyou.html?'.http_build_query($this->form->getValues()));
       }
     }
   }

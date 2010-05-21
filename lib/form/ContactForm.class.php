@@ -39,8 +39,12 @@
      		'required'   => 'Message is required',
      		'min_length' => 'Your message is too small (min %min_length% chars).'
      	)),
-     	'captcha'	  => new sfValidatorString(array('required' => true), array(
-     		'required'   => 'Captcha is required'
+     	'captcha'	  => new sfValidatorSimpleCaptcha(array(
+     	  'required'     => true,
+     	  'first_number' => 3,
+     	  'last_number'  => 4,
+     	), array(
+     		'required'     => 'Captcha is required',
      	)),
      ));
      
