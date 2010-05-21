@@ -13,8 +13,8 @@ Par défaut, trois champs sont disponibles :</p>
   <li>Un champ Message</li>
 </ul>
 
-<p>A ces champs viennent s'ajouter un "captcha" simple permettant de se prévenir d'une certains nombre de spams.</p>
-<p>Attention, ce module n'est pas administrable par le backoffice. Il faudra donc en cas de changement à effectuer (dans le choix des champs par exemple) se réferer au tutoriel <a href="http://www.symfony-project.org/forms/1_4/fr/" title="voir le site">forms in actions</a>. L'administration à travers le backoffice sera une fonctionnalité disponible dans une prochaine version</p>
+<p>A ces champs viennent s'ajouter un "captcha" simple permettant de se prévenir d'une certains nombre de spams avec le validateur sfValidatorSimpleCaptcha.</p>
+<p>Attention, ce module n'est pas administrable par le backoffice. Il faudra donc en cas de changement à effectuer (dans le choix des champs par exemple) se réferer au tutoriel <a href="http://www.symfony-project.org/forms/1_4/fr/" title="voir le site">forms in actions</a>. L'administration à travers le backoffice sera une fonctionnalité disponible dans une prochaine version.</p>
 
 <h2 class="helvetica light">Formulaire de contact</h2>
 <p class="notice">Les champs marqués d'une étoile (*) sont obligatoires</p>
