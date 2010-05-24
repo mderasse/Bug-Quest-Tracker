@@ -30,7 +30,7 @@
       </div>
       
       <div id="footer">
-        <p class="light">Ce site utilise le CMS <a href="http://dev.pockyworld.com/?s=peanut" title"Voir le site">peanut</a> et <a href="http://www.symfony-project.com" title="Voir le site">symfony</a> !</p>
+        <p class="light">Ce site utilise le CMS <a href="http://dev.pockyworld.com/?s=peanut" title="Voir le site">peanut</a> et <a href="http://www.symfony-project.com" title="Voir le site">symfony</a> !</p>
       </div>
       
     </div>

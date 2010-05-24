@@ -24,23 +24,23 @@ Aller (via le terminal) dans votre répertoire de travail "web" et exécuter la 
 
 2. Synchroniser les submodules
 
-    $ git submodule init
-    $ git submodule update
+`$ git submodule init` 
+`$ git submodule update`
 
 3. Renommer les fichiers *-dist
 Les fichiers de configurations les plus importants sont livrés "bruts". Il vous faudra donc pour utiliser correctement le projet sur votre machine renommer les fichiers *-dist en supprimant le -dist. La liste des fichiers est la suivantes :
- - apps/backend/config/factories.yml
- - apps/frontend/config/factories.yml
- - config/databases.yml
- - config/properties.ini
+  ./apps/backend/config/factories.yml  
+  ./apps/frontend/config/factories.yml  
+  ./config/databases.yml  
+  ./config/properties.ini  
  
 4. Configurer vos vhosts
 Se référer à la procédure [symfony](http://www.symfony-project.org/jobeet/1_4/Doctrine/fr/01#chapter_01_configuration_du_serveur_web_la_methode_securisee).
 
 5. Finalisation de l'installation
 
-    $ php symfony doctrine:build --all --and-load
-    $ php symfony cc
+  `$ php symfony doctrine:build --all --and-load` 
+  `$ php symfony cc`
 
 
 Alexandre
