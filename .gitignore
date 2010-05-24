@@ -6,5 +6,6 @@ cache/
 log/
 web/sf
 lib/vendor/symfony/
+data/fixtures/data.yml
 
 !.gitkeep
