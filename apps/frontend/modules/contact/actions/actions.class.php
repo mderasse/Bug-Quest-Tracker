@@ -43,9 +43,9 @@ class contactActions extends sfActions
     			$message = $this->getMailer();
     			
     			$message = Swift_Message::newInstance()
-    				->setSubject('Nouveau message depuis le formulaire de contact')
-    				->setFrom(array(sfConfig::get('app_mail_site') => 'Formulaire de contact peanut'))
-    				->setTo(array(sfConfig::get('app_mail_contact') => 'Webmaster peanut'))
+    			  ->setFrom(array(sfConfig::get('app_mail_site') => 'Formulaire de contact peanut'))
+    			  ->setTo(array(sfConfig::get('app_mail_contact') => 'Webmaster peanut'))
+    				->setSubject('Nouveau message depuis le formulaire de contact')   				
     				->setBody($body, 'text/html')
     				->addPart($altBody, 'text/plain');
   	  				

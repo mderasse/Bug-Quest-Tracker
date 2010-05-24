@@ -4,7 +4,7 @@
   
   $tonfiguration = ProjectConfiguration::getApplicationConfiguration( 'frontend', 'test', true);
   new sfDatabaseManager($tonfiguration);
-  Doctrine_Core::loadData(sfConfig::get('sf_test_dir').'/test');
+  Doctrine_Core::loadData(sfConfig::get('sf_test_dir').'/data');
   
   /**
    * Test a page with doctrine method.
