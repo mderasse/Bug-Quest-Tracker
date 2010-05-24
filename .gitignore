@@ -5,7 +5,6 @@ web/uploads/
 cache/
 log/
 web/sf
-lib/vendor/symfony/
 data/fixtures/data.yml
 apps/backend/config/factories.yml
 apps/frontend/config/factories.yml
