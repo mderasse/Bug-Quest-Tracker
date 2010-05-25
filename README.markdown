@@ -20,7 +20,8 @@ La procédure d'installation est relativement simple mais ne se fait pas par mag
 Voici les différentes étapes :
 
 1. Créer le dossier peanut
-Aller (via le terminal) dans votre répertoire de travail "web" et exécuter la commande suivante : `$ git clone git://github.com/pocky/peanut.git`
+Aller (via le terminal) dans votre répertoire de travail "web" et exécuter la commande suivante : 
+`$ git clone git://github.com/pocky/peanut.git`
 
 2. Synchroniser les submodules
 
@@ -28,10 +29,10 @@ Aller (via le terminal) dans votre répertoire de travail "web" et exécuter la 
 `$ git submodule update`
 
 3. Renommer les fichiers *-dist
-Les fichiers de configurations les plus importants sont livrés "bruts". Il vous faudra donc pour utiliser correctement le projet sur votre machine renommer les fichiers *-dist en supprimant le -dist. La liste des fichiers est la suivantes :
-  ./apps/backend/config/factories.yml  
+Les fichiers de configurations les plus importants sont livrés "bruts". Il vous faudra donc pour utiliser correctement le projet sur votre machine renommer les fichiers *-dist en supprimant le -dist. La liste des fichiers est la suivantes : 
+  ./apps/backend/config/factories.yml 
   ./apps/frontend/config/factories.yml  
-  ./config/databases.yml  
+  ./config/databases.yml 
   ./config/properties.ini  
  
 4. Configurer vos vhosts
