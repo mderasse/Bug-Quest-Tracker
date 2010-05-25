@@ -2,8 +2,8 @@
 
   require_once dirname(__FILE__).'/../../../bootstrap/unit.php';
   
-  $tonfiguration = ProjectConfiguration::getApplicationConfiguration( 'frontend', 'test', true);
-  new sfDatabaseManager($tonfiguration);
+  $configuration = ProjectConfiguration::getApplicationConfiguration( 'frontend', 'test', true);
+  new sfDatabaseManager($configuration);
   Doctrine_Core::loadData(sfConfig::get('sf_test_dir').'/test');
   
   /**

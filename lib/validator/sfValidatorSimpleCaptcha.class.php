@@ -59,7 +59,7 @@
     /**
      * Returns true if the captcha is valid.
      *
-     * @param  array   An array of request parameters
+     * @param  string input value for captcha
      *
      * @return Boolean true if the captcha is valid, false otherwise
      */

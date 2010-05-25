@@ -1,6 +1,6 @@
 <div class="entry">
-  <h2 class="helvetica title light"><?php echo $peanut_page->getTitle(); ?></h2>
+  <h2 class="helvetica title light"><?php echo $peanut_page['title']; ?></h2>
   <div class="content">
-    <?php echo $peanut_page->getContent(ESC_RAW); ?>
+    <?php echo htmlspecialchars_decode($peanut_page['content']); ?>
   </div>
 </div>

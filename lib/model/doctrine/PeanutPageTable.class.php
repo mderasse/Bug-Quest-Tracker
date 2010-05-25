@@ -43,7 +43,7 @@
         ->leftJoin('p.sfGuardUser s')
         ->where('p.id = ?', $id);
         
-      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
+      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
     
     
@@ -62,7 +62,7 @@
         ->leftJoin('p.sfGuardUser s')
         ->where('p.slug = ?', $slug);
         
-      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
+      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
     
     
@@ -84,7 +84,7 @@
         ->andWhere('p.status = ?', $status)
         ->orderBy('p.position DESC');
         
-      return $p->execute(array(), Doctrine_Core::HYDRATE_RECORD);
+      return $p->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
     
     /**
@@ -102,7 +102,7 @@
         ->where('p.status = ?', $status)
         ->orderBy('p.position ASC');
         
-      return $p->execute(array(), Doctrine_Core::HYDRATE_RECORD);
+      return $p->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
     
     /**
@@ -120,7 +120,7 @@
         ->where('p.status = ?', $status)
         ->orderBy('p.position ASC');
         
-      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
+      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
       
   }
