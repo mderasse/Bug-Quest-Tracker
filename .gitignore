@@ -2,7 +2,6 @@
 config/databases.yml
 config/properties.ini
 web/uploads/
-cache/
 log/
 web/sf
 data/fixtures/data.yml
