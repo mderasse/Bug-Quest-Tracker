@@ -28,14 +28,14 @@ class contactActions extends sfActions
     		try
     		{
     			$body = $this->getPartial('contact/mailTextBody',  array(
-    				'name' => $this->form->getValue('lastname'),
+    				'name' => $this->form->getValue('name'),
     				'email' => $this->form->getValue('email'),
     				'message' => $this->form->getValue('message'),
     			 ));
     			 
     			 
     			 $altbody = $this->getPartial('contact/mailTextAltBody',  array(
-    				'name' => $this->form->getValue('lastname'),
+    				'name' => $this->form->getValue('name'),
     				'email' => $this->form->getValue('email'),
     				'message' => $this->form->getValue('message'),
     			 ));
