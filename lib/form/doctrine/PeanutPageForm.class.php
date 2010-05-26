@@ -14,7 +14,7 @@ class peanutPageForm extends BasepeanutPageForm
   {
     $user = self::getValidUser();
     
-    unset($this['position']);
+    unset($this['position'], $this['updated_at']);
     
     $this->widgetSchema->setHelps(array(
       'slug'     => 'The field is not required',
@@ -36,10 +36,6 @@ class peanutPageForm extends BasepeanutPageForm
     
     if(!$this->isNew()) {
       $this->widgetSchema['created_at'] = new sfWidgetFormI18nDate(array(
-        'culture' => $user->getCulture(),
-      ));
-
-      $this->widgetSchema['updated_at'] = new sfWidgetFormI18nDate(array(
         'culture' => $user->getCulture(),
       ));
     }
