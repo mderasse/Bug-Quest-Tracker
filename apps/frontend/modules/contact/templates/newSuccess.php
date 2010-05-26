@@ -28,7 +28,7 @@ Par défaut, trois champs sont disponibles :</p>
 </ul>
 <?php endif; ?>
 
-<form action="<?php echo url_for('contact/new.html') ?>" class="cssform" method="POST">
+<form action="<?php echo url_for('contact/new.html') ?>" class="cssform" method="post">
 
 	<fieldset>
 	

@@ -23,6 +23,7 @@
         <ul class="menu grid_8">
           <?php include_component('page', 'menu') ?>
           <?php include_component('contact', 'menu') ?>
+        </ul>
       </div>
       
       <div id="content" class="alignLeft">
