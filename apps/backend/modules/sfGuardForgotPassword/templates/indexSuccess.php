@@ -9,7 +9,7 @@
 <?php if ($sf_user->hasFlash('error')): ?>
   <div class="notification error">
   	<div>
-  	  <?php echo $sf_user->getFlash('error') ?>
+  	  <?php echo __($sf_user->getFlash('error'), null, 'sf_guard') ?>
   	</div>
   </div>
 <?php endif ?>
