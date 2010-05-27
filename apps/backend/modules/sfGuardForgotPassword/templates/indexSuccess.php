@@ -6,6 +6,14 @@
   <?php echo __('Fill out the form below to request an e-mail with information on how to reset your password.', null, 'sf_guard') ?>
 </p>
 
+<?php if ($sf_user->hasFlash('error')): ?>
+  <div class="notification error">
+  	<div>
+  	  <?php echo $sf_user->getFlash('error') ?>
+  	</div>
+  </div>
+<?php endif ?>
+
 <form action="<?php echo url_for('@sf_guard_forgot_password') ?>" method="post" style="margin-top: 20px;">
   
   <p>
