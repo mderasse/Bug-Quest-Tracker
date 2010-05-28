@@ -1,4 +1,5 @@
 <?php
+// lib/form/BaseForm.class.php
 
 /**
  * Base project form.
@@ -11,26 +12,26 @@
 class BaseForm extends sfFormSymfony
 {
 
-  static protected $user = null;
+  static protected $formUser = null;
   
   static protected function getUser()
   {
-    return self::$user;
+    return self::$formUser;
   }
   
   static public function getValidUser()
   {
-    if (!self::$user instanceof sfBasicSecurityUser)
+    if (!self::$formUser instanceof sfBasicSecurityUser)
     {
       throw new RuntimeException('No valid user instance available');
     }
     
-    return self::$user;
+    return self::$formUser;
   }
  
   static public function setUser(sfBasicSecurityUser $user)
   {
-    self::$user = $user;
+    self::$formUser = $user;
   }
   
 }
