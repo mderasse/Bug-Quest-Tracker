@@ -1,3 +1,5 @@
+!.gitkeep
+
 .DS_Store
 .svn
 config/databases.yml
@@ -10,5 +12,3 @@ data/fixtures/data.yml
 apps/backend/config/factories.yml
 apps/frontend/config/factories.yml
 
-
-!.gitkeep
