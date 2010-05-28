@@ -1,4 +1,5 @@
 .DS_Store
+.svn
 config/databases.yml
 config/properties.ini
 web/uploads/
