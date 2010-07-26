@@ -7,17 +7,17 @@
  * 
  * @property integer $user_id
  * @property integer $permission_id
- * @property sfGuardUser $User
  * @property sfGuardPermission $Permission
+ * @property sfGuardUser $User
  * 
  * @method integer               getUserId()        Returns the current record's "user_id" value
  * @method integer               getPermissionId()  Returns the current record's "permission_id" value
- * @method sfGuardUser           getUser()          Returns the current record's "User" value
  * @method sfGuardPermission     getPermission()    Returns the current record's "Permission" value
+ * @method sfGuardUser           getUser()          Returns the current record's "User" value
  * @method sfGuardUserPermission setUserId()        Sets the current record's "user_id" value
  * @method sfGuardUserPermission setPermissionId()  Sets the current record's "permission_id" value
- * @method sfGuardUserPermission setUser()          Sets the current record's "User" value
  * @method sfGuardUserPermission setPermission()    Sets the current record's "Permission" value
+ * @method sfGuardUserPermission setUser()          Sets the current record's "User" value
  * 
  * @package    peanut
  * @subpackage model
@@ -30,12 +30,12 @@ abstract class BasesfGuardUserPermission extends sfDoctrineRecord
     {
         $this->setTableName('sf_guard_user_permission');
         $this->hasColumn('user_id', 'integer', null, array(
-             'type' => 'integer',
              'primary' => true,
+             'type' => 'integer',
              ));
         $this->hasColumn('permission_id', 'integer', null, array(
-             'type' => 'integer',
              'primary' => true,
+             'type' => 'integer',
              ));
 
         $this->option('symfony', array(
@@ -47,18 +47,17 @@ abstract class BasesfGuardUserPermission extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('sfGuardUser as User', array(
-             'local' => 'user_id',
-             'foreign' => 'id',
-             'onDelete' => 'CASCADE'));
-
         $this->hasOne('sfGuardPermission as Permission', array(
              'local' => 'permission_id',
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable(array(
-             ));
+        $this->hasOne('sfGuardUser as User', array(
+             'local' => 'user_id',
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
+
+        $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);
     }
 }

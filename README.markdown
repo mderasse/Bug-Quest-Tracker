@@ -39,7 +39,8 @@ Se référer à la procédure [symfony](http://www.symfony-project.org/jobeet/1_
 
 5. Finalisation de l'installation
 `$ php symfony doctrine:build --all` 
-`$ php symfony doctrine:load-data data/fixtures.yml` (afin de charger les utilisateurs/groupes/permissions par défaut)
+`$ php symfony doctrine:data-load data/fixtures/fixtures.yml` (afin de charger les utilisateurs/groupes/permissions par défaut)
+`$ php symfony doctrine:data-load data/fixtures/data.yml` (afin de créer deux pages par défaut)
 `$ php symfony cc`
 
 6. Ne pas oublier de changer le csrf_token dans les fichiers settings.yml de apps/backend/config/ et /apps/frontend/config/

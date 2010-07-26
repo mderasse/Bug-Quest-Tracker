@@ -30,12 +30,12 @@ abstract class BasesfGuardGroupPermission extends sfDoctrineRecord
     {
         $this->setTableName('sf_guard_group_permission');
         $this->hasColumn('group_id', 'integer', null, array(
-             'type' => 'integer',
              'primary' => true,
+             'type' => 'integer',
              ));
         $this->hasColumn('permission_id', 'integer', null, array(
-             'type' => 'integer',
              'primary' => true,
+             'type' => 'integer',
              ));
 
         $this->option('symfony', array(
@@ -57,8 +57,7 @@ abstract class BasesfGuardGroupPermission extends sfDoctrineRecord
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable(array(
-             ));
+        $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);
     }
 }
