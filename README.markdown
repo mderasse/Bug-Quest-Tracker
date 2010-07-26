@@ -46,4 +46,7 @@ Se référer à la procédure [symfony](http://www.symfony-project.org/jobeet/1_
 6. Ne pas oublier de changer le csrf_token dans les fichiers settings.yml de apps/backend/config/ et /apps/frontend/config/
 
 
+# Plugins #
+Si vous souhaitez créer un blog, le [plugin peanutPosts](http://github.com/pocky/peanutPostsPlugin) est disponible
+
 Alexandre
