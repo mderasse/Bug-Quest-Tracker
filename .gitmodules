@@ -1,6 +1,6 @@
 [submodule "lib/vendor/symfony"]
 	path = lib/vendor/symfony
-	url = http://github.com/vjousse/symfony-1.4.git
+	url = git://github.com/symfony/symfony1.git
 [submodule "plugins/sfDoctrineGuardPlugin"]
 	path = plugins/sfDoctrineGuardPlugin
 	url = git://github.com/pocky/sfDoctrineGuardPlugin.git

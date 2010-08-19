@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<orm-designer version="1.3.3.363">
+
+  <module import-format="DoctrineYml" import-path="schema.yml" name="peanut" visBkColor="15987704" visSizeX="0" visSizeX2="130" visSizeY="0" visSizeY2="177">
+    <table name="peanutPage" visPositionX="20" visPositionY="40" visSizeX="0" visSizeX2="90" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="title" required="true" size="255" type="string"/>
+      <column name="content" required="true" type="clob"/>
+      <column name="excerpt" type="clob"/>
+      <column default="draft" name="status" required="true" type="string" values="draft,publish"/>
+      <column description="Foreign key to sfGuardUser" name="author" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Sluggable">
+            <attribute name="fields">[title]</attribute>
+          </attribute>
+          <attribute name="Timestampable"/>
+          <attribute name="Sortable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <foreign-key from="peanutPage" name="FK_peanutPage_sfGuardUser" to="sfGuardUser">
+      <foreign-key-column from="author" to="id"/>
+    </foreign-key>
+  </module>
+
+</orm-designer>

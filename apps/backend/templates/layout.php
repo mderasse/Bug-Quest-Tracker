@@ -34,13 +34,15 @@
   	    
   	    <?php include_component('page', 'menu') ?>
   	    
+  	    <?php if($sf_user->hasPermission('webmaster')): ?> 
   	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardUser'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Manage users'); ?></a>
   	      <ul>
   	        <li><a href="<?php echo url_for('@sf_guard_user'); ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Show users'); ?></li></a>
   	        <li><a href="<?php echo url_for('@sf_guard_user_new') ?>" title="<?php echo __('Liens d\'accès') ?>"><?php echo __('Add user'); ?></li></a>
   	      </ul>
   	    </li>
-  	      
+  	    
+  	    
   	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardGroup'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Manage groups'); ?></a>
   	      <ul>
   	        <li><a href="<?php echo url_for('@sf_guard_group'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Show groups'); ?></li></a>
@@ -54,6 +56,7 @@
   	        <li><a href="<?php echo url_for('@sf_guard_permission_new'); ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Add permission'); ?></li></a>
   	      </ul>
   	    </li>
+  	    <?php endif; ?>
   	  </ul>
   	</div>
   	
