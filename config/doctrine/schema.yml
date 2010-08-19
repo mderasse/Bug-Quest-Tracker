@@ -3,7 +3,6 @@ peanutPage:
      Sluggable:
       fields:            [title]
      Timestampable:      ~
-     Sortable:           ~
      NestedSet:
        hasManyRoots: true
        rootColumnName: root_id

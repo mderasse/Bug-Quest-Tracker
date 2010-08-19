@@ -24,7 +24,6 @@ abstract class BasepeanutPageForm extends BaseFormDoctrine
       'slug'       => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
-      'position'   => new sfWidgetFormInputText(),
       'root_id'    => new sfWidgetFormInputText(),
       'lft'        => new sfWidgetFormInputText(),
       'rgt'        => new sfWidgetFormInputText(),
@@ -41,7 +40,6 @@ abstract class BasepeanutPageForm extends BaseFormDoctrine
       'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
-      'position'   => new sfValidatorInteger(array('required' => false)),
       'root_id'    => new sfValidatorInteger(array('required' => false)),
       'lft'        => new sfValidatorInteger(array('required' => false)),
       'rgt'        => new sfValidatorInteger(array('required' => false)),
@@ -49,10 +47,7 @@ abstract class BasepeanutPageForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'peanutPage', 'column' => array('slug'))),
-        new sfValidatorDoctrineUnique(array('model' => 'peanutPage', 'column' => array('position'))),
-      ))
+      new sfValidatorDoctrineUnique(array('model' => 'peanutPage', 'column' => array('slug')))
     );
 
     $this->widgetSchema->setNameFormat('peanut_page[%s]');

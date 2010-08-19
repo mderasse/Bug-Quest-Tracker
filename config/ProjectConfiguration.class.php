@@ -12,7 +12,6 @@ class ProjectConfiguration extends sfProjectConfiguration
       'sfFormExtraPlugin',
       'sfDoctrineGuardPlugin',
       'sfTaskExtraPlugin',
-      'csDoctrineActAsSortablePlugin',
       'sfCKEditorPlugin',
     ));
     
