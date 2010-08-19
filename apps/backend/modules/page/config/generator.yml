@@ -15,15 +15,7 @@ generator:
       actions:
       fields:  ~
       
-      list:
-        object_actions:
-          promote:
-            action: promote
-          demote:
-            action: demote
-          _edit:    ~
-          _delete:  ~
-        
+      list:    
         sort:       [position, asc]
         display:    [title, author, status, position]
       
