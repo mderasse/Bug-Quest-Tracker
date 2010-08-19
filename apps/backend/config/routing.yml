@@ -13,7 +13,7 @@ peanut_page_backendPage:
 # default rules
 homepage:
   url:   /
-  param: { module: page, action: index }
+  param: { module: backendPage, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

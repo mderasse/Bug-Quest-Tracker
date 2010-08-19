@@ -12,7 +12,7 @@ class pageComponents extends sfComponents
 {
   public function executeMenu(sfWebRequest $request)
   {
-    $this->peanut_pages = Doctrine::getTable('peanutPage')->getAll();
+    $this->roots = Doctrine::getTable('peanutPage')->getTree()->fetchRoots();
   }
 
   

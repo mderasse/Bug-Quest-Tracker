@@ -17,7 +17,27 @@ generator:
       
       list:    
         sort:       [created_at, asc]
-        display:    [title, author, status]
+        display:    [id, title, sfGuardUser, status]
+        
+        batch_actions:
+          order:
+            label:         Mettre à jour
+          _delete:         ~
+          
+        object_actions:
+          new:
+            label:         Ajouter enfant
+          up:
+            action:        up
+          down:
+            action:        down
+          make_root:
+            action:        makeRoot
+          _edit:           ~
+          _delete:         ~
+        actions:
+          _new:
+            label:         Ajouter racine
       
       filter:
         display:    [title, author, status]

@@ -17,4 +17,26 @@ class peanutPage extends BasepeanutPage
   	return $this->getTitle(ESC_RAW);
   }
   
+  public function ReadyToChoice()
+  {
+    return sprintf('%s', $this->getIndentedName());
+  }
+  
+  public function getParentId()
+  {
+    if (!$this->getNode()->isValidNode() || $this->getNode()->isRoot())
+    {
+      return null;
+    }
+
+    $parent = $this->getNode()->getParent();
+
+    return $parent['id'];
+  }
+
+  public function getIndentedName()
+  {
+    return str_repeat('- ',$this['level']).$this['title'];
+  }
+  
 }

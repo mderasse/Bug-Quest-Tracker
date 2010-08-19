@@ -87,28 +87,69 @@ form .button {
 /*--------------------------------------------------------------------
    2. header
 --------------------------------------------------------------------*/
-
 #header {
   margin: 40px 0;
 }
 
 #header h1 {
   font-size: 56px;
+  width: 200px;
+  margin-right: 100px;
 }
 
-#header ul {
-  border-bottom: 4px solid;
+.menu {
   margin: 40px 0 0 0;
   padding: 0;
-  position: bottom;
+  position: relative;
+  bottom: 20px;
 }
 
-#header ul li {
-  padding: 0 10px;
-
+.menu li {
+  float: left;
+  position: relative;
+  padding: 10px;
+  margin: 0 5px;
+  
 }
 
-#header h1:hover, #header h1:hover a, #header ul li:hover, #header ul li:hover a {
+.menu a {
+  background: url('/images/login/button-overlay.png') #000 repeat-x;
+  display: block;
+  padding: 7px 10px;
+  color: #fefefe;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.menu ul {
+  display: none;
+  width: 185px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #000;
+  z-index: 1;
+}
+
+.menu li:hover > ul {
+  display: block;
+  background: url('/images/login/button-overlay.png') #000 repeat-x;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.menu ul li {
+  float: none;
+}
+
+.menu ul ul {
+  left: 160px;
+  top: 0;
+}
+
+#header h1:hover, #header h1:hover a {
   color: #fefefe;
   background-color: #1b1b1b;
 }

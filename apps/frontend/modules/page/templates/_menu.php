@@ -1,3 +1,5 @@
-<?php foreach($peanut_pages as $item): ?>
-  <li class="uppercase floatLeft"><a href="<?php echo url_for('page', array('slug' => $item['slug'], 'sf_format' => 'html')); ?>"><?php echo $item['excerpt']; ?></a></li>
-<?php endforeach; ?>
+<?php
+  foreach($roots as $root):
+    include_partial('page/node', array('node' => $root));
+  endforeach;
+ ?>

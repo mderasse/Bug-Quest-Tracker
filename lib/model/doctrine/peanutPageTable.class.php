@@ -13,7 +13,7 @@
       
     public static function getInstance()
     {
-      return Doctrine_Core::getTable('PeanutPage');
+      return Doctrine_Core::getTable('peanutPage');
     }
     
     
@@ -71,7 +71,7 @@
         ->where('p.author = ?', $author)
         ->orWhere('s.username = ?', $author)
         ->andWhere('p.status = ?', $status)
-        ->orderBy('p.created_at DESC');
+        ->orderBy('p.level DESC, p.lft DESC');
         
       return $p->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
@@ -88,10 +88,9 @@
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
-        ->where('p.status = ?', $status)
-        ->orderBy('p.created_at ASC');
+        ->where('p.status = ?', $status);
         
-      return $p->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
+      return $p->execute(array(), Doctrine_Core::HYDRATE_RECORD_HIERARCHY);
     }
     
     /**
@@ -106,10 +105,9 @@
     {
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
-        ->where('p.status = ?', $status)
-        ->orderBy('p.created_at ASC');
+        ->where('p.status = ?', $status);
         
-      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_ARRAY);
+      return $p->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD_HIERARCHY);
     }
       
   }
