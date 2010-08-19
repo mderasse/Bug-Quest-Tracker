@@ -11,7 +11,7 @@ peanutPage:
      content:            { type: clob, notnull: true }
      excerpt:            { type: clob }
      author:             { type: integer, notnull: true }
-     status:             { type: string, notnull: true, values: [draft, publish], default: draft }
+     status:             { type: enum, notnull: true, values: [draft, publish], default: draft }
  relations:
      sfGuardUser:
       local:             author

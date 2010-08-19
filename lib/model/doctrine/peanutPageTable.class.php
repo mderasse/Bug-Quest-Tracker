@@ -16,17 +16,6 @@
       return Doctrine_Core::getTable('PeanutPage');
     }
     
-    static public $status = array
-    (
-    	'draft'		=> 'Draft',
-    	'publish'	=> 'Publish',
-    );
-    
-    public function getStatus()
-    {
-    	return self::$status;
-    }
-    
     
     /**
      * Retrieves a page object by id and status.

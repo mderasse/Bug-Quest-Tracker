@@ -29,10 +29,7 @@ class peanutPageForm extends BasepeanutPageForm
     	'filebrowserImageBrowseUrl'	=> '/js/filemanager/index.html?type=Images',
     )));
 
-    $this->widgetSchema['status'] = new sfWidgetFormChoice(array(
-    	'choices'	=> Doctrine::getTable('PeanutPage')->getStatus(),
-    	'expanded'	=> false,
-    ));
+
     
     if(!$this->isNew()) {
       $this->widgetSchema['created_at'] = new sfWidgetFormI18nDate(array(

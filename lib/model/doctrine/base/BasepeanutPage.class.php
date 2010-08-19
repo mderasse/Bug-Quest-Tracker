@@ -9,14 +9,14 @@
  * @property clob $content
  * @property clob $excerpt
  * @property integer $author
- * @property string $status
+ * @property enum $status
  * @property sfGuardUser $sfGuardUser
  * 
  * @method string      getTitle()       Returns the current record's "title" value
  * @method clob        getContent()     Returns the current record's "content" value
  * @method clob        getExcerpt()     Returns the current record's "excerpt" value
  * @method integer     getAuthor()      Returns the current record's "author" value
- * @method string      getStatus()      Returns the current record's "status" value
+ * @method enum        getStatus()      Returns the current record's "status" value
  * @method sfGuardUser getSfGuardUser() Returns the current record's "sfGuardUser" value
  * @method peanutPage  setTitle()       Sets the current record's "title" value
  * @method peanutPage  setContent()     Sets the current record's "content" value
@@ -51,8 +51,8 @@ abstract class BasepeanutPage extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('status', 'string', null, array(
-             'type' => 'string',
+        $this->hasColumn('status', 'enum', null, array(
+             'type' => 'enum',
              'notnull' => true,
              'values' => 
              array(
