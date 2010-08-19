@@ -25,6 +25,10 @@ abstract class BasepeanutPageForm extends BaseFormDoctrine
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
       'position'   => new sfWidgetFormInputText(),
+      'root_id'    => new sfWidgetFormInputText(),
+      'lft'        => new sfWidgetFormInputText(),
+      'rgt'        => new sfWidgetFormInputText(),
+      'level'      => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -38,6 +42,10 @@ abstract class BasepeanutPageForm extends BaseFormDoctrine
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
       'position'   => new sfValidatorInteger(array('required' => false)),
+      'root_id'    => new sfValidatorInteger(array('required' => false)),
+      'lft'        => new sfValidatorInteger(array('required' => false)),
+      'rgt'        => new sfValidatorInteger(array('required' => false)),
+      'level'      => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(

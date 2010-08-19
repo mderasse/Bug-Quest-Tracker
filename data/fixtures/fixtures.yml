@@ -10,10 +10,20 @@ sfGuardGroupPermission:
     Permission: sfGuardPermission_1
     created_at: '2010-05-03 00:07:39'
     updated_at: '2010-05-03 00:07:39'
+  sfGuardGroupPermission_1_2:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_2
+    created_at: '2010-05-03 00:07:39'
+    updated_at: '2010-05-03 00:07:39'
 sfGuardPermission:
   sfGuardPermission_1:
     name: backend
     description: 'Peut accéder au backoffice'
+    created_at: '2010-05-03 00:07:01'
+    updated_at: '2010-05-03 00:07:01'
+  sfGuardPermission_2:
+    name: webmaster
+    description: 'Administrateur du site'
     created_at: '2010-05-03 00:07:01'
     updated_at: '2010-05-03 00:07:01'
 sfGuardUser:
@@ -30,3 +40,9 @@ sfGuardUser:
     last_login: '2010-05-08 01:08:59'
     created_at: '2010-02-16 00:40:30'
     updated_at: '2010-05-08 01:08:59'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2010-08-19 14:37:42'
+    updated_at: '2010-08-19 14:37:42'

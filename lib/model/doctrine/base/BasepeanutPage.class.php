@@ -78,8 +78,13 @@ abstract class BasepeanutPage extends sfDoctrineRecord
              ));
         $timestampable0 = new Doctrine_Template_Timestampable();
         $sortable0 = new Doctrine_Template_Sortable();
+        $nestedset0 = new Doctrine_Template_NestedSet(array(
+             'hasManyRoots' => true,
+             'rootColumnName' => 'root_id',
+             ));
         $this->actAs($sluggable0);
         $this->actAs($timestampable0);
         $this->actAs($sortable0);
+        $this->actAs($nestedset0);
     }
 }
