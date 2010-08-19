@@ -32,7 +32,7 @@
   	  
   	  <ul class="alignRight">   
   	    
-  	    <?php include_component('page', 'menu') ?>
+  	    <?php include_component('backendPage', 'menu') ?>
   	    
   	    <?php if($sf_user->hasPermission('webmaster')): ?> 
   	    <li><a href="#" class="nav-top-item <?php if($sf_context->getModuleName() == 'sfGuardUser'): echo 'current'; endif; ?>" title="<?php echo __('Liens d\'accès'); ?>"><?php echo __('Manage users'); ?></a>

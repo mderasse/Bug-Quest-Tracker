@@ -82,7 +82,7 @@
         ->where('p.author = ?', $author)
         ->orWhere('s.username = ?', $author)
         ->andWhere('p.status = ?', $status)
-        ->orderBy('p.position DESC');
+        ->orderBy('p.created_at DESC');
         
       return $p->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
@@ -100,7 +100,7 @@
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
         ->where('p.status = ?', $status)
-        ->orderBy('p.position ASC');
+        ->orderBy('p.created_at ASC');
         
       return $p->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
     }
@@ -118,7 +118,7 @@
       $p = $this->createQuery('p')
         ->leftJoin('p.sfGuardUser s')
         ->where('p.status = ?', $status)
-        ->orderBy('p.position ASC');
+        ->orderBy('p.created_at ASC');
         
       return $p->fetchOne(array(), Doctrine_Core::HYDRATE_ARRAY);
     }

@@ -7,7 +7,7 @@ generator:
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          peanut_page
+    route_prefix:          peanut_page_backendPage
     with_doctrine_route:   true
     actions_base_class:    sfActions
 

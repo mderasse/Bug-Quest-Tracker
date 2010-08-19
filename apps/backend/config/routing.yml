@@ -1,9 +1,9 @@
-peanut_page:
+peanut_page_backendPage:
   class: sfDoctrineRouteCollection
   options:
-    model:                PeanutPage
-    module:               page
-    prefix_path:          /page
+    model:                peanutPage
+    module:               backendPage
+    prefix_path:          /backendPage
     column:               id
     with_wildcard_routes: true
 
