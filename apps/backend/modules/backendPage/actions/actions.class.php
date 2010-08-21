@@ -43,6 +43,64 @@ class backendPageActions extends autoBackendPageActions
       
       $this->getUser()->setFlash('notice', 'Order Updated!');
     }
+    elseif($node->isRoot())
+    { 
+      $prevSibling = Doctrine::getTable('peanutPage')->findOneByRootId($node->getRootValue() - 1);
+      
+      if($prevSibling)
+      {
+        $prevNode = $prevSibling->getNode();
+        $prevRight = $prevNode->getRightValue();
+        
+        $currentRight = $node->getRightValue();
+        
+        $node->setRightValue($prevRight);
+        $node->setRootValue($node->getRootValue() - 1);
+        
+        if($node->hasChildren())
+        {
+          $childs = Doctrine::getTable('peanutPage')->find($node->getChildren());
+          
+          foreach($childs as $child)
+          {
+            $children = Doctrine::getTable('peanutPage')->find($child->getId());
+            $childNode = $children->getNode();
+            $childNode->setRootValue($node->getRootValue() - 1);
+            $children->save();
+            
+            $this->getUser()->setFlash('error', $child);
+          }
+        }
+        
+        
+        $prevNode->setRightValue($currentRight);
+        $prevNode->setRootValue($node->getRootValue() + 1);
+        
+        if($prevNode->hasChildren())
+        {
+          $childs = $prevNode->getChildren();
+          
+          foreach($childs as $child)
+          {
+            $children = Doctrine::getTable('peanutPage')->find($child->getId());
+            $childNode = $children->getNode();
+            $childNode->setRootValue($node->getRootValue() + 1);
+            $children->save();
+            
+            $this->getUser()->setFlash('error', $prevRight . ' - ' . $currentRight);
+          }
+        }
+
+        $prevSibling->save();
+        $object->save();
+        
+        $this->getUser()->setFlash('notice', 'Order Updated!');
+      }
+      else
+      {
+        $this->getUser()->setFlash('error', 'This page do not have previous sibling');
+      }
+    }
     else
     {
       $this->getUser()->setFlash('error', 'This page do not have previous sibling');
@@ -64,6 +122,28 @@ class backendPageActions extends autoBackendPageActions
       $object->save();
       
       $this->getUser()->setFlash('notice', 'Order Updated!');
+    }
+    if($node->isRoot())
+    { 
+      $nextSibling = Doctrine::getTable('peanutPage')->findOneByRootId($node->getRootValue() + 1);
+      
+      if($prevSibling)
+      {
+        
+        $nextNode = $nextSibling->getNode();
+        
+        $node->setRootValue($node->getRootValue() + 1);
+        $nextNode->setRootValue($nextNode->getRootValue() - 1);
+        
+        $nextSibling->save();
+        $object->save();
+        
+        $this->getUser()->setFlash('notice', 'Order Updated!');
+      }
+      else
+      {
+        $this->getUser()->setFlash('error', 'This page do not have previous sibling');
+      }
     }
     else
     {
