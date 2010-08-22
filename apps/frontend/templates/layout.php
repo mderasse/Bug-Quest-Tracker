@@ -7,7 +7,7 @@
     
     <title>
       <?php if (!include_slot('title')): ?>
-        peanut :: another CMS on symfony
+        Aion-Lighting :: Bug Quest Tracker
       <?php endif; ?>
     </title>
     
@@ -15,25 +15,8 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
   </head>
-  <body class="helvetica">
-    <div class="container_12 alignCenter center">
-      
-      <div id="header" class="alignLeft clearfix">
-        <h1 class="helvetica bold condensed grid_4 padding"><a href="<?php echo url_for('@homepage') ?>" title="Retour à l'accueil">peanut</a></h1>
-        <ul class="menu grid_8">
-          <?php include_component('page', 'menu') ?>
-          <?php include_component('contact', 'menu') ?>
-        </ul>
-      </div>
-      
-      <div id="content" class="alignLeft">
+  <body>
         <?php echo $sf_content ?>
-      </div>
-      
-      <div id="footer">
-        <p class="light">Ce site utilise le CMS <a href="http://dev.pockyworld.com/?s=peanut" title="Voir le site">peanut</a> et <a href="http://www.symfony-project.com" title="Voir le site">symfony</a> !</p>
-      </div>
-      
-    </div>
+
   </body>
 </html>

@@ -4,5 +4,5 @@
 # default values
 all:
   mail:
-    site:              noreply@peanut.fr
-    contact:           albalmes@gmail.com
+    site:              noreply@aion-lightning.com
+    contact:           mystick@eternal-dream.net

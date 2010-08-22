@@ -1,19 +1,5 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
-
-contact:
-  url:             /contact/:action.:sf_format
-  param:           { module: contact, sf_format: html }
-  
-page:
-  url:             /:slug.:sf_format
-  class:           sfDoctrineRoute
-  options:         { model: peanutPage, type: object }
-  param:           { module: page, action: show }
-  requirement:     { sf_method: get }
-  
-
-
 # default rules
 homepage:
   url:   /
