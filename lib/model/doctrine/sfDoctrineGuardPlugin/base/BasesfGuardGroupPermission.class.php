@@ -19,9 +19,9 @@
  * @method sfGuardGroupPermission setGroup()         Sets the current record's "Group" value
  * @method sfGuardGroupPermission setPermission()    Sets the current record's "Permission" value
  * 
- * @package    peanut
+ * @package    Bug Quest Tracker
  * @subpackage model
- * @author     Alexandre pocky BALMES
+ * @author     Matthieu Mystick Derasse
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardGroupPermission extends sfDoctrineRecord
@@ -30,12 +30,12 @@ abstract class BasesfGuardGroupPermission extends sfDoctrineRecord
     {
         $this->setTableName('sf_guard_group_permission');
         $this->hasColumn('group_id', 'integer', null, array(
-             'primary' => true,
              'type' => 'integer',
+             'primary' => true,
              ));
         $this->hasColumn('permission_id', 'integer', null, array(
-             'primary' => true,
              'type' => 'integer',
+             'primary' => true,
              ));
 
         $this->option('symfony', array(
@@ -57,7 +57,8 @@ abstract class BasesfGuardGroupPermission extends sfDoctrineRecord
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
         $this->actAs($timestampable0);
     }
 }

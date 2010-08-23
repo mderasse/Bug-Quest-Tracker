@@ -3,9 +3,9 @@
 /**
  * sfGuardUser filter form base class.
  *
- * @package    peanut
+ * @package    Bug Quest Tracker
  * @subpackage filter
- * @author     Alexandre pocky BALMES
+ * @author     Matthieu Mystick Derasse
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
  */
 abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
