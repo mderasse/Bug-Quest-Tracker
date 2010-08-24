@@ -6,11 +6,11 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
-    #description:  symfony project
-    #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    title:        Bug Quest Tracker :: Aion-Lightning
+    description:  A Bug Quest Tracker for Aion-Lightning
+    keywords:     Quest, Tracker, Bug, Aion, Aion-Lightning, Quest Tracker
+    language:     en
+    robots:       index, follow
 
   stylesheets:    [main.css]
 

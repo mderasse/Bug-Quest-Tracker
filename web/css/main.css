@@ -3,7 +3,7 @@ By Mystick for Aion Lightning, Sunday 22 August, 10:45 PM
 */
 body
 {
-	background-image: url("../img/main_bg.jpg");
+	background-image: url("/images/main_bg.jpg");
 	padding: 0;
 	margin: 0;
 	background-attachment: fixed;
@@ -16,7 +16,7 @@ Top box with User information
 
 #topbox
 {
-	background: url("../img/toparea_bg.png");
+	background: url("/images/toparea_bg.png");
 	height: 92px;
 	width: 500px;
 	margin: 0 auto;
@@ -32,7 +32,7 @@ Top box with User information
 
 	height: 32px;
 	width: 139px;
-	background: url("../img/inputbox.png") no-repeat;
+	background: url("/images/inputbox.png") no-repeat;
   border:0px;
   font-size:12px;
   padding-left:10px;
@@ -43,7 +43,7 @@ Top box with User information
 
 	height: 24px;
 	width: 127px;
-	background: url("../img/submitbox.png") no-repeat;
+	background: url("/images/submitbox.png") no-repeat;
   border:0px;
   font-size:12px;
 }
@@ -60,7 +60,7 @@ Top box with logo and Seach Box
 }
 #top .logo
 {
-	background: url("../img/logo.png");
+	background: url("/images/logo.png");
 	height: 85px;
 	width: 350px;
 }
@@ -74,7 +74,7 @@ Top box with logo and Seach Box
 
 	height: 32px;
 	width: 122px;
-	background: url("../img/searchbox.png") no-repeat;
+	background: url("/images/searchbox.png") no-repeat;
   border:0px;
   font-size:12px;
   padding-left:10px;
@@ -96,7 +96,7 @@ Content box
 */
 #content
 {
-	background: url("../img/main_body_bg.png");
+	background: url("/images/main_body_bg.png");
 	width: 60%;
 	margin: 0 auto;
   margin-bottom:55px;
@@ -119,17 +119,17 @@ margin-bottom:25px;
 }
 #content #menu #menu-l
 {
-  background:url("../img/toolbar-l.png") no-repeat scroll 0 0 transparent;
+  background:url("/images/toolbar-l.png") no-repeat scroll 0 0 transparent;
   padding-left:20px;
 }
 #content #menu #menu-c
 {
-  background:url("../img/toolbar-bg.png") repeat-x scroll 0 0 transparent;
+  background:url("/images/toolbar-bg.png") repeat-x scroll 0 0 transparent;
   height:50px;
 }
 #content #menu #menu-r
 {
-  background:url("../img/toolbar-r.png") no-repeat scroll 100% 0 transparent;
+  background:url("/images/toolbar-r.png") no-repeat scroll 100% 0 transparent;
   padding-right:20px;
 }
 #content #menu #menu-c ul
@@ -184,7 +184,7 @@ Quest Table
 }
 #content #table table thead tr
 {
-	background: url("../img/catbg.png") repeat-x;
+	background: url("/images/catbg.png") repeat-x;
 }
 #content #table table thead
 {
@@ -201,7 +201,7 @@ Quest Table
 }
 #content #table table thead tr th.table-id
 {
-  width:70px;
+  width:10%;
 }
 #content #table table thead tr th.table-name
 {
@@ -255,7 +255,7 @@ Bottom box
 */
 #bottom
 {
-	background: url("../img/footer_bg.png");
+	background: url("/images/footer_bg.png");
 	height: 70px;
 	width: 540px;
 	margin: 0 auto;

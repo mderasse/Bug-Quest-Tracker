@@ -1,15 +1,14 @@
-<h1>Quests List</h1>
-
+<div class="page">Pages : 1 2 3 4 5 6 </div>
+<div id="table">
 <table>
   <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Zone</th>
-      <th>Race</th>
-      <th>Status</th>
-    </tr>
+     <tr>
+         <th class="table-id">ID</th>
+         <th class="table-name">Quest Name</th>
+         <th class="table-status">Status</th>
+         <th class="table-zone">Zone</th>
+         <th class="table-race">Race</th>
+     </tr>
   </thead>
   <tbody>
     <?php foreach ($quests as $quest): ?>
@@ -24,5 +23,4 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-
-  <a href="<?php echo url_for('quest/new') ?>">New</a>
+</div>
