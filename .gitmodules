@@ -1,3 +1,0 @@
-[submodule "plugins/sfDoctrineGuardPlugin"]
-	path = plugins/sfDoctrineGuardPlugin
-	url = git://github.com/pocky/sfDoctrineGuardPlugin.git
