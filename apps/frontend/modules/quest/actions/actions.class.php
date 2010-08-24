@@ -12,9 +12,10 @@ class questActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->quests = Doctrine::getTable('Quest')
-      ->createQuery('a')
-      ->execute();
+   $this->pager = new sfDoctrinePager('Quest', 25);
+   $this->pager->setQuery(Doctrine::getTable('Quest')->createQuery('a'));
+   $this->pager->setPage($request->getParameter('page', 1));
+   $this->pager->init();
   }
 
   public function executeNew(sfWebRequest $request)
