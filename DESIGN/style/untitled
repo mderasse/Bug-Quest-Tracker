@@ -1,9 +1,0 @@
-body
-{
-	background-image: url(img/main_bg.jpg);
-	padding: 0;
-	margin: 0;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center top;
-}

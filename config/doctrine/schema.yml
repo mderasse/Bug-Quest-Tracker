@@ -1,54 +1,58 @@
-Quest:
+ClientString:
   columns:
     name:
-      type: string(150)
+      type: string(255)
       notnull: true
+    name_fr:
+      type: string(500)
+      notnull: true
+Quest:
+  columns:
+    name_id:
+      type: string(255)
     type:
       type: string(50)
       notnull: true
     zone_id:
-      type: string(150)
-      notnull: true
+      type: string(255)
     race:
       type: string(150)
       notnull: true
     status_id:
       type: integer
       notnull: false
-    comment_id:
-      type: integer
-      notnull: false
   relations:
-    Trad:
+    Translate:
       class: ClientString
-      local: name
+      local: name_id
       foreign: name
-      foreignType: one
-      foreignAlias: Quest
+      type: one
+      foreignAlias: Questname
+    Zone:
+      class: ClientString
+      local: zone_id
+      foreign: name
+      type: one
+      foreignAlias: Questzone
     Status:
       class: Status
       local: status_id
       foreign: id
-      foreignType: one
-      foreignAlias: Quest
+      type: one
+      foreignAlias: Queststatus
     Comments:
       class: Comments
       local: id
       foreign: quest_id
       type: many
-ClientString:
-  columns:
-    name:
-      type: string(150)
-      notnull: true
-    name_fr:
-      type: string(500)
-      notnull: true
 Status:
   columns:
     name:
       type: string(150)
       notnull: true
+    colors:
+      type: string(150)
+      notnull: false
 Comments:
   actAs: [Timestampable]
   columns:

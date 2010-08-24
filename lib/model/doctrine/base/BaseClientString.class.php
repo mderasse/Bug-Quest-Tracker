@@ -7,14 +7,17 @@
  * 
  * @property string $name
  * @property string $name_fr
- * @property Quest $Quest
+ * @property Doctrine_Collection $Questname
+ * @property Doctrine_Collection $Questzone
  * 
- * @method string       getName()    Returns the current record's "name" value
- * @method string       getNameFr()  Returns the current record's "name_fr" value
- * @method Quest        getQuest()   Returns the current record's "Quest" value
- * @method ClientString setName()    Sets the current record's "name" value
- * @method ClientString setNameFr()  Sets the current record's "name_fr" value
- * @method ClientString setQuest()   Sets the current record's "Quest" value
+ * @method string              getName()      Returns the current record's "name" value
+ * @method string              getNameFr()    Returns the current record's "name_fr" value
+ * @method Doctrine_Collection getQuestname() Returns the current record's "Questname" collection
+ * @method Doctrine_Collection getQuestzone() Returns the current record's "Questzone" collection
+ * @method ClientString        setName()      Sets the current record's "name" value
+ * @method ClientString        setNameFr()    Sets the current record's "name_fr" value
+ * @method ClientString        setQuestname() Sets the current record's "Questname" collection
+ * @method ClientString        setQuestzone() Sets the current record's "Questzone" collection
  * 
  * @package    Bug Quest Tracker
  * @subpackage model
@@ -26,10 +29,10 @@ abstract class BaseClientString extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('client_string');
-        $this->hasColumn('name', 'string', 150, array(
+        $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 150,
+             'length' => 255,
              ));
         $this->hasColumn('name_fr', 'string', 500, array(
              'type' => 'string',
@@ -41,8 +44,12 @@ abstract class BaseClientString extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Quest', array(
+        $this->hasMany('Quest as Questname', array(
              'local' => 'name',
-             'foreign' => 'name'));
+             'foreign' => 'name_id'));
+
+        $this->hasMany('Quest as Questzone', array(
+             'local' => 'name',
+             'foreign' => 'zone_id'));
     }
 }

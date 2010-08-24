@@ -16,13 +16,13 @@ abstract class BaseClientStringForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'      => new sfWidgetFormInputHidden(),
-      'name'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Quest'), 'add_empty' => false)),
+      'name'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Questname'), 'add_empty' => false)),
       'name_fr' => new sfWidgetFormTextarea(),
     ));
 
     $this->setValidators(array(
       'id'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Quest'))),
+      'name'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Questname'))),
       'name_fr' => new sfValidatorString(array('max_length' => 500)),
     ));
 

@@ -15,23 +15,21 @@ abstract class BaseQuestForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'name'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Trad'), 'add_empty' => false)),
-      'type'       => new sfWidgetFormInputText(),
-      'zone_id'    => new sfWidgetFormInputText(),
-      'race'       => new sfWidgetFormInputText(),
-      'status_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => true)),
-      'comment_id' => new sfWidgetFormInputText(),
+      'id'        => new sfWidgetFormInputHidden(),
+      'name_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Translate'), 'add_empty' => true)),
+      'type'      => new sfWidgetFormInputText(),
+      'zone_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Zone'), 'add_empty' => true)),
+      'race'      => new sfWidgetFormInputText(),
+      'status_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Trad'))),
-      'type'       => new sfValidatorString(array('max_length' => 50)),
-      'zone_id'    => new sfValidatorString(array('max_length' => 150)),
-      'race'       => new sfValidatorString(array('max_length' => 150)),
-      'status_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'required' => false)),
-      'comment_id' => new sfValidatorInteger(array('required' => false)),
+      'id'        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'name_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Translate'), 'required' => false)),
+      'type'      => new sfValidatorString(array('max_length' => 50)),
+      'zone_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Zone'), 'required' => false)),
+      'race'      => new sfValidatorString(array('max_length' => 150)),
+      'status_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('quest[%s]');

@@ -1,7 +1,7 @@
-CREATE TABLE client_string (id BIGINT AUTO_INCREMENT, name VARCHAR(150) NOT NULL, name_fr TEXT NOT NULL, INDEX name_idx (name), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE client_string (id BIGINT AUTO_INCREMENT, name VARCHAR(255) NOT NULL, name_fr TEXT NOT NULL, INDEX name_idx (name), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE comments (id BIGINT AUTO_INCREMENT, quest_id BIGINT NOT NULL, content TEXT NOT NULL, author_id BIGINT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX quest_id_idx (quest_id), INDEX author_id_idx (author_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE quest (id BIGINT AUTO_INCREMENT, name VARCHAR(150) NOT NULL, type VARCHAR(50) NOT NULL, zone_id VARCHAR(150) NOT NULL, race VARCHAR(150) NOT NULL, status_id BIGINT, comment_id BIGINT, INDEX name_idx (name), INDEX status_id_idx (status_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE status (id BIGINT AUTO_INCREMENT, name VARCHAR(150) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE quest (id BIGINT AUTO_INCREMENT, name_id VARCHAR(255), type VARCHAR(50) NOT NULL, zone_id VARCHAR(255), race VARCHAR(150) NOT NULL, status_id BIGINT, INDEX name_id_idx (name_id), INDEX zone_id_idx (zone_id), INDEX status_id_idx (status_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE status (id BIGINT AUTO_INCREMENT, name VARCHAR(150) NOT NULL, colors VARCHAR(150), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_forgot_password (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, unique_key VARCHAR(255), expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group (id BIGINT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group_permission (group_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(group_id, permission_id)) ENGINE = INNODB;
@@ -10,11 +10,11 @@ CREATE TABLE sf_guard_remember_key (id BIGINT AUTO_INCREMENT, user_id BIGINT, re
 CREATE TABLE sf_guard_user (id BIGINT AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email_address VARCHAR(255) NOT NULL UNIQUE, username VARCHAR(128) NOT NULL UNIQUE, algorithm VARCHAR(128) DEFAULT 'sha1' NOT NULL, salt VARCHAR(128), password VARCHAR(128), is_active TINYINT(1) DEFAULT '0', is_super_admin TINYINT(1) DEFAULT '0', last_login DATETIME, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX is_active_idx_idx (is_active), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_group (user_id BIGINT, group_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, group_id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_permission (user_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, permission_id)) ENGINE = INNODB;
-ALTER TABLE client_string ADD CONSTRAINT client_string_name_quest_name FOREIGN KEY (name) REFERENCES quest(name);
 ALTER TABLE comments ADD CONSTRAINT comments_quest_id_quest_id FOREIGN KEY (quest_id) REFERENCES quest(id);
 ALTER TABLE comments ADD CONSTRAINT comments_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id);
+ALTER TABLE quest ADD CONSTRAINT quest_zone_id_client_string_name FOREIGN KEY (zone_id) REFERENCES client_string(name);
 ALTER TABLE quest ADD CONSTRAINT quest_status_id_status_id FOREIGN KEY (status_id) REFERENCES status(id);
-ALTER TABLE quest ADD CONSTRAINT quest_name_client_string_name FOREIGN KEY (name) REFERENCES client_string(name);
+ALTER TABLE quest ADD CONSTRAINT quest_name_id_client_string_name FOREIGN KEY (name_id) REFERENCES client_string(name);
 ALTER TABLE sf_guard_forgot_password ADD CONSTRAINT sf_guard_forgot_password_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_group_permission ADD CONSTRAINT sf_guard_group_permission_permission_id_sf_guard_permission_id FOREIGN KEY (permission_id) REFERENCES sf_guard_permission(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_group_permission ADD CONSTRAINT sf_guard_group_permission_group_id_sf_guard_group_id FOREIGN KEY (group_id) REFERENCES sf_guard_group(id) ON DELETE CASCADE;

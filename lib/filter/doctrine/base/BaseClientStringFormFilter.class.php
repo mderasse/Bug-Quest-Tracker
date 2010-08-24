@@ -13,12 +13,12 @@ abstract class BaseClientStringFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Quest'), 'add_empty' => true)),
+      'name'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Questname'), 'add_empty' => true)),
       'name_fr' => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'name'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Quest'), 'column' => 'id')),
+      'name'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Questname'), 'column' => 'id')),
       'name_fr' => new sfValidatorPass(array('required' => false)),
     ));
 

@@ -1,0 +1,267 @@
+/*
+By Mystick for Aion Lightning, Sunday 22 August, 10:45 PM
+*/
+body
+{
+	background-image: url("../img/main_bg.jpg");
+	padding: 0;
+	margin: 0;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+/*
+Top box with User information
+*/
+
+#topbox
+{
+	background: url("../img/toparea_bg.png");
+	height: 92px;
+	width: 500px;
+	margin: 0 auto;
+	padding: 0;
+  margin-bottom:25px;
+  text-align:center;
+  font-family:tahoma,sans-serif;
+  font-size:13px;
+  color:#444444;
+}
+#topbox input[type=text], #topbox input[type=password]
+{
+
+	height: 32px;
+	width: 139px;
+	background: url("../img/inputbox.png") no-repeat;
+  border:0px;
+  font-size:12px;
+  padding-left:10px;
+  padding-right:10px;
+}
+#topbox input[type=submit]
+{
+
+	height: 24px;
+	width: 127px;
+	background: url("../img/submitbox.png") no-repeat;
+  border:0px;
+  font-size:12px;
+}
+/*
+Top box with logo and Seach Box 
+*/
+#top
+{
+	height: 72px;
+	width: 60%;
+	margin: 0 auto;
+	padding: 0;
+  margin-bottom:25px;
+}
+#top .logo
+{
+	background: url("../img/logo.png");
+	height: 85px;
+	width: 350px;
+}
+#top .searchbox
+{
+  float:right;
+  margin-top:40px;
+}
+#top .searchbox input[type=text]
+{
+
+	height: 32px;
+	width: 122px;
+	background: url("../img/searchbox.png") no-repeat;
+  border:0px;
+  font-size:12px;
+  padding-left:10px;
+  padding-right:40px;
+}
+#top .searchbox input[type=submit]
+{
+	height: 32px;
+	width: 40px;
+  background-color:transparent;
+  border:none;
+  margin-left:-43px;
+}
+
+
+
+/*
+Content box
+*/
+#content
+{
+	background: url("../img/main_body_bg.png");
+	width: 60%;
+	margin: 0 auto;
+  margin-bottom:55px;
+  border: 2px solid #7FA0A9;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+
+/*
+Menu in Content box
+*/
+#content #menu
+{
+width: 97%;
+height:50px;
+margin:auto;
+font-family:tahoma,sans-serif;
+margin-bottom:25px;
+}
+#content #menu #menu-l
+{
+  background:url("../img/toolbar-l.png") no-repeat scroll 0 0 transparent;
+  padding-left:20px;
+}
+#content #menu #menu-c
+{
+  background:url("../img/toolbar-bg.png") repeat-x scroll 0 0 transparent;
+  height:50px;
+}
+#content #menu #menu-r
+{
+  background:url("../img/toolbar-r.png") no-repeat scroll 100% 0 transparent;
+  padding-right:20px;
+}
+#content #menu #menu-c ul
+{
+  padding:0px;
+  padding-top:16px;
+}
+#content #menu #menu-c li
+{
+  display:inline;
+  color: white;
+  font-family:tahoma,sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  margin-left:20px;
+}
+#content #menu #menu-c li a
+{
+  text-decoration:none;
+  color: white;
+}
+
+/*
+Quest Page
+*/
+#content .page
+{
+  width:98%;
+  margin:auto;
+  font-family:tahoma,sans-serif;
+  font-size:12px;
+  margin-bottom:8px;
+  margin-top:8px;
+}
+
+
+/*
+Quest Table
+*/
+#content #table
+{
+  width:98%;
+  margin:auto;
+  border:1px solid #193C5F;
+  padding:1px;
+}
+#content #table table 
+{
+	width:100%;
+  border-spacing:0px;
+	border-collapse:collapse; 
+}
+#content #table table thead tr
+{
+	background: url("../img/catbg.png") repeat-x;
+}
+#content #table table thead
+{
+	border-bottom: 2px solid transparent;
+}
+#content #table table thead th
+{
+  color:#B4CEEF;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:normal;
+  text-transform:uppercase;
+  padding:5px 5px 5px 10px;
+}
+#content #table table thead tr th.table-id
+{
+  width:70px;
+}
+#content #table table thead tr th.table-name
+{
+  width:40%;
+}
+#content #table table thead tr th.table-status
+{
+  width:20%;
+}
+#content #table table thead tr th.table-zone
+{
+  width:20%;
+}
+#content #table table thead tr th.table-race
+{
+  width:10%;
+}
+#content #table table tbody tr
+{
+  height: 30px;
+  color:#000000;
+  font-family:tahoma,sans-serif;
+  font-size:14px;
+}
+#content #table table tbody td
+{
+  text-align:center;
+}
+#content #table table tbody tr.valid
+{
+  background-color:green;
+}
+#content #table table tbody tr.error
+{
+  background-color:red;
+}
+#content #table table tbody tr.indev
+{
+  background-color:#8ACDFF;
+}
+#content #table table tbody tr.odd
+{
+  background-color:#D2D2D2;
+}
+#content #table table tbody tr.even
+{
+  background-color:#BBBBBB;
+}
+/*
+Bottom box
+*/
+#bottom
+{
+	background: url("../img/footer_bg.png");
+	height: 70px;
+	width: 540px;
+	margin: 0 auto;
+	padding-top:50px;
+  text-align:center;
+  font-family:tahoma,sans-serif;
+  font-size:11px;
+  color:#444444;
+}
