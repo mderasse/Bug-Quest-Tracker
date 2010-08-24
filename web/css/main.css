@@ -230,6 +230,16 @@ Quest Table
 {
   text-align:center;
 }
+#content #table table tbody tr a
+{
+text-decoration:none;
+color:black;
+}
+#content #table table tbody tr td.bold
+{
+font-weight:bold;
+}
+
 #content #table table tbody tr.valid
 {
   background-color:green;

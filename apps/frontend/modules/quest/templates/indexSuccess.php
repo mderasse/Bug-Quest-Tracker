@@ -19,8 +19,8 @@
   <tbody>
     <?php foreach ($pager->getResults() as $quest): ?>
     <tr style="background-color:<?php echo $quest->getStatus()->getColors() ?>" >
-      <td><a href="<?php echo url_for('quest/edit?id='.$quest->getId()) ?>"><?php echo $quest->getId() ?></a></td>
-      <td><?php echo $quest->getTranslate()->getNameFr() ?></td>
+      <td><a href="<?php echo url_for('quest/show?id='.$quest->getId()) ?>"><?php echo $quest->getId() ?></a></td>
+      <td class="bold"><a href="<?php echo url_for('quest/show?id='.$quest->getId()) ?>"><?php echo $quest->getTranslate()->getNameFr() ?></a></td>
       <td><?php echo $quest->getType() ?></td>
       <td><?php echo $quest->getZone()->getNameFr() ?></td>
       <td><?php echo $quest->getRace() ?></td>
