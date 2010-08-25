@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <header/>
+    <body>
+      <trans-unit>
+        <source>Username</source>
+        <target>Nom d'utilisateur </target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password</source>
+        <target>Mot de passe </target>
+      </trans-unit>
+      <trans-unit>
+        <source>Remember me</source>
+        <target>Rester actif</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Signin</source>
+        <target>Se connecter</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Forgot your password?</source>
+        <target>Mot de passe oublié ?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Hello %name%</source>
+        <target>Bonjour %name%</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Enter your new password in the form below.</source>
+        <target>Changer votre mot de passe ci-dessous</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Change</source>
+        <target>Changer</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You don't have the required permission to access this page.</source>
+        <target>Vous n'avez pas les permissions nécessaires pour accéder à cette page.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Want to register?</source>
+        <target>Vous inscrire ?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Request</source>
+        <target>Demander</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Do not worry, we can help you get back in to your account safely!</source>
+        <target>Ne vous inquiétez pas, nous pouvons vous aider !</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Fill out the form below to request an e-mail with information on how to reset your password.</source>
+        <target>Complétez le formulaire ci-dessous pour recevoir un email contenant les informations pour réinitiliser votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Register</source>
+        <target>S'inscrire</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Your account is already activated</source>
+        <target>Votre compte est déjà activé</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You are already registered and signed in!</source>
+        <target>Vous êtes déjà enregistré et connecté</target>
+      </trans-unit>
+      <trans-unit>
+        <source>A confirmation of creation has just been sent on your mailbox</source>
+        <target>Une confirmation de création vient d'être envoyé sur votre boite mail</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Your account is now confirmed!</source>
+        <target>Votre compte est confirmé !</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Sorry but the time of activation was exceeded, you must recreate your account</source>
+        <target>Désolé mais le délai d'activation de votre compte à été dépassé, vous devez recréer votre compte</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Your activation code is not valid</source>
+        <target>Votre code d'activation n'est pas valide</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Hi %first_name%</source>
+        <target>Bonjour %first_name%</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Below you will your username and new password:</source>
+        <target>Voici votre identifiant et votre mot nouveau mot de passe :</target>
+      </trans-unit>
+      <trans-unit>
+        <source>This e-mail is being sent because you requested information on how to reset your password.</source>
+        <target>Cet email vous est envoyé car vous avez effectué une demande de modification de votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You can change your password by clicking the below link which is only valid for 24 hours:</source>
+        <target>Vous pouvez changer votre mot de passe en cliquant sur le lien ci-dessous d'une validité de 24 heures :</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Click to change password</source>
+        <target>Changer votre mot de passe</target>
+      </trans-unit>
+      <trans-unit>
+        <source>This e-mail is being sent because you just registered on our site.</source>
+        <target>Cet email vous est envoyé car vous venez de vous enregistrer sur notre site.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Click to confirm your account</source>
+        <target>Confirmer votre compte</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Check your e-mail! You should receive something shortly!</source>
+        <target>Un email vient de vous être envoyé !</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password updated successfully!</source>
+        <target>Votre mot de passe a été mis à jour !</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Invalid e-mail address!</source>
+        <target>L'adresse mail n'existe pas !</target>
+      </trans-unit>    
+    </body>
+  </file>
+</xliff>
