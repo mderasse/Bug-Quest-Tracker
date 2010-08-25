@@ -365,7 +365,7 @@ color: #25475E;
 }
 .table-comment table thead tr th.table-author
 {
-  width:10%;
+  width:15%;
 }
 .table-comment table thead th
 {
@@ -378,5 +378,5 @@ color: #25475E;
 }
 .table-comment table thead tr th.table-message
 {
-  width: 70%%;
+  width: 65%;
 }

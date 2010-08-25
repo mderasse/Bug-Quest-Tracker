@@ -33,8 +33,8 @@
 <table>
   <thead>
      <tr>
-         <th class="table-id">Author</th>
-         <th class="table-name">Message</th>
+         <th class="table-author">Author</th>
+         <th class="table-message">Message</th>
      </tr>
   </thead>
   <tbody>
