@@ -1,7 +1,13 @@
 
 <?php if ($pager->haveToPaginate()): ?>
   <div class="page"> Pages :
-    <?php //  I Forgot the Systeme Pager for view every Page ?>
+    <?php foreach ($pager->getLinks() as $page): ?>
+      <?php if ($page == $pager->getPage()): ?>
+        <h2><?php echo $page ?></h2>
+      <?php else: ?>
+        <a href="index.php?page=<?php echo $page ?>"><?php echo $page ?></a>
+      <?php endif; ?>
+    <?php endforeach; ?>
   </div>
 <?php endif; ?>
 <div id="table">
@@ -32,6 +38,12 @@
 </div>
 <?php if ($pager->haveToPaginate()): ?>
   <div class="page"> Pages :
-    <?php //  I Forgot the Systeme Pager for view every Page ?>
+    <?php foreach ($pager->getLinks() as $page): ?>
+      <?php if ($page == $pager->getPage()): ?>
+        <h2><?php echo $page ?></h2>
+      <?php else: ?>
+        <a href="index.php?page=<?php echo $page ?>"><?php echo $page ?></a>
+      <?php endif; ?>
+    <?php endforeach; ?>
   </div>
 <?php endif; ?>

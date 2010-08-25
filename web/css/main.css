@@ -164,8 +164,24 @@ Quest Page
   margin-bottom:8px;
   margin-top:8px;
 }
-
-
+#content .page a
+{
+  color: black;
+  text-decoration:none;
+}
+#content .page a:hover
+{
+  color: black;
+  text-decoration:none;
+  color: #7FA0A9;
+}
+#content .page h2
+{
+  font-family:tahoma,sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  display: inline;
+}
 /*
 Quest Table
 */
@@ -274,4 +290,93 @@ Bottom box
   font-family:tahoma,sans-serif;
   font-size:11px;
   color:#444444;
+}
+.table-show
+{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.table-show table
+{
+  text-align:center;
+  margin: 0 auto;
+  width:70%;
+  border-spacing:0px;
+	border-collapse:collapse;
+  border:3px solid black;
+}
+.table-show table tr td
+{
+  border: 1px solid black;
+  height:35px;
+}
+.table-show table tbody tr td.columns2
+{
+  border: 1px solid black;
+  height:35px;
+  width:65%;
+}
+.table-show table tbody tr td.columns1
+{
+  border: 1px solid black;
+  height:35px;
+  width:35%;
+}
+.table-comment h1
+{
+text-align:center;
+color: #25475E;
+}
+.table-comment table
+{
+  margin: 0 auto;
+  width:70%;
+  border-spacing:5px;
+  border: none;
+}
+.table-comment table tr td
+{
+  height:35px;
+  padding-bottom:10px;
+}
+.table-comment table tbody tr td.columns2
+{
+  height:35px;
+  width:65%;
+  vertical-align:top;
+  font-family:tahoma,sans-serif;
+  font-size:13px;
+  color:#444444;
+}
+.table-comment table tbody tr td.columns1
+{
+  height:35px;
+  width:35%;
+  vertical-align:top;
+  font-family:tahoma,sans-serif;
+  font-size:12px;
+  color:#444444;
+  font-weight:bold;
+}
+.table-comment table thead tr
+{
+	background: url("/images/catbg.png") repeat-x;
+}
+.table-comment table thead tr th.table-author
+{
+  width:10%;
+}
+.table-comment table thead th
+{
+  color:#B4CEEF;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:normal;
+  text-transform:uppercase;
+  padding:5px 5px 5px 10px;
+}
+.table-comment table thead tr th.table-message
+{
+  width: 70%%;
 }

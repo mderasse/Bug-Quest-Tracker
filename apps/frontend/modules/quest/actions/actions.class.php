@@ -17,16 +17,16 @@ class questActions extends sfActions
    $this->pager->setPage($request->getParameter('page', 1));
    $this->pager->init();
   }
-
-  public function executeNew(sfWebRequest $request)
-  {
-    $this->form = new QuestForm();
-  }
   public function executeShow(sfWebRequest $request)
   {
     $this->quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->quest);
   }
+  public function executeNew(sfWebRequest $request)
+  {
+    $this->form = new QuestForm();
+  }
+
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
