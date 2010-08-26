@@ -21,12 +21,30 @@ class questActions extends sfActions
   {
     $this->quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->quest);
+    if($this->getUser()->hasCredential('AddComments'))
+    {
+      $this->form = new CommentsForm();
+    }
   }
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new QuestForm();
   }
+  public function executeCreatecomments(sfWebRequest $request)
+  {
+    $this->quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id')));
+    if ($this->getUser()->hasCredential('AddComments'))
+    {
+      $this->form = new CommentsForm();
 
+      $this->forward404Unless($request->isMethod(sfRequest::POST));
+
+      $this->form = new CommentsForm();
+
+      $this->processFormComments($request, $this->form);
+    }
+    $this->setTemplate('show');
+  }
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
@@ -73,6 +91,16 @@ class questActions extends sfActions
       $quest = $form->save();
 
       $this->redirect('quest/edit?id='.$quest->getId());
+    }
+  }
+  protected function processFormcomments(sfWebRequest $request, sfForm $form)
+  {
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    if ($form->isValid())
+    {
+      $comments = $form->save();
+
+      $this->redirect('quest/show?id='.$comments->getQuestId());
     }
   }
 }

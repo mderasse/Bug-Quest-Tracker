@@ -12,5 +12,18 @@ class CommentsForm extends BaseCommentsForm
 {
   public function configure()
   {
+    $this->removeFields();
+  }
+  protected function doSave($conn = null)
+  {
+    $this->values['author_id'] = $this->getUser()->getGuardUser()->getId();
+
+    parent::doSave($conn);
+  }
+  public function removeFields()
+  {
+    unset(
+      $this['created_at'], $this['updated_at'], $this['author_id']
+    );
   }
 }

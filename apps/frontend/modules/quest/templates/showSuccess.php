@@ -44,6 +44,15 @@
       <td class="columns2"><?php echo $comments->getContent() ?></td>
     </tr>
     <?php endforeach; ?>
+    <?php if($sf_user->hasCredential('AddComments')): ?>
+    <tr>
+      <td class="columns1">Your Comments :</td>
+      <td class="columns2">
+      <form action="<?php echo url_for('quest/createcomments?id='.$sf_params->get('id')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+      <?php echo $form->renderHiddenFields(true) ?>    
+      <?php echo $form['content'] ?><br /><input type="submit" value="Add Comments" /></form></td>
+    </tr>
+    <?php endif; ?>
   </tbody>
 </table>
 </div>
