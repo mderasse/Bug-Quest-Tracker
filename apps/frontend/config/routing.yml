@@ -5,6 +5,11 @@
 homepage:
   url:   /
   param: { module: quest, action: index }
+editprofil:
+  url:   /editprofil
+  param: { module: user, action: edit }
+
+# SfGuardUser Rule
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }

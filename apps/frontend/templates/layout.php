@@ -12,7 +12,7 @@
       <div id="topbox">
       <?php if($sf_user->isAuthenticated()): ?>
       Welcome <?php echo $sf_user->getGuardUser()->getUsername() ?><br /><br />
-      Profile - <a href="<?php echo url_for('@sf_guard_signout') ?>" >Logout</a>
+      <a href="<?php echo url_for('@editprofil') ?>" >Profile</a> - <a href="<?php echo url_for('@sf_guard_signout') ?>" >Logout</a>
       <?php else: ?>
         <?php include_component('sfGuardAuth', 'loginfast') ?>
       <?php endif; ?>
