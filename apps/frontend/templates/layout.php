@@ -41,8 +41,9 @@
     <?php echo $sf_content ?>
     </div>
     <div id="bottom">Aion LP designed by Seigi. Materials are trademarks and copyrights of NCsoft Corporation.<br />
-                     Powered by Mystick for Aion Lightning
-    </div>
+                     Powered by Mystick for Aion Lightning<br />
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/"><img alt="Contrat Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/2.0/fr/80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Bug Quest Tracker</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="www.eternal-dream.fr" property="cc:attributionName" rel="cc:attributionURL">Matthieu 'Mystick' Derasse - Eternal-Dream</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">licence Creative Commons Paternité - Pas d'Utilisation Commerciale - Pas de Modification 2.0 France</a>.<br />Basé(e) sur une oeuvre à <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://github.com/Mystick/Bug-Quest-Tracker" rel="dc:source">github.com</a>.<br />Les autorisations au-delà du champ de cette licence peuvent être obtenues à <a xmlns:cc="http://creativecommons.org/ns#" href="www.eternal-dream.fr" rel="cc:morePermissions">www.eternal-dream.fr</a>.
+       </div>
     
   </body>
 </html>
