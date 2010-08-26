@@ -10,8 +10,12 @@
   </head>
   <body>
       <div id="topbox">
-        User : <input type="text" name="user" /> Password : <input type="password" name="pass" /><br />
-        <input type="submit" value="Login" />
+      <?php if($sf_user->isAuthenticated()): ?>
+      Welcome <?php echo $sf_user->getGuardUser()->getUsername() ?><br /><br />
+      Profile - <a href="<?php echo url_for('@sf_guard_signout') ?>" >Logout</a>
+      <?php else: ?>
+        <?php include_component('sfGuardAuth', 'loginfast') ?>
+      <?php endif; ?>
     </div>
     <div id="top">
       <div class="searchbox"><input type="text" name="search"><input type="submit" value="" name="search"></div>
