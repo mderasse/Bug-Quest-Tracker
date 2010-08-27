@@ -35,11 +35,9 @@ class questActions extends sfActions
     $this->quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id')));
     if ($this->getUser()->hasCredential('AddComments'))
     {
-      $this->form = new CommentsForm();
-
       $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-      $this->form = new CommentsForm();
+      $this->form = new CommentsForm(array(), array('idquest' => $request->getParameter('id')));
 
       $this->processFormComments($request, $this->form);
     }

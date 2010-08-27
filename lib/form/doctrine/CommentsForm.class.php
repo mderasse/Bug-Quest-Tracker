@@ -14,6 +14,12 @@ class CommentsForm extends BaseCommentsForm
   {
     $this->removeFields();
   }
+  public function doBind(array $values)
+  {
+    $values['quest_id'] = $this->getOption('idquest');
+    
+    parent::doBind($values);
+  }
   protected function doSave($conn = null)
   {
     $this->values['author_id'] = $this->getUser()->getGuardUser()->getId();
