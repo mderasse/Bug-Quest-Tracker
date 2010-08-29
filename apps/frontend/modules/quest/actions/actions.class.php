@@ -13,7 +13,14 @@ class questActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
    $this->pager = new sfDoctrinePager('Quest', 25);
-   $this->pager->setQuery(Doctrine::getTable('Quest')->createQuery('a'));
+   if($request->getParameter('quest'))
+   {
+     $this->pager->setQuery(Doctrine::getTable('Quest')->createQuery('a')->where('type=?', $request->getParameter('quest'))->orWhere('race=?', $request->getParameter('quest'))->orWhere('status_id=?', $request->getParameter('quest')));
+   }
+   else
+   {
+     $this->pager->setQuery(Doctrine::getTable('Quest')->createQuery('a'));
+   }
    $this->pager->setPage($request->getParameter('page', 1));
    $this->pager->init();
   }

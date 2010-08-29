@@ -5,7 +5,11 @@
       <?php if ($page == $pager->getPage()): ?>
         <h2><?php echo $page ?></h2>
       <?php else: ?>
-        <a href="index.php?page=<?php echo $page ?>"><?php echo $page ?></a>
+        <?php if($sf_request->getParameter('quest')): ?>
+        <a href="?quest=<?php echo $sf_request->getParameter('quest') ?>&page=<?php echo $page ?>"><?php echo $page ?></a>
+        <?php else: ?>
+        <a href="?page=<?php echo $page ?>"><?php echo $page ?></a>
+        <?php endif; ?>
       <?php endif; ?>
     <?php endforeach; ?>
   </div>
@@ -42,7 +46,11 @@
       <?php if ($page == $pager->getPage()): ?>
         <h2><?php echo $page ?></h2>
       <?php else: ?>
-        <a href="index.php?page=<?php echo $page ?>"><?php echo $page ?></a>
+        <?php if($sf_request->getParameter('quest')): ?>
+        <a href="?quest=<?php echo $sf_request->getParameter('quest') ?>&page=<?php echo $page ?>"><?php echo $page ?></a>
+        <?php else: ?>
+        <a href="?page=<?php echo $page ?>"><?php echo $page ?></a>
+        <?php endif; ?>
       <?php endif; ?>
     <?php endforeach; ?>
   </div>
