@@ -10,10 +10,13 @@ body
 	background-repeat: no-repeat;
 	background-position: center top;
 }
+img
+{
+border:0px;
+}
 /*
 Top box with User information
 */
-
 #topbox
 {
 	background: url("/images/toparea_bg.png");
@@ -60,9 +63,12 @@ Top box with logo and Seach Box
 }
 #top .logo
 {
-	background: url("/images/logo.png");
 	height: 85px;
 	width: 350px;
+}
+#top .logo a
+{
+border:0px;
 }
 #top .searchbox
 {
@@ -471,4 +477,27 @@ color: #25475E;
 .table-comment table tbody tr td.columns2 form
 {
   text-align:center;
+}
+.table-show input[type=submit]
+{
+	height: 24px;
+	width: 127px;
+	background: url("/images/submitbox.png") no-repeat;
+  border:0px;
+  font-size:12px;
+  margin-left:40px;
+}
+.table-show select
+{
+  background-color:transparent;
+	background: url("/images/bg_input.png") repeat;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding:5px;
+  border: solid 3px RGBa( 146,146,146,0.3);
+  font-size:12px;
+  margin-left:40px;
+  height:30px;
+  width:130px;
 }

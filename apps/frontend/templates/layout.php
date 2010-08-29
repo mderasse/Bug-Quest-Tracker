@@ -19,7 +19,7 @@
     </div>
     <div id="top">
       <div class="searchbox"><input type="text" name="search"><input type="submit" value="" name="search"></div>
-      <div class="logo"><a href="index.php"></a></div>
+      <a class="logo" href="<?php echo url_for('@homepage') ?>"><img src="/images/logo.png" alt="logo" /></a>
     </div>
     <div id="content">
       <div id="menu">
@@ -27,12 +27,11 @@
           <div id="menu-r">
             <div id="menu-c">
               <ul>
-                <li>HOME</li>
-                <li>Mission</li>
-                <li>Quest</li>
-                <li>Elyo</li>
-                <li>Asmodians</li>
-                <li>Admin</li>
+                <li><a href="<?php echo url_for('@homepage') ?>">HOME</a></li>
+                <li><a href="<?php echo url_for('@homepage?quest=mission') ?>">Mission</a></li>
+                <li><a href="<?php echo url_for('@homepage?quest=quest') ?>">Quest</a></li>
+                <li><a href="<?php echo url_for('@homepage?quest=elyo') ?>">Elyo</a></li>
+                <li><a href="<?php echo url_for('@homepage?quest=asmodians') ?>">Asmodians</a></li>
               </ul>
             </div>
           </div>
