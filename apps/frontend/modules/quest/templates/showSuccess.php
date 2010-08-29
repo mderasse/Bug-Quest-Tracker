@@ -11,7 +11,14 @@
     </tr>
     <tr>
       <td class="columns1">Status : </td>
-      <td class="columns2"><?php echo $quest->getStatus()->getName() ?></td>
+      <td class="columns2">
+      <?php if($sf_user->hasCredential('ChangeStatus')): ?>
+      <form action="<?php echo url_for('quest/update?id='.$sf_params->get('id')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+      <?php echo $formquest->renderHiddenFields(true) ?>    
+      <?php echo $formquest['status_id'] ?><input type="submit" value="Add Comment" /></form>
+      <?php else: ?>
+      <?php echo $quest->getStatus()->getName() ?></td>
+      <?php endif; ?>
     </tr>
     <tr>
       <td class="columns1">Location : </td>

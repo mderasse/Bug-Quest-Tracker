@@ -21,6 +21,10 @@ class questActions extends sfActions
   {
     $this->quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->quest);
+    if($this->getUser()->hasCredential('ChangeStatus'))
+    {
+      $this->formquest = new QuestForm($this->quest);
+    }
     if($this->getUser()->hasCredential('AddComments'))
     {
       $this->form = new CommentsForm();
@@ -64,11 +68,15 @@ class questActions extends sfActions
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id'))), sprintf('Object quest does not exist (%s).', $request->getParameter('id')));
-    $this->form = new QuestForm($quest);
+    $this->quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id')));
+    $this->formquest = new QuestForm($quest, array('idquest' => $request->getParameter('id')));
+    if($this->getUser()->hasCredential('AddComments'))
+    {
+      $this->form = new CommentsForm();
+    }
+    $this->processForm($request, $this->formquest);
 
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('edit');
+    $this->setTemplate('show');
   }
 
   public function executeDelete(sfWebRequest $request)
@@ -88,7 +96,7 @@ class questActions extends sfActions
     {
       $quest = $form->save();
 
-      $this->redirect('quest/edit?id='.$quest->getId());
+      $this->redirect('quest/show?id='.$quest->getId());
     }
   }
   protected function processFormcomments(sfWebRequest $request, sfForm $form)

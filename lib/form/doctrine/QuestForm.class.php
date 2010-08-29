@@ -12,5 +12,18 @@ class QuestForm extends BaseQuestForm
 {
   public function configure()
   {
+    $this->removeFields();
+  }
+  public function doBind(array $values)
+  {
+    $values['id'] = $this->getOption('idquest');
+    
+    parent::doBind($values);
+  }
+  public function removeFields()
+  {
+    unset(
+      $this['name_id'], $this['type'], $this['zone_id'], $this['race']
+    );
   }
 }
