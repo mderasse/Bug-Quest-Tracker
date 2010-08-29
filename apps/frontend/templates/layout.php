@@ -6,6 +6,8 @@
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
+    <?php use_javascript('jquery-1.4.2.min.js') ?>
+    <?php use_javascript('search.js') ?>
     <?php include_javascripts() ?>
   </head>
   <body>
@@ -18,7 +20,13 @@
       <?php endif; ?>
     </div>
     <div id="top">
-      <div class="searchbox"><input type="text" name="search"><input type="submit" value="" name="search"></div>
+      <div class="searchbox">
+        <form action="<?php echo url_for('quest_search') ?>" method="get">
+        <input type="text" name="query" value="<?php echo $sf_request->getParameter('query') ?>" id="search_keywords" /><input type="submit" value="" name="search">
+        <img id="loader" src="/images/loader.gif" style="vertical-align: middle; display: none" />
+
+        </form>
+      </div>
       <a class="logo" href="<?php echo url_for('@homepage') ?>"><img src="/images/logo.png" alt="logo" /></a>
     </div>
     <div id="content">

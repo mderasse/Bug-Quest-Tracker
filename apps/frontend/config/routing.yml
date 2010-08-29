@@ -5,6 +5,9 @@
 homepage:
   url:   /
   param: { module: quest, action: index }
+quest_search:
+  url:   /search
+  param: { module: quest, action: search }
 editprofil:
   url:   /editprofil
   param: { module: user, action: edit }

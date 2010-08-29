@@ -7,10 +7,10 @@ $(document).ready(function()
     if (this.value.length >= 3 || this.value == '')
     {
       $('#loader').show();
-      $('#resultat').load(
+      $('#jobs').load(
         $(this).parents('form').attr('action'),
         { query: this.value + '*' },
-        function() { $('#loader').hide(); Cufon.replace('h2'); }
+        function() { $('#loader').hide(); }
       );
     }
   });
