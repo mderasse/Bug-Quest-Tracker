@@ -44,12 +44,6 @@ class Quest extends BaseQuest
       $index->delete($hit->id);
     }
    
-    // don't index expired and non-activated jobs
-    if ($this->isExpired() || !$this->getIsActivated())
-    {
-      return;
-    }
-   
     $doc = new Zend_Search_Lucene_Document();
    
     // store job primary key to identify it in the search results
@@ -57,9 +51,7 @@ class Quest extends BaseQuest
    
     // index job fields
     $doc->addField(Zend_Search_Lucene_Field::UnStored('race', $this->getRace(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::UnStored('name', $this->getTranslate->getNameFr(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::UnStored('zone', $this->getZoneId->getNameFr(), 'utf-8'));
-    $doc->addField(Zend_Search_Lucene_Field::UnStored('status', $this->getStatusId->getName(), 'utf-8'));
+
    
     // add job to the index
     $index->addDocument($doc);

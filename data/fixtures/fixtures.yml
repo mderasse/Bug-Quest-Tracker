@@ -59,3 +59,65 @@ Status:
   Status_4:
     name: Untested
     colors: grey
+ClientString:
+  ClientString_1:
+    name: STR_QUEST_ZONE01
+    name_fr: Heiron
+  ClientString_2:
+    name: STR_QUEST_ZONE02
+    name_fr: Ishalgen
+  ClientString_3:
+    name: STR_QUEST_ZONE03
+    name_fr: Poeta
+  ClientString_4:
+    name: STR_QUEST_ZONE04
+    name_fr: Morheim
+  ClientString_5:
+    name: STR_QUEST_ZONE05
+    name_fr: Verteron
+  ClientString_6:
+    name: STR_QUEST_NAME_Q1010
+    name_fr: Attaquez
+  ClientString_7:
+    name: STR_QUEST_NAME_Q1011
+    name_fr: TestQuest
+  ClientString_8:
+    name: STR_QUEST_NAME_Q1012
+    name_fr: Magatron
+  ClientString_9:
+    name: STR_QUEST_NAME_Q1013
+    name_fr: Aion
+  ClientString_10:
+    name: STR_QUEST_NAME_Q1014
+    name_fr: PapaNoel
+Quest:
+  Quest_1:
+    Type: Mission
+    Race: Asmodian
+    Translate: ClientString_6
+    Zone: ClientString_1
+    Status: Status_1
+  Quest_2:
+    Type: quest
+    Race: Asmodian
+    Translate: ClientString_7
+    Zone: ClientString_2
+    Status: Status_2
+  Quest_3:
+    Type: Mission
+    Race: Elyo
+    Translate: ClientString_8
+    Zone: ClientString_3
+    Status: Status_3
+  Quest_4:
+    Type: quest
+    Race: Elyo
+    Translate: ClientString_9
+    Zone: ClientString_4
+    Status: Status_4
+  Quest_5:
+    Type: Mission
+    Race: Asmodian
+    Translate: ClientString_10
+    Zone: ClientString_5
+    Status: Status_1
