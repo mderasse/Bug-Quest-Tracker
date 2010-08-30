@@ -22,9 +22,9 @@
  * @method Comments    setQuest()     Sets the current record's "Quest" value
  * @method Comments    setUser()      Sets the current record's "User" value
  * 
- * @package    Bug Quest Tracker
+ * @package    symfony
  * @subpackage model
- * @author     Matthieu Mystick Derasse
+ * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseComments extends sfDoctrineRecord

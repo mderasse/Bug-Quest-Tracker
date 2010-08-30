@@ -7,9 +7,7 @@ config/properties.ini
 web/uploads/
 cache/
 log/
-cache
-log
 web/sf
 apps/backend/config/factories.yml
 apps/frontend/config/factories.yml
-
+data/index.dev.index/

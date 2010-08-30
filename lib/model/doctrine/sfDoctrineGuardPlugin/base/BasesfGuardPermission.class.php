@@ -25,9 +25,9 @@
  * @method sfGuardPermission   setUsers()                  Sets the current record's "Users" collection
  * @method sfGuardPermission   setSfGuardUserPermission()  Sets the current record's "sfGuardUserPermission" collection
  * 
- * @package    Bug Quest Tracker
+ * @package    symfony
  * @subpackage model
- * @author     Matthieu Mystick Derasse
+ * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardPermission extends sfDoctrineRecord
