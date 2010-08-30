@@ -6,8 +6,6 @@
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
-    <?php use_javascript('jquery-1.4.2.min.js') ?>
-    <?php use_javascript('search.js') ?>
     <?php include_javascripts() ?>
   </head>
   <body>
@@ -22,8 +20,7 @@
     <div id="top">
       <div class="searchbox">
         <form action="<?php echo url_for('quest_search') ?>" method="get">
-        <input type="text" name="query" value="<?php echo $sf_request->getParameter('query') ?>" id="search_keywords" /><input type="submit" value="" name="search">
-        <img id="loader" src="/images/loader.gif" style="vertical-align: middle; display: none" />
+        <input type="text" name="query" value="<?php echo $sf_request->getParameter('query') ?>" id="search_keywords" /><input type="submit" value="">
 
         </form>
       </div>
@@ -54,6 +51,6 @@
     <div id="bottom">Aion LP designed by Seigi. Materials are trademarks and copyrights of NCsoft Corporation.<br />
                      Powered by Mystick for Aion Lightning<br />
        </div>
-    
+
   </body>
 </html>

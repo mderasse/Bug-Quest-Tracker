@@ -40,19 +40,10 @@ class questActions extends sfActions
   public function executeSearch(sfWebRequest $request)
   {
     $this->forwardUnless($query = $request->getParameter('query'), 'quest', 'index');
-   
-    $this->quest = Doctrine_Core::getTable('Quest')->getForLuceneQuery($query);
-   
-    if ($request->isXmlHttpRequest())
-    {
-      if ('*' == $query || !$this->quest)
-      {
-        return $this->renderText('No results.');
-      }
-   
-      return $this->renderPartial('quest/list', array('quest' => $this->quest));
-    }
+
+    $this->quest = Doctrine_Core::getTable('Quest') ->getForLuceneQuery($query);
   }
+
 
   public function executeNew(sfWebRequest $request)
   {
