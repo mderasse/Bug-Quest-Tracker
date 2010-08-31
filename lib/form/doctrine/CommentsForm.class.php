@@ -12,6 +12,7 @@ class CommentsForm extends BaseCommentsForm
 {
   public function configure()
   {
+    $this->setValidator('content', new sfValidatorString(array('min_length' => 3, 'max_length' => 4000, 'required' => true), array('required' => 'Comment is empty...', 'invalid' => 'Your comment is not valid.', 'max_length' => 'Comments too big.', 'min_length' => ' Comments too short')));
     $this->removeFields();
   }
   public function doBind(array $values)

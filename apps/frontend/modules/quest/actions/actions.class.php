@@ -43,36 +43,19 @@ class questActions extends sfActions
 
     $this->quest = Doctrine_Core::getTable('Quest') ->getForLuceneQuery($query);
   }
-
-
-  public function executeNew(sfWebRequest $request)
-  {
-    $this->form = new QuestForm();
-  }
   public function executeCreatecomments(sfWebRequest $request)
   {
     $this->quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id')));
     if ($this->getUser()->hasCredential('AddComments'))
     {
       $this->forward404Unless($request->isMethod(sfRequest::POST));
-
+      $this->formquest = new QuestForm($this->quest);
       $this->form = new CommentsForm(array(), array('idquest' => $request->getParameter('id')));
 
       $this->processFormComments($request, $this->form);
     }
     $this->setTemplate('show');
   }
-  public function executeCreate(sfWebRequest $request)
-  {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
-
-    $this->form = new QuestForm();
-
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('new');
-  }
-
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id'))), sprintf('Object quest does not exist (%s).', $request->getParameter('id')));
@@ -92,16 +75,6 @@ class questActions extends sfActions
     $this->processForm($request, $this->formquest);
 
     $this->setTemplate('show');
-  }
-
-  public function executeDelete(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($quest = Doctrine::getTable('Quest')->find(array($request->getParameter('id'))), sprintf('Object quest does not exist (%s).', $request->getParameter('id')));
-    $quest->delete();
-
-    $this->redirect('quest/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
