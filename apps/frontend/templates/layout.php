@@ -35,7 +35,7 @@
                 <li><a href="<?php echo url_for('@homepage') ?>">HOME</a></li>
                 <li><a href="<?php echo url_for('@homepage?quest=mission') ?>">Mission</a></li>
                 <li><a href="<?php echo url_for('@homepage?quest=quest') ?>">Quest</a></li>
-                <li><a href="<?php echo url_for('@homepage?quest=elyos') ?>">Elyo</a></li>
+                <li><a href="<?php echo url_for('@homepage?quest=elyos') ?>">Elyos</a></li>
                 <li><a href="<?php echo url_for('@homepage?quest=asmodian') ?>">Asmodians</a></li>
                 <li><a href="<?php echo url_for('@homepage?quest=1') ?>">Worked</a></li>
                 <li><a href="<?php echo url_for('@homepage?quest=2') ?>">Broken</a></li>

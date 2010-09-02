@@ -5,9 +5,9 @@
  *
  * @method sfGuardUser getObject() Returns the current form's model object
  *
- * @package    symfony
+ * @package    Bug Quest Tracker
  * @subpackage form
- * @author     Your name here
+ * @author     Matthieu Mystick Derasse
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BasesfGuardUserForm extends BaseFormDoctrine
@@ -50,7 +50,12 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'permissions_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission', 'required' => false)),
     ));
 
-
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorAnd(array(
+        new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('email_address'))),
+        new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('username'))),
+      ))
+    );
 
     $this->widgetSchema->setNameFormat('sf_guard_user[%s]');
 

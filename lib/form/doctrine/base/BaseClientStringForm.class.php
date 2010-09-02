@@ -5,9 +5,9 @@
  *
  * @method ClientString getObject() Returns the current form's model object
  *
- * @package    symfony
+ * @package    Bug Quest Tracker
  * @subpackage form
- * @author     Your name here
+ * @author     Matthieu Mystick Derasse
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BaseClientStringForm extends BaseFormDoctrine

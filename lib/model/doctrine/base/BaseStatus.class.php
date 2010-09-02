@@ -16,9 +16,9 @@
  * @method Status              setColors()      Sets the current record's "colors" value
  * @method Status              setQueststatus() Sets the current record's "Queststatus" collection
  * 
- * @package    symfony
+ * @package    Bug Quest Tracker
  * @subpackage model
- * @author     Your name here
+ * @author     Matthieu Mystick Derasse
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseStatus extends sfDoctrineRecord
