@@ -19,15 +19,13 @@
   <td class="columns1"><?php echo $form['password']->renderLabel() ?> </td>
   <td class="columns2"><?php echo $form['password']; ?></td>
 </tr>
+<?php if($sf_user->hasCredential('backend')): ?>
 <tr>
-  <td class="columns1">Groups: </td>
-  <td class="columns2"> 
-    <?php
-      $array =  $sf_user->getGroups();
-    ?>
-    <input type="text" value="<?php echo $array[0]; ?>" readonly />
+  <td class="columns1">Permissions: </td>
+  <td class="columns2"><?php echo $form['permissions_list']; ?></td>
   </td>
 </tr>
+<?php endif; ?>
 <tr>
   <td colspan="2" class="columns3" ><input type="submit" value="Change my Profile" /> </td>
 </tr>

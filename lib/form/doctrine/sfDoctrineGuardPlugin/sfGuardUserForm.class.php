@@ -15,7 +15,22 @@ class sfGuardUserForm extends PluginsfGuardUserForm
     
     $this->widgetSchema['password'] = new sfWidgetFormInputPassword();
     $this->setLabels();
-    $this->removeFields();
+    if(!$this->isNew())
+    {
+      if($this->getUser()->hasCredential('backend'))
+      {
+        $this->removeFieldseditadmin();
+      }
+      else
+      {
+        $this->removeFields();
+      }
+    }
+    else
+    {
+      $this->removeFieldsadmin();
+    }
+      
   }  
     
   public function setLabels()
@@ -29,6 +44,21 @@ class sfGuardUserForm extends PluginsfGuardUserForm
     unset(
       $this['created_at'], $this['updated_at'], $this['id'], $this['first_name'], $this['last_name'], $this['username'], $this['algorithm'], $this['salt'], $this['is_active'], $this['is_super_admin'],
       $this['last_login'], $this['permissions_list'], $this['groups_list']
+    );
+  }
+  
+  public function removeFieldsadmin()
+  {
+    unset(
+      $this['created_at'], $this['updated_at'], $this['id'], $this['first_name'], $this['last_name'], $this['algorithm'], $this['salt'],
+      $this['last_login'], $this['group_list']
+    );
+  }
+  public function removeFieldseditadmin()
+  {
+    unset(
+      $this['created_at'], $this['updated_at'], $this['id'], $this['first_name'], $this['last_name'], $this['username'], $this['algorithm'], $this['salt'], $this['is_active'], $this['is_super_admin'],
+      $this['last_login'], $this['group_list']
     );
   }
 }

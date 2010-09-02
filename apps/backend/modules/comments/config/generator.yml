@@ -1,0 +1,22 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Comments
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          comments
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        display: [id, Quest, User, created_at]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

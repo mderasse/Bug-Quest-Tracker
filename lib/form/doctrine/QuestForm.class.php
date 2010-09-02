@@ -12,7 +12,10 @@ class QuestForm extends BaseQuestForm
 {
   public function configure()
   {
-    $this->removeFields();
+    if(!$this->isNew())
+    {
+      $this->removeFields();
+    }
   }
   public function doBind(array $values)
   {

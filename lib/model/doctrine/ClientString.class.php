@@ -12,4 +12,8 @@
  */
 class ClientString extends BaseClientString
 {
+  public function __toString()
+  {
+    return (string) $this->getNameFr();
+  }
 }

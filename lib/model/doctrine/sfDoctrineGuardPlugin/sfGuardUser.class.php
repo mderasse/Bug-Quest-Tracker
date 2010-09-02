@@ -15,17 +15,6 @@ class sfGuardUser extends PluginsfGuardUser
   
   public function __toString()
   {
-  	return $this->getGiven() . ' ' . $this->getFamily();
+    return (string) $this->getUsername();
   }
-  
-  public function getGiven()
-  {
-  	return ucfirst(strtolower($this->_get('first_name')));
-  }
-  
-  public function getFamily()
-  {
-  	return strtoupper($this->_get('last_name'));
-  }
-
 }

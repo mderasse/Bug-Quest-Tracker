@@ -72,4 +72,8 @@ class Quest extends BaseQuest
 
     return parent::delete($conn);
   }
+    public function __toString()
+  {
+    return (string) $this->getTranslate()->getNameFr();
+  }
 }
