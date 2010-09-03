@@ -16,7 +16,9 @@ generator:
       fields:  ~
       list:    
         display: [id, Translate, type, zone, race, status]
-      filter:  ~
+        max_per_page: 10
+      filter:
+        display: [type, race, status_id]
       form:    ~
       edit:    ~
       new:     ~

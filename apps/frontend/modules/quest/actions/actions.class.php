@@ -40,8 +40,22 @@ class questActions extends sfActions
   public function executeSearch(sfWebRequest $request)
   {
     $this->forwardUnless($query = $request->getParameter('query'), 'quest', 'index');
-
-    $this->quest = Doctrine_Core::getTable('Quest') ->getForLuceneQuery($query);
+    $this->pager = new sfDoctrinePager('Quest', 25);
+    $query = $request->getParameter('query');
+    $q= Doctrine_Query::create()
+      ->from('Quest u')
+      ->leftJoin('u.Translate h')
+      ->leftJoin('u.Zone j')
+      ->leftJoin('u.Status i')
+      ->where('h.name_fr LIKE "%'.$query.'%"')
+      ->orWhere('i.name LIKE "'.$query.'"')
+      ->orWhere('u.id LIKE "'.$query.'"')
+      ->orWhere('u.type LIKE "'.$query.'"')
+      ->orWhere('u.race LIKE "'.$query.'"')
+      ->orWhere('j.name_fr LIKE "'.$query.'"');
+    $this->pager->setQuery($q);
+    $this->pager->setPage($request->getParameter('page', 1));
+    $this->pager->init();
   }
   public function executeCreatecomments(sfWebRequest $request)
   {

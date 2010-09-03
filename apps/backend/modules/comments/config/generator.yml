@@ -16,7 +16,8 @@ generator:
       fields:  ~
       list:    
         display: [id, Quest, User, created_at]
-      filter:  ~
+      filter:  
+        display: [id, author_id, created_at]
       form:    ~
       edit:    ~
       new:     ~

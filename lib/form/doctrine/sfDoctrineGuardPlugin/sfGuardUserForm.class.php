@@ -30,7 +30,12 @@ class sfGuardUserForm extends PluginsfGuardUserForm
     {
       $this->removeFieldsadmin();
     }
-      
+    $this->setValidator('email_address', new sfValidatorEmail(array('required' => true), array('required' => 'Need Email Address', 'invalid' => 'Error with Email Format')));
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorAnd(array(
+        new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('username'))),
+      ))
+    );
   }  
     
   public function setLabels()
