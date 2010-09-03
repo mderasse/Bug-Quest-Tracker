@@ -12,7 +12,6 @@ class sfGuardUserForm extends PluginsfGuardUserForm
 {
   public function configure()
   {
-    
     $this->widgetSchema['password'] = new sfWidgetFormInputPassword();
     $this->setLabels();
     if(!$this->isNew())
@@ -30,12 +29,7 @@ class sfGuardUserForm extends PluginsfGuardUserForm
     {
       $this->removeFieldsadmin();
     }
-    $this->setValidator('email_address', new sfValidatorEmail(array('required' => true), array('required' => 'Need Email Address', 'invalid' => 'Error with Email Format')));
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('username'))),
-      ))
-    );
+    $this->setValidator('email_address', new sfValidatorEmail());
   }  
     
   public function setLabels()
@@ -65,5 +59,26 @@ class sfGuardUserForm extends PluginsfGuardUserForm
       $this['created_at'], $this['updated_at'], $this['id'], $this['first_name'], $this['last_name'], $this['username'], $this['algorithm'], $this['salt'], $this['is_active'], $this['is_super_admin'],
       $this['last_login'], $this['group_list']
     );
+  }
+  public function doBind(array $values)
+  {
+    if($values['email_address'] == $this->getUser()->getGuardUser()->getEmailAddress())
+    {
+      $this->validatorSchema->setPostValidator(
+        new sfValidatorAnd(array(
+          new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('username'))),
+        ))
+      );
+    }
+    else
+    {
+      $this->validatorSchema->setPostValidator(
+        new sfValidatorAnd(array(
+          new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('username'))),
+          new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('email_address'))),
+        ))
+      );
+    }
+    parent::doBind($values);
   }
 }
