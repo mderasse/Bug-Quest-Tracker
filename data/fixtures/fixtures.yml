@@ -17,13 +17,18 @@ sfGuardGroupPermission:
     updated_at: '2010-05-03 00:07:39'
 sfGuardPermission:
   sfGuardPermission_1:
-    name: backend
-    description: 'Peut accéder au backoffice'
+    name: useradmin
+    description: 'can acces at Administrator page'
     created_at: '2010-05-03 00:07:01'
     updated_at: '2010-05-03 00:07:01'
   sfGuardPermission_2:
-    name: webmaster
-    description: 'Administrateur du site'
+    name: AddComments
+    description: 'AddComments'
+    created_at: '2010-05-03 00:07:01'
+    updated_at: '2010-05-03 00:07:01'
+  sfGuardPermission_3:
+    name: ChangeStatus
+    description: 'change quest status'
     created_at: '2010-05-03 00:07:01'
     updated_at: '2010-05-03 00:07:01'
 sfGuardUser:

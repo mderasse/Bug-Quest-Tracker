@@ -19,7 +19,7 @@
   <td class="columns1"><?php echo $form['password']->renderLabel() ?> </td>
   <td class="columns2"><?php echo $form['password']; ?></td>
 </tr>
-<?php if($sf_user->hasCredential('backend')): ?>
+<?php if($sf_user->hasCredential('useradmin')): ?>
 <tr>
   <td class="columns1">Permissions: </td>
   <td class="columns2"><?php echo $form['permissions_list']; ?></td>
