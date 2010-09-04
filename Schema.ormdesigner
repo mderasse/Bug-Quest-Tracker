@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<orm-designer version="1.4.0.428">
+
+  <include name="plugins\sfDoctrineGuardPlugin\config\doctrine\schema.module.xml"/>
+
+  <include name="config\doctrine\schema.module.xml"/>
+
+  <project code-name="Unnamed" name="Bug Quest Tracker" orm="Doctrine" visSizeX="166" visSizeX2="1166" visSizeY="82" visSizeY2="763">
+    <module-position name="sfDoctrineGuardPlugin" visPositionX="50" visPositionY="50"/>
+    <module-position name="bugquest" visPositionX="849" visPositionY="54"/>
+    <module-position name="peanut" visPositionX="792" visPositionY="452"/>
+  </project>
+
+</orm-designer>

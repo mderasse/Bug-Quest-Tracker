@@ -1,7 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<orm-designer version="1.3.3.363">
+<orm-designer version="1.4.0.428">
 
-  <module import-format="DoctrineYml" import-path="schema.yml" name="peanut" visBkColor="15987704" visSizeX="0" visSizeX2="130" visSizeY="0" visSizeY2="177">
+  <module import-format="DoctrineYml" import-path="schema.yml" name="bugquest" visBkColor="15987704" visSizeX="89" visSizeX2="315" visSizeY="82" visSizeY2="341">
+    <table name="ClientString" visPositionX="80" visPositionY="-69" visSizeX="0" visSizeX2="108" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="255" type="string"/>
+      <column name="name_fr" required="true" size="500" type="string"/>
+    </table>
+    <table name="Quest" visPositionX="79" visPositionY="50" visSizeX="0" visSizeX2="108" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name_id" size="255" type="string"/>
+      <column name="type" required="true" size="50" type="string"/>
+      <column name="zone_id" size="255" type="string"/>
+      <column name="race" required="true" size="150" type="string"/>
+      <column name="status_id" type="integer"/>
+    </table>
+    <table name="Status" visPositionX="-77" visPositionY="71" visSizeX="0" visSizeX2="99" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="150" type="string"/>
+      <column name="colors" size="150" type="string"/>
+    </table>
+    <table name="Comments" visPositionX="80" visPositionY="223" visSizeX="0" visSizeX2="109" visSizeY="0" visSizeY2="73">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="quest_id" required="true" type="integer"/>
+      <column name="content" required="true" size="1000" type="string"/>
+      <column name="author_id" required="true" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <foreign-key from="Quest" inverse-alias="Translate" name="FK_Quest_ClientString_id" owning-alias="Questname" to="ClientString" visCenterX="0" visCenterY="0">
+      <foreign-key-column from="name_id" to="name"/>
+      <orm-properties>
+        <attribute name="side-inverse">
+          <attribute name="type">one</attribute>
+        </attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Quest" inverse-alias="Zone" name="FK_Quest_ClientString_id2" owning-alias="Questzone" to="ClientString" visCenterX="0" visCenterY="0">
+      <foreign-key-column from="zone_id" to="name"/>
+      <orm-properties>
+        <attribute name="side-inverse">
+          <attribute name="type">one</attribute>
+        </attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Quest" inverse-alias="Status" name="FK_Quest_Status_id" owning-alias="Queststatus" to="Status" visCenterX="0" visCenterY="0">
+      <foreign-key-column from="status_id" to="id"/>
+      <orm-properties>
+        <attribute name="side-inverse">
+          <attribute name="type">one</attribute>
+        </attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Comments" inverse-alias="Quest" name="FK_Comments_Quest_id" owning-alias="Quests" to="Quest" visCenterX="0" visCenterY="0">
+      <foreign-key-column from="quest_id" to="id"/>
+      <orm-properties>
+        <attribute name="side-inverse">
+          <attribute name="type">one</attribute>
+        </attribute>
+        <attribute name="side-owning">
+          <attribute name="type">many</attribute>
+        </attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Comments" inverse-alias="User" name="FK_Comments_sfGuardUser_id" owning-alias="Authors" to="sfGuardUser" visShowCaption="0">
+      <foreign-key-column from="author_id" to="id"/>
+      <orm-properties>
+        <attribute name="side-inverse">
+          <attribute name="type">one</attribute>
+        </attribute>
+        <attribute name="side-owning">
+          <attribute name="type">many</attribute>
+        </attribute>
+      </orm-properties>
+    </foreign-key>
+  </module>
+
+  <module import-format="DoctrineYml" import-path="schema.yml" name="peanut" visBkColor="15987704" visSizeX="28" visSizeX2="373" visSizeY="40" visSizeY2="261">
     <table name="peanutPage" visPositionX="20" visPositionY="40" visSizeX="0" visSizeX2="90" visSizeY="0" visSizeY2="101">
       <column auto-increment="true" name="id" primary="true" type="integer"/>
       <column name="title" required="true" size="255" type="string"/>

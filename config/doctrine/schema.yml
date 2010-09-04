@@ -1,80 +1,30 @@
-ClientString:
+peanutPage:
+  actAs:
+    Timestampable: 
+    Sluggable:
+      fields: [title]
+    Sortable: 
   columns:
-    name:
-      type: string(255)
-      notnull: true
-    name_fr:
-      type: string(500)
-      notnull: true
-Quest:
-  columns:
-    name_id:
-      type: string(255)
-    type:
-      type: string(50)
-      notnull: true
-    zone_id:
-      type: string(255)
-    race:
-      type: string(150)
-      notnull: true
-    status_id:
+    id:
+      primary: true
       type: integer
-      notnull: false
-  relations:
-    Translate:
-      class: ClientString
-      local: name_id
-      foreign: name
-      type: one
-      foreignAlias: Questname
-    Zone:
-      class: ClientString
-      local: zone_id
-      foreign: name
-      type: one
-      foreignAlias: Questzone
-    Status:
-      class: Status
-      local: status_id
-      foreign: id
-      type: one
-      foreignAlias: Queststatus
-    Comments:
-      class: Comments
-      local: id
-      foreign: quest_id
-      type: many
-Status:
-  columns:
-    name:
-      type: string(150)
-      notnull: true
-    colors:
-      type: string(150)
-      notnull: false
-Comments:
-  actAs: [Timestampable]
-  columns:
-    quest_id:
-      type: integer
+      autoincrement: true
+    title:
+      type: string(255)
       notnull: true
     content:
-      type: string(1000)
+      type: clob
       notnull: true
-    author_id:
+    excerpt:
+      type: clob
+    status:
+      default: draft
+      type: string
+      notnull: true
+      values: [draft,publish]
+    author:
       type: integer
-      notnull: true
   relations:
-    Quest:
-      class: Quest
-      local: quest_id
+    sfGuardUser:
+      local: author
       foreign: id
-      type: one
-      foreignAlias: Quests
-    User:
-      class: sfGuardUser
-      local: author_id
-      foreign: id
-      type: one
-      foreignAlias: Authors
